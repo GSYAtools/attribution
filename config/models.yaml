@@ -1,0 +1,42 @@
+models:
+
+  model_1:
+    enabled: true
+    provider: "provider_1"
+    model_id: "TO_BE_DEFINED"
+    api_key_env: "PROVIDER_1_API_KEY"
+
+    generation:
+      temperature: null
+      top_p: null
+      seed: null
+      max_output_tokens: 1500
+
+  model_2:
+    enabled: true
+    provider: "provider_2"
+    model_id: "TO_BE_DEFINED"
+    api_key_env: "PROVIDER_2_API_KEY"
+
+    generation:
+      temperature: null
+      top_p: null
+      seed: null
+      max_output_tokens: 1500
+
+execution:
+  timeout_seconds: 120
+  max_retries: 2
+  retry_invalid_json: false
+
+  store:
+    raw_response: true
+    parsed_response: true
+    request_metadata: true
+    token_usage: true
+
+  record:
+    model_identifier: true
+    provider: true
+    execution_timestamp: true
+    generation_parameters: true

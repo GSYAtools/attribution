@@ -1,0 +1,10 @@
+python-dotenv
+PyYAML
+pydantic
+pandas
+numpy
+scipy
+statsmodels
+tenacity
+pytest
+jsonschema

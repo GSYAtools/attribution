@@ -1,0 +1,106 @@
+{
+  "pilot_version": "1.0",
+  "vignettes": [
+    {
+      "case_id": "PX_1001",
+      "domain": "fairness",
+      "context": "An AI-assisted credit screening system prioritises loan applications for manual review. Human analysts make the final lending decision.",
+      "evidence": [
+        "Validation accuracy: 91.8%.",
+        "False-positive rate for demographic group A: 8.1%.",
+        "False-positive rate for demographic group B: 8.7%.",
+        "False-negative rate for demographic group A: 6.4%.",
+        "False-negative rate for demographic group B: 6.8%.",
+        "Calibration error: 0.031 for demographic group A and 0.034 for demographic group B.",
+        "The validation dataset contains 48,200 applications.",
+        "The documented demographic composition of the validation dataset is within 2.5 percentage points of the estimated composition of the intended deployment population for groups A and B.",
+        "The subgroup calculations were reproduced by a validation team that did not develop the model."
+      ],
+      "request": "Assess whether the available evidence supports attributing fairness to the system for the described deployment context."
+    },
+    {
+      "case_id": "PX_1002",
+      "domain": "fairness",
+      "context": "An AI-assisted credit screening system prioritises loan applications for manual review. Human analysts make the final lending decision.",
+      "evidence": [
+        "Validation accuracy: 93.1%.",
+        "Overall false-positive rate: 7.9%.",
+        "Overall false-negative rate: 6.2%.",
+        "Overall calibration error: 0.029.",
+        "The validation dataset contains 51,600 applications.",
+        "Group-specific error rates are not reported in the validation documentation.",
+        "The demographic composition of the validation dataset is not included in the documentation available to the evaluator.",
+        "During the first eight weeks of limited deployment, 14,310 applications were processed.",
+        "Seven complaints concerning lending decisions were registered; none had completed investigation at the date of evaluation."
+      ],
+      "request": "Assess whether the available evidence supports attributing fairness to the system for the described deployment context."
+    },
+    {
+      "case_id": "PX_1003",
+      "domain": "robustness",
+      "context": "An AI system classifies medical documents into administrative workflow categories. Staff review classifications before downstream processing.",
+      "evidence": [
+        "Standard validation accuracy: 96.4%.",
+        "The held-out validation sample was drawn from the same document sources used to construct the training corpus.",
+        "Pilot deployment accuracy: 94.9%.",
+        "During the pilot, 18,420 documents were processed.",
+        "Human operators modified 3.1% of model classifications before downstream processing.",
+        "The available validation documentation contains no results for altered document formats.",
+        "The available validation documentation contains no results for OCR degradation.",
+        "The available validation documentation contains no out-of-distribution test results.",
+        "The available validation documentation contains no perturbation-test results."
+      ],
+      "request": "Assess whether the available evidence supports attributing operational robustness to the system for the described deployment context."
+    },
+    {
+      "case_id": "PX_1004",
+      "domain": "accountability",
+      "context": "An AI system recommends whether insurance claims should receive additional fraud review. Human reviewers determine the final disposition of individual claims.",
+      "evidence": [
+        "Each model recommendation contains a timestamp and model version.",
+        "Human reviewers can accept or override model recommendations.",
+        "Overrides are recorded.",
+        "Recording a rationale for an override is optional.",
+        "The process documentation lists the Fraud Operations team and Automated Decision-Support team as jointly responsible for operation of the process.",
+        "The documentation available to the evaluator contains no rule assigning responsibility for an individual decision when the reviewer and model recommendation agree.",
+        "Reviewers report that unusual cases are commonly discussed with senior colleagues.",
+        "Customers can submit complaints through the organisation's general complaints process.",
+        "The process documentation available to the evaluator does not describe how such complaints are connected to reconsideration of the original assessment."
+      ],
+      "request": "Assess whether the available evidence supports attributing accountable decision-making to the described AI-assisted process."
+    },
+    {
+      "case_id": "PX_1005",
+      "domain": "robustness",
+      "context": "An AI system classifies medical documents into administrative workflow categories. Staff review classifications before downstream processing.",
+      "evidence": [
+        "Standard-condition validation accuracy: 95.2%.",
+        "With 10% randomly removed non-critical fields, accuracy was 93.7%.",
+        "With the predefined OCR degradation transformation, accuracy was 92.1%.",
+        "Across the predefined formatting-variation set, accuracy ranged from 91.6% to 94.8%.",
+        "An out-of-distribution test set contained 1,200 documents from document classes excluded from training.",
+        "Of the 1,200 out-of-distribution samples, 1,127 were flagged by the out-of-distribution mechanism.",
+        "The validation protocol contains three predefined perturbation tests; corresponding accuracies were 92.8%, 90.9%, and 93.4%.",
+        "A separate validation team reproduced the reported tests."
+      ],
+      "request": "Assess whether the available evidence supports attributing operational robustness to the system for the described deployment context."
+    },
+    {
+      "case_id": "PX_1006",
+      "domain": "accountability",
+      "context": "An AI system recommends whether insurance claims should receive additional fraud review. Human reviewers determine the final disposition of individual claims.",
+      "evidence": [
+        "Each model recommendation record contains the model version, timestamp, and a reference to the input record.",
+        "The human review record identifies the evidence consulted.",
+        "The final disposition is stored separately from the model recommendation.",
+        "Reviewers enter a free-text rationale when finalising a disposition.",
+        "The documented procedure assigns the final case-level decision to the claims reviewer.",
+        "Disagreements between the model recommendation and the reviewer are routed to an organisational role identified as Senior Claims Reviewer.",
+        "Customers may request reconsideration of an adverse disposition.",
+        "Reconsideration outcomes are retained with the original decision record.",
+        "Model maintenance is assigned to the Model Operations team."
+      ],
+      "request": "Assess whether the available evidence supports attributing accountable decision-making to the described AI-assisted process."
+    }
+  ]
+}

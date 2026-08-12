@@ -1,0 +1,39 @@
+paths:
+  data: "data"
+  prompts: "prompts"
+  runs: "runs"
+  results: "results"
+  logs: "logs"
+  docs: "docs"
+
+data_files:
+  vignettes: "data/pilot_vignettes.json"
+  criteria_cards: "data/criteria_cards.json"
+  governance_card: "data/governance_card.md"
+  case_annotations: "data/case_annotations.json"
+  case_registry: "data/case_registry.json"
+  revalidation_updates: "data/revalidation_updates.json"
+
+prompt_files:
+  system: "prompts/system.txt"
+  output_schema: "prompts/output_schema.json"
+  revision_prompt: "prompts/revision_prompt.txt"
+  revision_output_schema: "prompts/revision_output_schema.json"
+  grounding_rubric: "prompts/grounding_rubric.md"
+
+run_directories:
+  raw: "runs/raw"
+  parsed: "runs/parsed"
+  prompts: "runs/prompts"
+  metadata: "runs/metadata"
+
+result_directories:
+  cleaned: "results/cleaned"
+  scores: "results/scores"
+  summary: "results/summary"
+  figures: "results/figures"
+
+log_files:
+  build: "logs/build.log"
+  run: "logs/run.log"
+  scoring: "logs/scoring.log"

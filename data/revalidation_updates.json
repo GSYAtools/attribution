@@ -1,0 +1,38 @@
+{
+  "pilot_version": "1.0",
+  "updates": {
+    "PX_1005": {
+      "domain": "robustness",
+      "base_case": "PX_1005",
+
+      "material_defeater": {
+        "update_id": "PX_1005_MD",
+        "type": "material_defeater",
+        "text": "A second hospital began using document templates that were not represented in the original validation corpus. These templates fall within the deployment categories specified for the system. Accuracy for 4,830 documents using these templates was 72.6%. The out-of-distribution mechanism flagged 31.2% of these documents. No other measured deployment category showed a comparable change during the same period."
+      },
+
+      "non_material_control": {
+        "update_id": "PX_1005_NC",
+        "type": "non_material_control",
+        "text": "The robustness-test report was migrated to a new document-management system. The datasets, tested conditions, test procedures, and reported results were unchanged."
+      }
+    },
+
+    "PX_1006": {
+      "domain": "accountability",
+      "base_case": "PX_1006",
+
+      "material_defeater": {
+        "update_id": "PX_1006_MD",
+        "type": "material_defeater",
+        "text": "An internal audit found that reviewer performance assessments include an agreement-rate indicator comparing final decisions with model recommendations. An override rate above 12% triggers managerial review of the reviewer's case history. No corresponding review is triggered by high agreement rates. In interviews conducted during the audit, 17 of 21 reviewers reported considering the agreement-rate indicator when deciding whether to override a recommendation. These performance-management arrangements were not included in the documentation used for the initial assessment."
+      },
+
+      "non_material_control": {
+        "update_id": "PX_1006_NC",
+        "type": "non_material_control",
+        "text": "The organisation renamed the role 'Senior Claims Reviewer' to 'Claims Review Lead'. The responsibilities, escalation rules, and decision authority assigned to the role were unchanged."
+      }
+    }
+  }
+}

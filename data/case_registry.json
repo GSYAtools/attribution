@@ -1,0 +1,59 @@
+{
+  "pilot_version": "1.0",
+  "cases": [
+    {
+      "case_id": "PX_1001",
+      "domain": "fairness",
+      "role": "broad_evidence",
+      "expected_evidential_state": "broad_evidence_present",
+      "has_defeater_round": false,
+      "has_non_material_control": false,
+      "notes": "Fairness case with subgroup evidence available and no obvious leakage."
+    },
+    {
+      "case_id": "PX_1002",
+      "domain": "fairness",
+      "role": "critical_evidence_missing",
+      "expected_evidential_state": "critical_evidence_missing",
+      "has_defeater_round": false,
+      "has_non_material_control": false,
+      "notes": "Fairness case with missing subgroup-level evidence and incomplete representativeness information."
+    },
+    {
+      "case_id": "PX_1003",
+      "domain": "robustness",
+      "role": "critical_evidence_missing",
+      "expected_evidential_state": "critical_evidence_missing",
+      "has_defeater_round": false,
+      "has_non_material_control": false,
+      "notes": "Robustness case with only nominal validation evidence."
+    },
+    {
+      "case_id": "PX_1004",
+      "domain": "accountability",
+      "role": "procedural_evidence_incomplete",
+      "expected_evidential_state": "procedural_evidence_incomplete",
+      "has_defeater_round": false,
+      "has_non_material_control": false,
+      "notes": "Accountability case with logging and partial role allocation but incomplete rationale and review linkage."
+    },
+    {
+      "case_id": "PX_1005",
+      "domain": "robustness",
+      "role": "broad_evidence",
+      "expected_evidential_state": "broad_evidence_present",
+      "has_defeater_round": true,
+      "has_non_material_control": true,
+      "notes": "Robustness base case for later material defeater and non-material control."
+    },
+    {
+      "case_id": "PX_1006",
+      "domain": "accountability",
+      "role": "broad_procedural_evidence",
+      "expected_evidential_state": "broad_procedural_evidence_present",
+      "has_defeater_round": true,
+      "has_non_material_control": true,
+      "notes": "Accountability base case for later material defeater and non-material control."
+    }
+  ]
+}

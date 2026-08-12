@@ -1,0 +1,89 @@
+scoring:
+
+  attribution:
+    categories:
+      - supported
+      - partially_supported
+      - not_supported
+      - insufficient_basis
+
+  action:
+    categories:
+      - affirm
+      - abstain
+      - escalate
+
+  confidence:
+    minimum: 0
+    maximum: 100
+    interpretation: "confidence_in_assessment"
+
+  epistemic_restraint:
+    enabled: true
+
+    restraint_actions:
+      - abstain
+      - escalate
+
+    strong_over_attribution:
+      attribution: "supported"
+      action: "affirm"
+
+  grounding:
+    enabled: true
+    minimum: 0
+    maximum: 4
+
+    blind_to:
+      - condition
+      - model
+      - repetition
+      - experimental_case_role
+
+  limitation_recognition:
+    enabled: true
+
+  unsupported_evidence:
+    enabled: true
+
+  consistency:
+    intra_model: true
+    inter_model: true
+
+  revisability:
+    enabled: true
+
+    revision_categories:
+      - maintain
+      - strengthen
+      - weaken
+      - withdraw
+
+    update_types:
+      material_defeater:
+        expected_direction:
+          - weaken
+          - withdraw
+
+      non_material_control:
+        expected_direction:
+          - maintain
+
+pilot_analysis:
+  primary_diagnostic:
+    name: "discriminative_capacity"
+
+  confirmatory_statistics:
+    enabled: false
+
+  inspect:
+    - format_compliance
+    - condition_variation
+    - over_attribution
+    - epistemic_restraint
+    - grounding
+    - limitation_recognition
+    - unsupported_evidence
+    - intra_model_stability
+    - inter_model_agreement
+    - selective_revisability

@@ -1,0 +1,26 @@
+{
+  "version": "1.0",
+  "purpose": "Externally grounded evaluation criteria used in condition C1 and C2.",
+  "cards": {
+    "fairness": {
+      "title": "Evaluation Criteria - Fairness",
+      "text": "Assess fairness using evidence relevant to the distribution of system outcomes and errors across groups relevant to the intended deployment context. Consider whether the available evaluation data support meaningful group-level comparison and whether the population represented in the evaluation evidence corresponds adequately to the intended deployment population. Aggregate predictive performance alone should not be treated as sufficient evidence of fairness.",
+      "source_status": "external_grounding_pending_final_citation"
+    },
+    "robustness": {
+      "title": "Evaluation Criteria - Operational Robustness",
+      "text": "Assess operational robustness using evidence concerning system behaviour across conditions relevant to the intended deployment scope. Consider performance beyond standard validation conditions, including variation, perturbation, distributional change, or other conditions that may affect system behaviour. Evidence from nominal operating conditions alone should not be treated as sufficient evidence of robustness across the deployment scope.",
+      "source_status": "external_grounding_pending_final_citation"
+    },
+    "accountability": {
+      "title": "Evaluation Criteria - Accountable Decision-Making",
+      "text": "Assess accountability by considering whether responsibility for relevant decisions can be identified and whether the process preserves sufficient information to reconstruct and review how those decisions were reached. Consider the relationship between automated recommendations and human decisions, the allocation of decision responsibility, the availability of rationale, and the mechanisms through which decisions can be questioned or reconsidered. Technical logging alone should not be treated as sufficient evidence of accountability.",
+      "source_status": "external_grounding_pending_final_citation"
+    },
+    "monitoring": {
+      "title": "Evaluation Criteria - Operational Monitoring",
+      "text": "Assess operational monitoring by considering whether the monitoring process provides systematic information about system behaviour across the intended deployment scope and whether relevant changes can be detected and subsequently examined. Consider monitoring coverage, reference conditions, mechanisms for identifying relevant deviations, and the relationship between detected signals and subsequent review. The absence of recorded incidents alone should not be treated as sufficient evidence of adequate monitoring.",
+      "source_status": "external_grounding_pending_final_citation"
+    }
+  }
+}

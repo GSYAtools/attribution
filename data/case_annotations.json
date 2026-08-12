@@ -1,0 +1,59 @@
+{
+  "pilot_version": "1.0",
+  "annotations": {
+    "PX_1001": {
+      "domain": "fairness",
+      "evidential_state": "broad_evidence_present",
+      "known_limitations": [
+        "subgroup-level evidence available",
+        "validation population composition documented",
+        "independent subgroup reproduction available"
+      ]
+    },
+    "PX_1002": {
+      "domain": "fairness",
+      "evidential_state": "critical_evidence_missing",
+      "known_limitations": [
+        "group-specific error rates unavailable",
+        "validation population composition unavailable",
+        "complaints unresolved at time of assessment"
+      ]
+    },
+    "PX_1003": {
+      "domain": "robustness",
+      "evidential_state": "critical_evidence_missing",
+      "known_limitations": [
+        "no stress tests under non-nominal conditions",
+        "no out-of-distribution testing",
+        "no adversarial perturbation assessment"
+      ]
+    },
+    "PX_1004": {
+      "domain": "accountability",
+      "evidential_state": "procedural_evidence_incomplete",
+      "known_limitations": [
+        "rationale for overrides optional",
+        "responsibility jointly assigned",
+        "complaint-to-review linkage unspecified"
+      ]
+    },
+    "PX_1005": {
+      "domain": "robustness",
+      "evidential_state": "broad_evidence_present",
+      "known_limitations": [
+        "baseline robustness evidence available",
+        "prepared for later material defeater",
+        "prepared for later non-material control"
+      ]
+    },
+    "PX_1006": {
+      "domain": "accountability",
+      "evidential_state": "broad_procedural_evidence_present",
+      "known_limitations": [
+        "role allocation documented",
+        "rationale capture available",
+        "prepared for later material defeater and non-material control"
+      ]
+    }
+  }
+}

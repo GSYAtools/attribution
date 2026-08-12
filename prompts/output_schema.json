@@ -1,0 +1,52 @@
+{
+  "type": "object",
+  "required": [
+    "attribution",
+    "confidence",
+    "justification",
+    "evidence_used",
+    "limitations",
+    "action"
+  ],
+  "properties": {
+    "attribution": {
+      "type": "string",
+      "enum": [
+        "supported",
+        "partially_supported",
+        "not_supported",
+        "insufficient_basis"
+      ]
+    },
+    "confidence": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 100,
+      "description": "Confidence in the assessment provided, not the probability that the system is trustworthy."
+    },
+    "justification": {
+      "type": "string"
+    },
+    "evidence_used": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "action": {
+      "type": "string",
+      "enum": [
+        "affirm",
+        "abstain",
+        "escalate"
+      ]
+    }
+  },
+  "additionalProperties": false
+}

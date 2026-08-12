@@ -1,0 +1,62 @@
+experiment:
+  id: "SC5-PILOT"
+  version: "1.0"
+  name: "Trustworthiness Attribution Pilot"
+
+  purpose: "instrument_validation"
+
+  seed: 20260810
+
+design:
+  conditions:
+    - C0
+    - C1
+    - C2
+
+  repetitions: 2
+
+  expected_models: 2
+
+  primary_cases: 6
+
+  randomize_execution_order: true
+
+conditions:
+  C0:
+    name: "Evidence only"
+    include_evidence: true
+    include_criteria: false
+    include_governance: false
+
+  C1:
+    name: "Evidence plus external criteria"
+    include_evidence: true
+    include_criteria: true
+    include_governance: false
+
+  C2:
+    name: "Evidence plus external criteria plus evaluative governance"
+    include_evidence: true
+    include_criteria: true
+    include_governance: true
+
+pilot:
+  use_for_confirmatory_testing: false
+
+  evaluate:
+    - format_compliance
+    - vignette_ambiguity
+    - condition_variation
+    - ceiling_floor_effects
+    - epistemic_restraint
+    - evidential_grounding
+    - selective_revisability
+
+revalidation:
+  enabled: true
+
+  update_types:
+    - material_defeater
+    - non_material_control
+
+  include_in_primary_72_runs: false
