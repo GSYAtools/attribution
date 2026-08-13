@@ -473,5 +473,4 @@ The experiment operationalises the conceptual transition:
 
 and tests whether an explicit evaluative layer affects that transition.
 
-This provides an empirical complement to SC5 by moving the argument from a purely conceptual claim about the need for Evaluative Governance toward an experimentally observable question about how governance conditions affect attribution behaviour.
-
+This provides an empirical complement to SC5 by moving the argument from a purely conceptual claim about the need for Evaluative Governance toward an experimentally observable question about how governance conditions affect attribution behaviour
