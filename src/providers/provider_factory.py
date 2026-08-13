@@ -1,6 +1,7 @@
 from src.providers.base import LLMProvider
 from src.providers.mock_provider import MockProvider
-
+from src.providers.gemini_provider import GeminiProvider
+from src.providers.openai_provider import OpenAIProvider
 
 def create_provider(provider_name: str) -> LLMProvider:
     """
@@ -12,6 +13,8 @@ def create_provider(provider_name: str) -> LLMProvider:
 
     providers = {
         "mock": MockProvider,
+	"openai": OpenAIProvider,
+	"gemini": GeminiProvider
     }
 
     if provider_name not in providers:

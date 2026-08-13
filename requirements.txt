@@ -8,3 +8,5 @@ statsmodels
 tenacity
 pytest
 jsonschema
+openai
+google-genai

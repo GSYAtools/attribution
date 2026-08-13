@@ -2,12 +2,13 @@ import argparse
 import csv
 import json
 from datetime import datetime, timezone
-from pathlib import Path
 from typing import Any
 
 from jsonschema import Draft202012Validator
 
+from src.providers.errors import ProviderError
 from src.providers.provider_factory import create_provider
+from src.retry_manager import execute_with_retry
 from src.utils import ROOT, load_json, load_yaml
 
 
@@ -73,9 +74,7 @@ def load_prompt(prompt_file: str) -> tuple[str, str]:
             f"Prompt file not found: {path}"
         )
 
-    text = path.read_text(
-        encoding="utf-8"
-    )
+    text = path.read_text(encoding="utf-8")
 
     system_marker = "===== SYSTEM PROMPT ====="
     user_marker = "===== USER PROMPT ====="
@@ -103,14 +102,16 @@ def load_prompt(prompt_file: str) -> tuple[str, str]:
 
 def get_model_configuration(
     model_slot: str,
-) -> tuple[str, str, dict[str, Any]]:
-    """Return provider, model identifier, and generation config."""
+) -> tuple[str, str, dict[str, Any], int]:
+    """
+    Return provider, model identifier, generation configuration,
+    and maximum retry count.
+    """
 
-    config = load_yaml(
-        "config/models.yaml"
-    )
+    config = load_yaml("config/models.yaml")
 
     models = config["models"]
+    execution = config.get("execution", {})
 
     if model_slot not in models:
         raise RuntimeError(
@@ -119,24 +120,24 @@ def get_model_configuration(
 
     model = models[model_slot]
 
+    max_retries = int(
+        execution.get("max_retries", 0)
+    )
+
     return (
         model["provider"],
         model["model_id"],
         model.get("generation", {}),
+        max_retries,
     )
 
 
 def load_output_validator() -> Draft202012Validator:
     """Load and compile the Round 1 output schema."""
 
-    paths = load_yaml(
-        "config/paths.yaml"
-    )
+    paths = load_yaml("config/paths.yaml")
 
-    schema_path = paths["prompt_files"][
-        "output_schema"
-    ]
-
+    schema_path = paths["prompt_files"]["output_schema"]
     schema = load_json(schema_path)
 
     return Draft202012Validator(schema)
@@ -153,9 +154,7 @@ def parse_and_validate(
     """Parse JSON and validate it against the experiment schema."""
 
     try:
-        parsed = json.loads(
-            response_text
-        )
+        parsed = json.loads(response_text)
 
     except json.JSONDecodeError as exc:
         return (
@@ -198,11 +197,65 @@ def parse_and_validate(
     )
 
 
+def save_provider_error(
+    row: dict[str, Any],
+    provider_name: str,
+    model_id: str,
+    exc: ProviderError,
+    max_retries: int,
+) -> None:
+    """Persist normalized provider-error metadata."""
+
+    run_id = row["run_id"]
+
+    metadata_dir = ROOT / "runs" / "metadata"
+
+    metadata_dir.mkdir(
+        parents=True,
+        exist_ok=True,
+    )
+
+    metadata_path = (
+        metadata_dir / f"{run_id}.json"
+    )
+
+    metadata = {
+        "run_id": run_id,
+        "case_id": row["case_id"],
+        "domain": row["domain"],
+        "condition": row["condition"],
+        "model_slot": row["model_slot"],
+        "repetition": int(row["repetition"]),
+        "prompt_hash": row["prompt_hash"],
+        "prompt_file": row["prompt_file"],
+        "provider": provider_name,
+        "model_id": model_id,
+        "status": STATUS_PROVIDER_ERROR,
+        "error_category": exc.category,
+        "retryable": exc.retryable,
+        "max_retries": max_retries,
+        "provider_error": exc.message,
+        "executed_at_utc": datetime.now(
+            timezone.utc
+        ).isoformat(),
+    }
+
+    metadata_path.write_text(
+        json.dumps(
+            metadata,
+            indent=2,
+            ensure_ascii=False,
+        ),
+        encoding="utf-8",
+    )
+
+
 def save_run_artifacts(
     row: dict[str, Any],
     response: Any,
     status: str,
     validation_error: str | None,
+    max_retries: int,
 ) -> None:
     """Persist raw response, parsed response and metadata."""
 
@@ -227,19 +280,10 @@ def save_run_artifacts(
         exist_ok=True,
     )
 
-    raw_path = (
-        raw_dir / f"{run_id}.txt"
-    )
+    raw_path = raw_dir / f"{run_id}.txt"
+    parsed_path = parsed_dir / f"{run_id}.json"
+    metadata_path = metadata_dir / f"{run_id}.json"
 
-    parsed_path = (
-        parsed_dir / f"{run_id}.json"
-    )
-
-    metadata_path = (
-        metadata_dir / f"{run_id}.json"
-    )
-
-    # Protect existing raw output.
     if raw_path.exists():
         raise RuntimeError(
             f"Raw output already exists for {run_id}."
@@ -254,9 +298,7 @@ def save_run_artifacts(
 
     if status != STATUS_INVALID_JSON:
         try:
-            parsed = json.loads(
-                response.text
-            )
+            parsed = json.loads(response.text)
         except json.JSONDecodeError:
             parsed = None
 
@@ -276,9 +318,7 @@ def save_run_artifacts(
         "domain": row["domain"],
         "condition": row["condition"],
         "model_slot": row["model_slot"],
-        "repetition": int(
-            row["repetition"]
-        ),
+        "repetition": int(row["repetition"]),
         "prompt_hash": row["prompt_hash"],
         "prompt_file": row["prompt_file"],
         "provider": response.provider,
@@ -286,6 +326,7 @@ def save_run_artifacts(
         "usage": response.usage,
         "status": status,
         "validation_error": validation_error,
+        "max_retries": max_retries,
         "executed_at_utc": datetime.now(
             timezone.utc
         ).isoformat(),
@@ -317,9 +358,9 @@ def main() -> None:
     )
 
     mode.add_argument(
-        "--mock",
+        "--real",
         action="store_true",
-        help="Execute using the deterministic mock provider.",
+        help="Execute using configured providers.",
     )
 
     parser.add_argument(
@@ -329,6 +370,15 @@ def main() -> None:
         help="Maximum number of pending runs to process.",
     )
 
+    parser.add_argument(
+        "--confirm-pilot",
+        action="store_true",
+        help=(
+            "Explicitly authorize real execution of "
+            "more than two experimental runs."
+        ),
+    )
+
     args = parser.parse_args()
 
     if args.limit < 1:
@@ -336,6 +386,15 @@ def main() -> None:
             "--limit must be at least 1."
         )
 
+    if (
+        args.real
+        and args.limit > 2
+        and not args.confirm_pilot
+    ):
+        raise RuntimeError(
+            "Real execution of more than two runs "
+            "requires --confirm-pilot."
+        )
     rows = load_manifest()
 
     pending = [
@@ -344,17 +403,10 @@ def main() -> None:
         if row["status"] == STATUS_PENDING
     ]
 
-    selected = pending[
-        : args.limit
-    ]
+    selected = pending[: args.limit]
 
-    print(
-        f"Pending runs: {len(pending)}"
-    )
-
-    print(
-        f"Selected runs: {len(selected)}"
-    )
+    print(f"Pending runs: {len(pending)}")
+    print(f"Selected runs: {len(selected)}")
 
     if args.dry_run:
         for row in selected:
@@ -372,29 +424,37 @@ def main() -> None:
     validator = load_output_validator()
 
     for row in selected:
-
         run_id = row["run_id"]
 
         system_prompt, user_prompt = load_prompt(
             row["prompt_file"]
         )
 
-        provider_name, model_id, generation_config = (
-            get_model_configuration(
-                row["model_slot"]
-            )
+        (
+            provider_name,
+            model_id,
+            generation_config,
+            max_retries,
+        ) = get_model_configuration(
+            row["model_slot"]
         )
 
-        provider = create_provider (
+        provider = create_provider(
             provider_name
-            )
+        )
 
-        try:
-            response = provider.generate(
+        def operation():
+            return provider.generate(
                 system_prompt=system_prompt,
                 user_prompt=user_prompt,
                 model_id=model_id,
                 generation_config=generation_config,
+            )
+
+        try:
+            response = execute_with_retry(
+                operation=operation,
+                max_retries=max_retries,
             )
 
             status, _, validation_error = (
@@ -404,42 +464,13 @@ def main() -> None:
                 )
             )
 
-        except Exception as exc:
-            error_message = str(exc)
-
-            metadata_dir = ROOT / "runs" / "metadata"
-            metadata_dir.mkdir(
-                parents=True,
-                exist_ok=True,
-            )
-
-            metadata_path = (
-                metadata_dir / f"{run_id}.json"
-            )
-
-            metadata = {
-                "run_id": run_id,
-                "case_id": row["case_id"],
-                "domain": row["domain"],
-                "condition": row["condition"],
-                "model_slot": row["model_slot"],
-                "repetition": int(row["repetition"]),
-                "prompt_hash": row["prompt_hash"],
-                "prompt_file": row["prompt_file"],
-                "status": STATUS_PROVIDER_ERROR,
-                "provider_error": error_message,
-                "executed_at_utc": datetime.now(
-                    timezone.utc
-                ).isoformat(),
-            }
-
-            metadata_path.write_text(
-                json.dumps(
-                    metadata,
-                    indent=2,
-                    ensure_ascii=False,
-                ),
-                encoding="utf-8",
+        except ProviderError as exc:
+            save_provider_error(
+                row=row,
+                provider_name=provider_name,
+                model_id=model_id,
+                exc=exc,
+                max_retries=max_retries,
             )
 
             row["status"] = STATUS_PROVIDER_ERROR
@@ -447,8 +478,9 @@ def main() -> None:
 
             print(
                 f"{run_id}: {STATUS_PROVIDER_ERROR} - "
-                f"{error_message}"
+                f"{exc.category}"
             )
+
             continue
 
         save_run_artifacts(
@@ -456,6 +488,7 @@ def main() -> None:
             response=response,
             status=status,
             validation_error=validation_error,
+            max_retries=max_retries,
         )
 
         row["status"] = status
@@ -464,10 +497,6 @@ def main() -> None:
             print(
                 f"{run_id}: {status} - "
                 f"{validation_error}"
-            )
-        else:
-            print(
-                f"{run_id}: {status}"
             )
 
         save_manifest(rows)

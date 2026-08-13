@@ -2,10 +2,12 @@ models:
 
   model_1:
     enabled: true
-    provider: "provider_1"
-    model_id: "TO_BE_DEFINED"
-    api_key_env: "PROVIDER_1_API_KEY"
-
+    provider: "openai"
+    model_id: "gpt-5.4-mini-2026-03-17"
+    api_key_env: "OPENAI_API_KEY"
+    # null sampling parameters mean:
+    # use the provider/model native defaults.
+    # They are intentionally not sent to the API.
     generation:
       temperature: null
       top_p: null
@@ -14,10 +16,12 @@ models:
 
   model_2:
     enabled: true
-    provider: "provider_2"
-    model_id: "TO_BE_DEFINED"
-    api_key_env: "PROVIDER_2_API_KEY"
-
+    provider: "gemini"
+    model_id: "gemini-3.5-flash"
+    api_key_env: "GEMINI_API_KEY"
+    # null sampling parameters mean:
+    # use the provider/model native defaults.
+    # They are intentionally not sent to the API.
     generation:
       temperature: null
       top_p: null

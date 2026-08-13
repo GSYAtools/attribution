@@ -22,3 +22,6 @@ Thumbs.db
 
 .pytest_cache/
 *.tmp
+
+# Provider connectivity tests
+micro_runs/
