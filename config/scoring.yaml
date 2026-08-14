@@ -42,10 +42,26 @@ scoring:
 
   limitation_recognition:
     enabled: true
+    type: "binary"
+    values:
+      0: "not_recognized"
+      1: "recognized"
+    definition: >
+      Whether the assessment explicitly recognizes at least one
+      material evidential limitation that is relevant to the
+      reasoning supporting its attribution.
 
   unsupported_evidence:
     enabled: true
-
+    type: "binary"
+    values:
+      0: "absent"
+      1: "present"
+    definition: >
+      Whether the assessment introduces at least one material
+      factual claim used in its reasoning that is not supported
+      by the information legitimately available to the assessed
+      response.
   consistency:
     intra_model: true
     inter_model: true
