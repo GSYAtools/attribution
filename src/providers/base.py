@@ -26,10 +26,14 @@ class LLMProvider(ABC):
         user_prompt: str,
         model_id: str,
         generation_config: dict[str, Any],
+        output_schema: dict[str, Any],
     ) -> ModelResponse:
         """
         Generate one model response.
 
         Implementations must return a normalized ModelResponse.
+
+        output_schema contains the JSON Schema that the provider
+        must enforce for the generated response.
         """
         raise NotImplementedError

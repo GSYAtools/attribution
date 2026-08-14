@@ -8,7 +8,7 @@ from src.run_experiment import (
 
 
 def test_valid_output_is_completed():
-    validator = load_output_validator()
+    _, validator = load_output_validator()
 
     response = (
         '{"attribution":"insufficient_basis",'
@@ -30,7 +30,7 @@ def test_valid_output_is_completed():
 
 
 def test_invalid_json_is_detected():
-    validator = load_output_validator()
+    _, validator = load_output_validator()
 
     response = (
         '{"attribution":"supported",'
@@ -49,7 +49,7 @@ def test_invalid_json_is_detected():
 
 
 def test_schema_invalid_output_is_detected():
-    validator = load_output_validator()
+    _, validator = load_output_validator()
 
     response = (
         '{"attribution":"invalid_value",'

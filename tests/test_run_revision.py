@@ -40,7 +40,7 @@ def test_revision_run_ids_are_distinct_for_two_updates():
 
 
 def test_valid_revision_output_is_completed():
-    validator = load_revision_validator()
+    _, validator = load_revision_validator()
 
     response = (
         '{"revised_attribution":"partially_supported",'
@@ -62,7 +62,7 @@ def test_valid_revision_output_is_completed():
 
 
 def test_invalid_json_is_detected():
-    validator = load_revision_validator()
+    _, validator = load_revision_validator()
 
     response = (
         '{"revised_attribution":"supported",'
@@ -81,7 +81,7 @@ def test_invalid_json_is_detected():
 
 
 def test_schema_invalid_revision_is_detected():
-    validator = load_revision_validator()
+    _, validator = load_revision_validator()
 
     response = (
         '{"revised_attribution":"invalid_value",'
@@ -102,7 +102,7 @@ def test_schema_invalid_revision_is_detected():
 
 
 def test_revision_schema_rejects_additional_properties():
-    validator = load_revision_validator()
+    _, validator = load_revision_validator()
 
     response = (
         '{"revised_attribution":"supported",'

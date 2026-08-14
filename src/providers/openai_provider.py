@@ -12,11 +12,7 @@ from src.providers.errors import (
     ProviderTimeoutError,
     ProviderUnknownError,
 )
-from src.utils import (
-    get_env,
-    load_json,
-    load_yaml,
-)
+from src.utils import get_env
 
 
 class OpenAIProvider(LLMProvider):
@@ -29,24 +25,13 @@ class OpenAIProvider(LLMProvider):
             api_key=get_env("OPENAI_API_KEY")
         )
 
-        paths = load_yaml(
-            "config/paths.yaml"
-        )
-
-        schema_path = paths["prompt_files"][
-            "output_schema"
-        ]
-
-        self.output_schema = load_json(
-            schema_path
-        )
-
     def generate(
         self,
         system_prompt: str,
         user_prompt: str,
         model_id: str,
         generation_config: dict[str, Any],
+        output_schema: dict[str, Any],
     ) -> ModelResponse:
 
         request: dict[str, Any] = {
@@ -56,8 +41,8 @@ class OpenAIProvider(LLMProvider):
             "text": {
                 "format": {
                     "type": "json_schema",
-                    "name": "sc5_attribution",
-                    "schema": self.output_schema,
+                    "name": "sc5_output",
+                    "schema": output_schema,
                     "strict": True,
                 }
             },

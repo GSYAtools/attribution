@@ -12,11 +12,7 @@ from src.providers.errors import (
     ProviderTimeoutError,
     ProviderUnknownError,
 )
-from src.utils import (
-    get_env,
-    load_json,
-    load_yaml,
-)
+from src.utils import get_env
 
 
 class GeminiProvider(LLMProvider):
@@ -29,30 +25,19 @@ class GeminiProvider(LLMProvider):
             api_key=get_env("GEMINI_API_KEY")
         )
 
-        paths = load_yaml(
-            "config/paths.yaml"
-        )
-
-        schema_path = paths["prompt_files"][
-            "output_schema"
-        ]
-
-        self.output_schema = load_json(
-            schema_path
-        )
-
     def generate(
         self,
         system_prompt: str,
         user_prompt: str,
         model_id: str,
         generation_config: dict[str, Any],
+        output_schema: dict[str, Any],
     ) -> ModelResponse:
 
         config_kwargs: dict[str, Any] = {
             "system_instruction": system_prompt,
             "response_mime_type": "application/json",
-            "response_json_schema": self.output_schema,
+            "response_json_schema": output_schema,
             "thinking_config": types.ThinkingConfig(
                 thinking_level="low"
             ),

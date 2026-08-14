@@ -132,16 +132,19 @@ def get_model_configuration(
     )
 
 
-def load_output_validator() -> Draft202012Validator:
-    """Load and compile the Round 1 output schema."""
+def load_output_validator(
+) -> tuple[dict[str, Any], Draft202012Validator]:
+    """Load the Round 1 output schema and compile its validator."""
 
     paths = load_yaml("config/paths.yaml")
 
     schema_path = paths["prompt_files"]["output_schema"]
     schema = load_json(schema_path)
 
-    return Draft202012Validator(schema)
-
+    return (
+        schema,
+        Draft202012Validator(schema),
+    )
 
 def parse_and_validate(
     response_text: str,
@@ -421,7 +424,7 @@ def main() -> None:
 
         return
 
-    validator = load_output_validator()
+    output_schema, validator = load_output_validator()
 
     for row in selected:
         run_id = row["run_id"]
@@ -449,6 +452,7 @@ def main() -> None:
                 user_prompt=user_prompt,
                 model_id=model_id,
                 generation_config=generation_config,
+		output_schema=output_schema,
             )
 
         try:

@@ -166,8 +166,9 @@ def get_model_configuration(
     )
 
 
-def load_revision_validator() -> Draft202012Validator:
-    """Load the Round 2 output schema."""
+def load_revision_validator(
+) -> tuple[dict[str, Any], Draft202012Validator]:
+    """Load the Round 2 output schema and compile its validator."""
 
     paths = load_yaml(
         "config/paths.yaml"
@@ -181,10 +182,10 @@ def load_revision_validator() -> Draft202012Validator:
         schema_path
     )
 
-    return Draft202012Validator(
-        schema
+    return (
+        schema,
+        Draft202012Validator(schema),
     )
-
 
 def parse_and_validate(
     response_text: str,
@@ -538,7 +539,7 @@ def main() -> None:
 
         return
 
-    validator = load_revision_validator()
+    output_schema, validator = load_revision_validator()
 
     for row in selected:
 
@@ -569,6 +570,7 @@ def main() -> None:
                 user_prompt=user_prompt,
                 model_id=model_id,
                 generation_config=generation_config,
+		output_schema=output_schema,
             )
 
         try:

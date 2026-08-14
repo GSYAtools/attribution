@@ -7,7 +7,7 @@ from typing import Any
 from src.providers.errors import ProviderError
 from src.providers.provider_factory import create_provider
 from src.retry_manager import execute_with_retry
-from src.utils import ROOT, load_yaml
+from src.utils import ROOT, load_json, load_yaml
 
 
 MICRO_RUN_DIR = ROOT / "micro_runs"
@@ -92,12 +92,19 @@ def run_one(model_slot: str) -> None:
 
     started_at = datetime.now(timezone.utc)
 
+    paths = load_yaml("config/paths.yaml")
+
+    output_schema = load_json(
+        paths["prompt_files"]["output_schema"]
+    )
+
     def operation():
         return provider.generate(
             system_prompt=TEST_SYSTEM_PROMPT,
             user_prompt=TEST_USER_PROMPT,
             model_id=model_id,
             generation_config=generation_config,
+	    output_schema=output_schema,
         )
 
     try:
