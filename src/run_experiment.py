@@ -498,6 +498,10 @@ def main() -> None:
                 f"{run_id}: {status} - "
                 f"{validation_error}"
             )
+        else:
+            print(
+                f"{run_id}: {status}"
+            )
 
         save_manifest(rows)
 

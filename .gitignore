@@ -25,3 +25,6 @@ Thumbs.db
 
 # Provider connectivity tests
 micro_runs/
+
+# Local diagnostic experimental outputs
+diagnostics/
