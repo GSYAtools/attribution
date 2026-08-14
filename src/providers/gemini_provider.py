@@ -12,7 +12,11 @@ from src.providers.errors import (
     ProviderTimeoutError,
     ProviderUnknownError,
 )
-from src.utils import get_env
+from src.utils import (
+    get_env,
+    load_json,
+    load_yaml,
+)
 
 
 class GeminiProvider(LLMProvider):
@@ -25,6 +29,18 @@ class GeminiProvider(LLMProvider):
             api_key=get_env("GEMINI_API_KEY")
         )
 
+        paths = load_yaml(
+            "config/paths.yaml"
+        )
+
+        schema_path = paths["prompt_files"][
+            "output_schema"
+        ]
+
+        self.output_schema = load_json(
+            schema_path
+        )
+
     def generate(
         self,
         system_prompt: str,
@@ -35,6 +51,11 @@ class GeminiProvider(LLMProvider):
 
         config_kwargs: dict[str, Any] = {
             "system_instruction": system_prompt,
+            "response_mime_type": "application/json",
+            "response_json_schema": self.output_schema,
+            "thinking_config": types.ThinkingConfig(
+                thinking_level="low"
+            ),
         }
 
         max_output_tokens = generation_config.get(
@@ -42,7 +63,9 @@ class GeminiProvider(LLMProvider):
         )
 
         if max_output_tokens is not None:
-            config_kwargs["max_output_tokens"] = max_output_tokens
+            config_kwargs["max_output_tokens"] = (
+                max_output_tokens
+            )
 
         try:
             response = self.client.models.generate_content(

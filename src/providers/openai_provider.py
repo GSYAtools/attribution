@@ -12,7 +12,11 @@ from src.providers.errors import (
     ProviderTimeoutError,
     ProviderUnknownError,
 )
-from src.utils import get_env
+from src.utils import (
+    get_env,
+    load_json,
+    load_yaml,
+)
 
 
 class OpenAIProvider(LLMProvider):
@@ -23,6 +27,18 @@ class OpenAIProvider(LLMProvider):
     def __init__(self) -> None:
         self.client = OpenAI(
             api_key=get_env("OPENAI_API_KEY")
+        )
+
+        paths = load_yaml(
+            "config/paths.yaml"
+        )
+
+        schema_path = paths["prompt_files"][
+            "output_schema"
+        ]
+
+        self.output_schema = load_json(
+            schema_path
         )
 
     def generate(
@@ -37,6 +53,14 @@ class OpenAIProvider(LLMProvider):
             "model": model_id,
             "instructions": system_prompt,
             "input": user_prompt,
+            "text": {
+                "format": {
+                    "type": "json_schema",
+                    "name": "sc5_attribution",
+                    "schema": self.output_schema,
+                    "strict": True,
+                }
+            },
         }
 
         max_output_tokens = generation_config.get(
@@ -44,7 +68,9 @@ class OpenAIProvider(LLMProvider):
         )
 
         if max_output_tokens is not None:
-            request["max_output_tokens"] = max_output_tokens
+            request["max_output_tokens"] = (
+                max_output_tokens
+            )
 
         try:
             response = self.client.responses.create(
@@ -66,7 +92,8 @@ class OpenAIProvider(LLMProvider):
             if (
                 "insufficient_quota" in message
                 or "credit_balance_exhausted" in message
-                or "no credits remaining" in message.lower()
+                or "no credits remaining"
+                in message.lower()
             ):
                 raise ProviderQuotaError(
                     provider=self.provider_name,

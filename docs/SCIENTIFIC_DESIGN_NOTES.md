@@ -474,3 +474,28 @@ The experiment operationalises the conceptual transition:
 and tests whether an explicit evaluative layer affects that transition.
 
 This provides an empirical complement to SC5 by moving the argument from a purely conceptual claim about the need for Evaluative Governance toward an experimentally observable question about how governance conditions affect attribution behaviour
+## Pilot instrumentation revision v1.1
+
+An initial smoke-test execution of pilot v1.0 identified a provider-specific
+output-formatting problem. Three Gemini executions produced invalid JSON,
+including truncated output and free-form text preceding the requested
+structured response.
+
+The issue was treated as an instrumentation failure rather than an
+experimental outcome. No substantive interpretation of these runs was
+performed.
+
+Pilot v1.1 therefore introduces provider-level structured output enforcement
+for both evaluated model families using the same experimental JSON schema.
+
+For Gemini 3.5 Flash, the thinking level is additionally set to `low` to
+prevent the default reasoning budget from interfering with completion of the
+structured response. Sampling parameters remain at the native provider
+defaults.
+
+The revised configuration was validated through independent provider
+micro-runs. Both OpenAI and Gemini produced complete JSON responses conforming
+to the experimental output schema before pilot execution was restarted.
+
+The six v1.0 smoke-test runs are retained as instrumentation diagnostics and
+are excluded from the v1.1 experimental dataset.
