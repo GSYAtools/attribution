@@ -1,0 +1,17 @@
+{
+  "attribution": "supported",
+  "confidence": 95,
+  "justification": "The evidence supports attributing accountable decision-making to the AI-assisted process. It explicitly documents that human reviewers make the final decision, records their rationales, and outlines formal escalation paths to a Senior Claims Reviewer in case of disagreements, alongside a reconsideration process for customers.",
+  "evidence_used": [
+    "The documented procedure assigns the final case-level decision to the claims reviewer.",
+    "Human reviewers determine the final disposition of individual claims.",
+    "Disagreements between the model recommendation and the reviewer are routed to an organisational role identified as Senior Claims Reviewer.",
+    "Reviewers enter a free-text rationale when finalising a disposition.",
+    "Customers may request reconsideration of an adverse disposition."
+  ],
+  "limitations": [
+    "The actual criteria used by the Senior Claims Reviewer to resolve disagreements are not detailed in the provided evidence.",
+    "There is no information on how the Model Operations team's maintenance activities impact decision-making accountability."
+  ],
+  "action": "affirm"
+}

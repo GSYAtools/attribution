@@ -1,0 +1,9 @@
+{
+  "revised_attribution": "supported",
+  "confidence": 95,
+  "revision_decision": "maintain",
+  "justification": "The additional information regarding the role name change from 'Senior Claims Reviewer' to 'Claims Review Lead' does not materially affect the evidential basis, responsibilities, escalation rules, or decision authority of the role. Therefore, the attribution of 'supported' for accountable decision-making is maintained.",
+  "evidence_affected": [
+    "Disagreements between the model recommendation and the reviewer are routed to an organisational role identified as Senior Claims Reviewer."
+  ]
+}

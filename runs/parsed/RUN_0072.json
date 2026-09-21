@@ -1,0 +1,19 @@
+{
+  "attribution": "supported",
+  "confidence": 95,
+  "justification": "The available evidence supports attributing accountable decision-making to the AI-assisted process. Responsibility for relevant decisions is clearly identified, with the final case-level decision assigned to human claims reviewers (and disagreements escalating to a Senior Claims Reviewer). The process preserves sufficient information to reconstruct decisions, including model versions/timestamps, human-identified evidence, and free-text rationales. Furthermore, mechanisms exist for reconsideration of decisions, and those outcomes are retained.",
+  "evidence_used": [
+    "Each model recommendation record contains the model version, timestamp, and a reference to the input record.",
+    "The human review record identifies the evidence consulted.",
+    "Reviewers enter a free-text rationale when finalising a disposition.",
+    "The documented procedure assigns the final case-level decision to the claims reviewer.",
+    "Disagreements between the model recommendation and the reviewer are routed to an organisational role identified as Senior Claims Reviewer.",
+    "Customers may request reconsideration of an adverse disposition.",
+    "Reconsideration outcomes are retained with the original decision record."
+  ],
+  "limitations": [
+    "The final disposition is stored separately from the model recommendation, requiring manual or system-level linkage to correlate them.",
+    "The free-text rationales entered by reviewers are unstructured and may vary in detail and quality."
+  ],
+  "action": "affirm"
+}

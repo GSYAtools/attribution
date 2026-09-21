@@ -1,0 +1,19 @@
+{
+  "attribution": "supported",
+  "confidence": 95,
+  "justification": "The evidence shows that the system has highly similar error rates (false-positive and false-negative rates) and calibration errors across demographic groups A and B. Furthermore, the evaluation dataset is large and representative of the intended deployment population's demographic composition (within 2.5 percentage points), and the subgroup analysis was independently verified.",
+  "evidence_used": [
+    "False-positive rate for demographic group A: 8.1%.",
+    "False-positive rate for demographic group B: 8.7%.",
+    "False-negative rate for demographic group A: 6.4%.",
+    "False-negative rate for demographic group B: 6.8%.",
+    "Calibration error: 0.031 for demographic group A and 0.034 for demographic group B.",
+    "The validation dataset contains 48,200 applications.",
+    "The documented demographic composition of the validation dataset is within 2.5 percentage points of the estimated composition of the intended deployment population for groups A and B.",
+    "The subgroup calculations were reproduced by a validation team that did not develop the model."
+  ],
+  "limitations": [
+    "The analysis is limited to demographic groups A and B, and may not account for other demographic groups or intersectional identities."
+  ],
+  "action": "affirm"
+}

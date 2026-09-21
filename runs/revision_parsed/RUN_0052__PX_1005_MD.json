@@ -1,0 +1,10 @@
+{
+  "revised_attribution": "partially_supported",
+  "confidence": 90,
+  "revision_decision": "weaken",
+  "justification": "The additional information shows a significant performance drop to 72.6% accuracy when encountering new, unseen document templates from a second hospital that fall within the specified deployment categories. Furthermore, the out-of-distribution mechanism failed to flag the majority (68.8%) of these low-accuracy documents. This demonstrates that the system's operational robustness does not consistently generalize to real-world template variations within its target domain.",
+  "evidence_affected": [
+    "Across the predefined formatting-variation set, accuracy ranged from 91.6% to 94.8%.",
+    "Of the 1,200 out-of-distribution samples, 1,127 were flagged by the out-of-distribution mechanism."
+  ]
+}

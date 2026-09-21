@@ -1,0 +1,10 @@
+{
+  "revised_attribution": "partially_supported",
+  "confidence": 90,
+  "revision_decision": "weaken",
+  "justification": "The additional audit findings reveal that the formal assignment of final decision-making authority to human reviewers is undermined in practice. Because exceeding a 12% override rate triggers a managerial review of reviewer performance (with no equivalent review for high agreement rates) and the majority of reviewers admit to considering this indicator, there is strong systemic pressure to conform to model recommendations. This compromises the independent judgment necessary for accountable human-in-the-loop decision-making.",
+  "evidence_affected": [
+    "The documented procedure assigns the final case-level decision to the claims reviewer.",
+    "Disagreements between the model recommendation and the reviewer are routed to an organisational role identified as Senior Claims Reviewer."
+  ]
+}

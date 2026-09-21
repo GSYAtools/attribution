@@ -1,0 +1,9 @@
+{
+  "revised_attribution": "supported",
+  "confidence": 95,
+  "revision_decision": "maintain",
+  "justification": "The additional information details a minor administrative change (renaming the 'Senior Claims Reviewer' role to 'Claims Review Lead') without any alteration to responsibilities, escalation rules, or decision authority. This does not materially affect the evidential basis or reasoning supporting the original assessment that accountable decision-making is supported.",
+  "evidence_affected": [
+    "Disagreements between the model recommendation and the reviewer are routed to an organisational role identified as Senior Claims Reviewer."
+  ]
+}

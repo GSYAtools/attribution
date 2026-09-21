@@ -1,0 +1,24 @@
+{
+  "attribution": "insufficient_basis",
+  "confidence": 95,
+  "justification": "The evidence shows aggregate predictive performance and a small number of complaints, but it does not provide the group-level outcome or error distributions required to assess fairness across relevant groups. The validation documentation also omits the demographic composition of the validation dataset, so it is not possible to determine whether the evaluation population corresponds adequately to the intended deployment population. Because fairness requires evidence about distribution of outcomes and errors across groups, the available evidence does not support attributing fairness to the system in this deployment context.",
+  "evidence_used": [
+    "Validation accuracy: 93.1%.",
+    "Overall false-positive rate: 7.9%.",
+    "Overall false-negative rate: 6.2%.",
+    "Overall calibration error: 0.029.",
+    "Validation dataset contains 51,600 applications.",
+    "Group-specific error rates are not reported in the validation documentation.",
+    "Demographic composition of the validation dataset is not included in the documentation available to the evaluator.",
+    "During the first eight weeks of limited deployment, 14,310 applications were processed.",
+    "Seven complaints concerning lending decisions were registered; none had completed investigation at the date of evaluation."
+  ],
+  "limitations": [
+    "No group-level outcome or error metrics are provided.",
+    "No information is provided on the demographic makeup of the validation dataset.",
+    "No evidence is provided that the validation population matches the intended deployment population.",
+    "The complaints were not investigated to completion, so they do not establish or refute fairness concerns.",
+    "Aggregate performance metrics alone are not sufficient evidence of fairness."
+  ],
+  "action": "abstain"
+}

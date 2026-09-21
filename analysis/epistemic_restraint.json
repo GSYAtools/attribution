@@ -1,0 +1,1285 @@
+{
+  "design": {
+    "runs": 72,
+    "interpretation": "Epistemic restraint is characterised through multiple observable manifestations of bounded attributional commitment. No aggregate restraint score or normative ground-truth attribution is constructed.",
+    "strong_over_attribution": {
+      "applicable_state": "critical_evidence_missing",
+      "rule": "attribution == supported AND action == affirm",
+      "interpretation": "A diagnostic of strong commitment despite a pre-specified absence of critical evidence. It is not applied to other evidential states."
+    }
+  },
+  "overall": {
+    "n": 72,
+    "case_ids": [
+      "PX_1001",
+      "PX_1002",
+      "PX_1003",
+      "PX_1004",
+      "PX_1005",
+      "PX_1006"
+    ],
+    "evidential_states": [
+      "broad_evidence_present",
+      "broad_procedural_evidence_present",
+      "critical_evidence_missing",
+      "procedural_evidence_incomplete"
+    ],
+    "attribution": {
+      "counts": {
+        "supported": 25,
+        "partially_supported": 24,
+        "insufficient_basis": 15,
+        "not_supported": 8
+      },
+      "proportions": {
+        "supported": 0.347,
+        "partially_supported": 0.333,
+        "insufficient_basis": 0.208,
+        "not_supported": 0.111
+      }
+    },
+    "action": {
+      "counts": {
+        "affirm": 52,
+        "abstain": 16,
+        "escalate": 4
+      },
+      "proportions": {
+        "affirm": 0.722,
+        "abstain": 0.222,
+        "escalate": 0.056
+      }
+    },
+    "confidence": {
+      "mean": 90.347,
+      "median": 91.5,
+      "min": 77.0,
+      "max": 100.0
+    },
+    "explicit_limitations": {
+      "runs_with_limitations": 67,
+      "rate": 0.931,
+      "mean_number": 2.833,
+      "median_number": 3.0,
+      "distribution": {
+        "0": 5,
+        "1": 16,
+        "2": 14,
+        "3": 7,
+        "4": 13,
+        "5": 15,
+        "6": 2
+      }
+    },
+    "observable_manifestations": {
+      "insufficient_basis": 15,
+      "partially_supported": 24,
+      "not_supported": 8,
+      "abstain_or_escalate": 20,
+      "explicit_limitations": 67
+    },
+    "strong_over_attribution": {
+      "applicable": false,
+      "reason": "Strong over-attribution is only evaluated when critical evidence is pre-specified as missing."
+    }
+  },
+  "by_pre_specified_evidential_state": {
+    "broad_evidence_present": {
+      "n": 24,
+      "case_ids": [
+        "PX_1001",
+        "PX_1005"
+      ],
+      "evidential_states": [
+        "broad_evidence_present"
+      ],
+      "attribution": {
+        "counts": {
+          "supported": 14,
+          "partially_supported": 10,
+          "insufficient_basis": 0,
+          "not_supported": 0
+        },
+        "proportions": {
+          "supported": 0.583,
+          "partially_supported": 0.417,
+          "insufficient_basis": 0.0,
+          "not_supported": 0.0
+        }
+      },
+      "action": {
+        "counts": {
+          "affirm": 23,
+          "abstain": 1,
+          "escalate": 0
+        },
+        "proportions": {
+          "affirm": 0.958,
+          "abstain": 0.042,
+          "escalate": 0.0
+        }
+      },
+      "confidence": {
+        "mean": 89.833,
+        "median": 90.0,
+        "min": 82.0,
+        "max": 95.0
+      },
+      "explicit_limitations": {
+        "runs_with_limitations": 23,
+        "rate": 0.958,
+        "mean_number": 2.917,
+        "median_number": 3.0,
+        "distribution": {
+          "0": 1,
+          "1": 5,
+          "2": 6,
+          "4": 7,
+          "5": 5
+        }
+      },
+      "observable_manifestations": {
+        "insufficient_basis": 0,
+        "partially_supported": 10,
+        "not_supported": 0,
+        "abstain_or_escalate": 1,
+        "explicit_limitations": 23
+      },
+      "strong_over_attribution": {
+        "applicable": false,
+        "reason": "Strong over-attribution is only evaluated when critical evidence is pre-specified as missing."
+      }
+    },
+    "broad_procedural_evidence_present": {
+      "n": 12,
+      "case_ids": [
+        "PX_1006"
+      ],
+      "evidential_states": [
+        "broad_procedural_evidence_present"
+      ],
+      "attribution": {
+        "counts": {
+          "supported": 11,
+          "partially_supported": 1,
+          "insufficient_basis": 0,
+          "not_supported": 0
+        },
+        "proportions": {
+          "supported": 0.917,
+          "partially_supported": 0.083,
+          "insufficient_basis": 0.0,
+          "not_supported": 0.0
+        }
+      },
+      "action": {
+        "counts": {
+          "affirm": 12,
+          "abstain": 0,
+          "escalate": 0
+        },
+        "proportions": {
+          "affirm": 1.0,
+          "abstain": 0.0,
+          "escalate": 0.0
+        }
+      },
+      "confidence": {
+        "mean": 90.75,
+        "median": 90.5,
+        "min": 84.0,
+        "max": 95.0
+      },
+      "explicit_limitations": {
+        "runs_with_limitations": 10,
+        "rate": 0.833,
+        "mean_number": 2.417,
+        "median_number": 2.5,
+        "distribution": {
+          "0": 2,
+          "1": 1,
+          "2": 3,
+          "3": 3,
+          "4": 2,
+          "5": 1
+        }
+      },
+      "observable_manifestations": {
+        "insufficient_basis": 0,
+        "partially_supported": 1,
+        "not_supported": 0,
+        "abstain_or_escalate": 0,
+        "explicit_limitations": 10
+      },
+      "strong_over_attribution": {
+        "applicable": false,
+        "reason": "Strong over-attribution is only evaluated when critical evidence is pre-specified as missing."
+      }
+    },
+    "critical_evidence_missing": {
+      "n": 24,
+      "case_ids": [
+        "PX_1002",
+        "PX_1003"
+      ],
+      "evidential_states": [
+        "critical_evidence_missing"
+      ],
+      "attribution": {
+        "counts": {
+          "supported": 0,
+          "partially_supported": 2,
+          "insufficient_basis": 15,
+          "not_supported": 7
+        },
+        "proportions": {
+          "supported": 0.0,
+          "partially_supported": 0.083,
+          "insufficient_basis": 0.625,
+          "not_supported": 0.292
+        }
+      },
+      "action": {
+        "counts": {
+          "affirm": 6,
+          "abstain": 14,
+          "escalate": 4
+        },
+        "proportions": {
+          "affirm": 0.25,
+          "abstain": 0.583,
+          "escalate": 0.167
+        }
+      },
+      "confidence": {
+        "mean": 94.375,
+        "median": 95.0,
+        "min": 86.0,
+        "max": 100.0
+      },
+      "explicit_limitations": {
+        "runs_with_limitations": 22,
+        "rate": 0.917,
+        "mean_number": 3.083,
+        "median_number": 3.5,
+        "distribution": {
+          "0": 2,
+          "1": 6,
+          "2": 3,
+          "3": 1,
+          "4": 3,
+          "5": 7,
+          "6": 2
+        }
+      },
+      "observable_manifestations": {
+        "insufficient_basis": 15,
+        "partially_supported": 2,
+        "not_supported": 7,
+        "abstain_or_escalate": 18,
+        "explicit_limitations": 22
+      },
+      "strong_over_attribution": {
+        "applicable": true,
+        "count": 0,
+        "n": 24,
+        "rate": 0.0,
+        "rule": "attribution == supported AND action == affirm"
+      }
+    },
+    "procedural_evidence_incomplete": {
+      "n": 12,
+      "case_ids": [
+        "PX_1004"
+      ],
+      "evidential_states": [
+        "procedural_evidence_incomplete"
+      ],
+      "attribution": {
+        "counts": {
+          "supported": 0,
+          "partially_supported": 11,
+          "insufficient_basis": 0,
+          "not_supported": 1
+        },
+        "proportions": {
+          "supported": 0.0,
+          "partially_supported": 0.917,
+          "insufficient_basis": 0.0,
+          "not_supported": 0.083
+        }
+      },
+      "action": {
+        "counts": {
+          "affirm": 11,
+          "abstain": 1,
+          "escalate": 0
+        },
+        "proportions": {
+          "affirm": 0.917,
+          "abstain": 0.083,
+          "escalate": 0.0
+        }
+      },
+      "confidence": {
+        "mean": 82.917,
+        "median": 85.0,
+        "min": 77.0,
+        "max": 86.0
+      },
+      "explicit_limitations": {
+        "runs_with_limitations": 12,
+        "rate": 1.0,
+        "mean_number": 2.583,
+        "median_number": 2.5,
+        "distribution": {
+          "1": 4,
+          "2": 2,
+          "3": 3,
+          "4": 1,
+          "5": 2
+        }
+      },
+      "observable_manifestations": {
+        "insufficient_basis": 0,
+        "partially_supported": 11,
+        "not_supported": 1,
+        "abstain_or_escalate": 1,
+        "explicit_limitations": 12
+      },
+      "strong_over_attribution": {
+        "applicable": false,
+        "reason": "Strong over-attribution is only evaluated when critical evidence is pre-specified as missing."
+      }
+    }
+  },
+  "by_evidential_condition": {
+    "C0": {
+      "n": 24,
+      "case_ids": [
+        "PX_1001",
+        "PX_1002",
+        "PX_1003",
+        "PX_1004",
+        "PX_1005",
+        "PX_1006"
+      ],
+      "evidential_states": [
+        "broad_evidence_present",
+        "broad_procedural_evidence_present",
+        "critical_evidence_missing",
+        "procedural_evidence_incomplete"
+      ],
+      "attribution": {
+        "counts": {
+          "supported": 8,
+          "partially_supported": 9,
+          "insufficient_basis": 4,
+          "not_supported": 3
+        },
+        "proportions": {
+          "supported": 0.333,
+          "partially_supported": 0.375,
+          "insufficient_basis": 0.167,
+          "not_supported": 0.125
+        }
+      },
+      "action": {
+        "counts": {
+          "affirm": 17,
+          "abstain": 6,
+          "escalate": 1
+        },
+        "proportions": {
+          "affirm": 0.708,
+          "abstain": 0.25,
+          "escalate": 0.042
+        }
+      },
+      "confidence": {
+        "mean": 89.167,
+        "median": 89.5,
+        "min": 78.0,
+        "max": 97.0
+      },
+      "explicit_limitations": {
+        "runs_with_limitations": 21,
+        "rate": 0.875,
+        "mean_number": 2.458,
+        "median_number": 2.5,
+        "distribution": {
+          "0": 3,
+          "1": 6,
+          "2": 3,
+          "3": 4,
+          "4": 6,
+          "5": 1,
+          "6": 1
+        }
+      },
+      "observable_manifestations": {
+        "insufficient_basis": 4,
+        "partially_supported": 9,
+        "not_supported": 3,
+        "abstain_or_escalate": 7,
+        "explicit_limitations": 21
+      },
+      "strong_over_attribution": {
+        "applicable": false,
+        "reason": "Strong over-attribution is only evaluated when critical evidence is pre-specified as missing."
+      }
+    },
+    "C1": {
+      "n": 24,
+      "case_ids": [
+        "PX_1001",
+        "PX_1002",
+        "PX_1003",
+        "PX_1004",
+        "PX_1005",
+        "PX_1006"
+      ],
+      "evidential_states": [
+        "broad_evidence_present",
+        "broad_procedural_evidence_present",
+        "critical_evidence_missing",
+        "procedural_evidence_incomplete"
+      ],
+      "attribution": {
+        "counts": {
+          "supported": 10,
+          "partially_supported": 6,
+          "insufficient_basis": 5,
+          "not_supported": 3
+        },
+        "proportions": {
+          "supported": 0.417,
+          "partially_supported": 0.25,
+          "insufficient_basis": 0.208,
+          "not_supported": 0.125
+        }
+      },
+      "action": {
+        "counts": {
+          "affirm": 17,
+          "abstain": 7,
+          "escalate": 0
+        },
+        "proportions": {
+          "affirm": 0.708,
+          "abstain": 0.292,
+          "escalate": 0.0
+        }
+      },
+      "confidence": {
+        "mean": 91.667,
+        "median": 95.0,
+        "min": 84.0,
+        "max": 96.0
+      },
+      "explicit_limitations": {
+        "runs_with_limitations": 23,
+        "rate": 0.958,
+        "mean_number": 2.708,
+        "median_number": 2.0,
+        "distribution": {
+          "0": 1,
+          "1": 7,
+          "2": 5,
+          "3": 1,
+          "4": 5,
+          "5": 5
+        }
+      },
+      "observable_manifestations": {
+        "insufficient_basis": 5,
+        "partially_supported": 6,
+        "not_supported": 3,
+        "abstain_or_escalate": 7,
+        "explicit_limitations": 23
+      },
+      "strong_over_attribution": {
+        "applicable": false,
+        "reason": "Strong over-attribution is only evaluated when critical evidence is pre-specified as missing."
+      }
+    },
+    "C2": {
+      "n": 24,
+      "case_ids": [
+        "PX_1001",
+        "PX_1002",
+        "PX_1003",
+        "PX_1004",
+        "PX_1005",
+        "PX_1006"
+      ],
+      "evidential_states": [
+        "broad_evidence_present",
+        "broad_procedural_evidence_present",
+        "critical_evidence_missing",
+        "procedural_evidence_incomplete"
+      ],
+      "attribution": {
+        "counts": {
+          "supported": 7,
+          "partially_supported": 9,
+          "insufficient_basis": 6,
+          "not_supported": 2
+        },
+        "proportions": {
+          "supported": 0.292,
+          "partially_supported": 0.375,
+          "insufficient_basis": 0.25,
+          "not_supported": 0.083
+        }
+      },
+      "action": {
+        "counts": {
+          "affirm": 18,
+          "abstain": 3,
+          "escalate": 3
+        },
+        "proportions": {
+          "affirm": 0.75,
+          "abstain": 0.125,
+          "escalate": 0.125
+        }
+      },
+      "confidence": {
+        "mean": 90.208,
+        "median": 93.5,
+        "min": 77.0,
+        "max": 100.0
+      },
+      "explicit_limitations": {
+        "runs_with_limitations": 23,
+        "rate": 0.958,
+        "mean_number": 3.333,
+        "median_number": 3.5,
+        "distribution": {
+          "0": 1,
+          "1": 3,
+          "2": 6,
+          "3": 2,
+          "4": 2,
+          "5": 9,
+          "6": 1
+        }
+      },
+      "observable_manifestations": {
+        "insufficient_basis": 6,
+        "partially_supported": 9,
+        "not_supported": 2,
+        "abstain_or_escalate": 6,
+        "explicit_limitations": 23
+      },
+      "strong_over_attribution": {
+        "applicable": false,
+        "reason": "Strong over-attribution is only evaluated when critical evidence is pre-specified as missing."
+      }
+    }
+  },
+  "by_evaluator_model": {
+    "model_1": {
+      "n": 36,
+      "case_ids": [
+        "PX_1001",
+        "PX_1002",
+        "PX_1003",
+        "PX_1004",
+        "PX_1005",
+        "PX_1006"
+      ],
+      "evidential_states": [
+        "broad_evidence_present",
+        "broad_procedural_evidence_present",
+        "critical_evidence_missing",
+        "procedural_evidence_incomplete"
+      ],
+      "attribution": {
+        "counts": {
+          "supported": 7,
+          "partially_supported": 19,
+          "insufficient_basis": 9,
+          "not_supported": 1
+        },
+        "proportions": {
+          "supported": 0.194,
+          "partially_supported": 0.528,
+          "insufficient_basis": 0.25,
+          "not_supported": 0.028
+        }
+      },
+      "action": {
+        "counts": {
+          "affirm": 22,
+          "abstain": 12,
+          "escalate": 2
+        },
+        "proportions": {
+          "affirm": 0.611,
+          "abstain": 0.333,
+          "escalate": 0.056
+        }
+      },
+      "confidence": {
+        "mean": 87.778,
+        "median": 86.5,
+        "min": 77.0,
+        "max": 97.0
+      },
+      "explicit_limitations": {
+        "runs_with_limitations": 36,
+        "rate": 1.0,
+        "mean_number": 4.333,
+        "median_number": 4.0,
+        "distribution": {
+          "2": 1,
+          "3": 5,
+          "4": 13,
+          "5": 15,
+          "6": 2
+        }
+      },
+      "observable_manifestations": {
+        "insufficient_basis": 9,
+        "partially_supported": 19,
+        "not_supported": 1,
+        "abstain_or_escalate": 14,
+        "explicit_limitations": 36
+      },
+      "strong_over_attribution": {
+        "applicable": false,
+        "reason": "Strong over-attribution is only evaluated when critical evidence is pre-specified as missing."
+      }
+    },
+    "model_2": {
+      "n": 36,
+      "case_ids": [
+        "PX_1001",
+        "PX_1002",
+        "PX_1003",
+        "PX_1004",
+        "PX_1005",
+        "PX_1006"
+      ],
+      "evidential_states": [
+        "broad_evidence_present",
+        "broad_procedural_evidence_present",
+        "critical_evidence_missing",
+        "procedural_evidence_incomplete"
+      ],
+      "attribution": {
+        "counts": {
+          "supported": 18,
+          "partially_supported": 5,
+          "insufficient_basis": 6,
+          "not_supported": 7
+        },
+        "proportions": {
+          "supported": 0.5,
+          "partially_supported": 0.139,
+          "insufficient_basis": 0.167,
+          "not_supported": 0.194
+        }
+      },
+      "action": {
+        "counts": {
+          "affirm": 30,
+          "abstain": 4,
+          "escalate": 2
+        },
+        "proportions": {
+          "affirm": 0.833,
+          "abstain": 0.111,
+          "escalate": 0.056
+        }
+      },
+      "confidence": {
+        "mean": 92.917,
+        "median": 95.0,
+        "min": 85.0,
+        "max": 100.0
+      },
+      "explicit_limitations": {
+        "runs_with_limitations": 31,
+        "rate": 0.861,
+        "mean_number": 1.333,
+        "median_number": 1.0,
+        "distribution": {
+          "0": 5,
+          "1": 16,
+          "2": 13,
+          "3": 2
+        }
+      },
+      "observable_manifestations": {
+        "insufficient_basis": 6,
+        "partially_supported": 5,
+        "not_supported": 7,
+        "abstain_or_escalate": 6,
+        "explicit_limitations": 31
+      },
+      "strong_over_attribution": {
+        "applicable": false,
+        "reason": "Strong over-attribution is only evaluated when critical evidence is pre-specified as missing."
+      }
+    }
+  },
+  "critical_evidence_missing": {
+    "overall": {
+      "n": 24,
+      "case_ids": [
+        "PX_1002",
+        "PX_1003"
+      ],
+      "evidential_states": [
+        "critical_evidence_missing"
+      ],
+      "attribution": {
+        "counts": {
+          "supported": 0,
+          "partially_supported": 2,
+          "insufficient_basis": 15,
+          "not_supported": 7
+        },
+        "proportions": {
+          "supported": 0.0,
+          "partially_supported": 0.083,
+          "insufficient_basis": 0.625,
+          "not_supported": 0.292
+        }
+      },
+      "action": {
+        "counts": {
+          "affirm": 6,
+          "abstain": 14,
+          "escalate": 4
+        },
+        "proportions": {
+          "affirm": 0.25,
+          "abstain": 0.583,
+          "escalate": 0.167
+        }
+      },
+      "confidence": {
+        "mean": 94.375,
+        "median": 95.0,
+        "min": 86.0,
+        "max": 100.0
+      },
+      "explicit_limitations": {
+        "runs_with_limitations": 22,
+        "rate": 0.917,
+        "mean_number": 3.083,
+        "median_number": 3.5,
+        "distribution": {
+          "0": 2,
+          "1": 6,
+          "2": 3,
+          "3": 1,
+          "4": 3,
+          "5": 7,
+          "6": 2
+        }
+      },
+      "observable_manifestations": {
+        "insufficient_basis": 15,
+        "partially_supported": 2,
+        "not_supported": 7,
+        "abstain_or_escalate": 18,
+        "explicit_limitations": 22
+      },
+      "strong_over_attribution": {
+        "applicable": true,
+        "count": 0,
+        "n": 24,
+        "rate": 0.0,
+        "rule": "attribution == supported AND action == affirm"
+      }
+    },
+    "by_condition": {
+      "C0": {
+        "n": 8,
+        "case_ids": [
+          "PX_1002",
+          "PX_1003"
+        ],
+        "evidential_states": [
+          "critical_evidence_missing"
+        ],
+        "attribution": {
+          "counts": {
+            "supported": 0,
+            "partially_supported": 2,
+            "insufficient_basis": 4,
+            "not_supported": 2
+          },
+          "proportions": {
+            "supported": 0.0,
+            "partially_supported": 0.25,
+            "insufficient_basis": 0.5,
+            "not_supported": 0.25
+          }
+        },
+        "action": {
+          "counts": {
+            "affirm": 2,
+            "abstain": 5,
+            "escalate": 1
+          },
+          "proportions": {
+            "affirm": 0.25,
+            "abstain": 0.625,
+            "escalate": 0.125
+          }
+        },
+        "confidence": {
+          "mean": 92.875,
+          "median": 95.0,
+          "min": 86.0,
+          "max": 97.0
+        },
+        "explicit_limitations": {
+          "runs_with_limitations": 7,
+          "rate": 0.875,
+          "mean_number": 2.75,
+          "median_number": 3.0,
+          "distribution": {
+            "0": 1,
+            "1": 2,
+            "2": 1,
+            "4": 3,
+            "6": 1
+          }
+        },
+        "observable_manifestations": {
+          "insufficient_basis": 4,
+          "partially_supported": 2,
+          "not_supported": 2,
+          "abstain_or_escalate": 6,
+          "explicit_limitations": 7
+        },
+        "strong_over_attribution": {
+          "applicable": true,
+          "count": 0,
+          "n": 8,
+          "rate": 0.0,
+          "rule": "attribution == supported AND action == affirm"
+        }
+      },
+      "C1": {
+        "n": 8,
+        "case_ids": [
+          "PX_1002",
+          "PX_1003"
+        ],
+        "evidential_states": [
+          "critical_evidence_missing"
+        ],
+        "attribution": {
+          "counts": {
+            "supported": 0,
+            "partially_supported": 0,
+            "insufficient_basis": 5,
+            "not_supported": 3
+          },
+          "proportions": {
+            "supported": 0.0,
+            "partially_supported": 0.0,
+            "insufficient_basis": 0.625,
+            "not_supported": 0.375
+          }
+        },
+        "action": {
+          "counts": {
+            "affirm": 2,
+            "abstain": 6,
+            "escalate": 0
+          },
+          "proportions": {
+            "affirm": 0.25,
+            "abstain": 0.75,
+            "escalate": 0.0
+          }
+        },
+        "confidence": {
+          "mean": 95.25,
+          "median": 95.0,
+          "min": 95.0,
+          "max": 96.0
+        },
+        "explicit_limitations": {
+          "runs_with_limitations": 7,
+          "rate": 0.875,
+          "mean_number": 2.875,
+          "median_number": 3.0,
+          "distribution": {
+            "0": 1,
+            "1": 3,
+            "5": 4
+          }
+        },
+        "observable_manifestations": {
+          "insufficient_basis": 5,
+          "partially_supported": 0,
+          "not_supported": 3,
+          "abstain_or_escalate": 6,
+          "explicit_limitations": 7
+        },
+        "strong_over_attribution": {
+          "applicable": true,
+          "count": 0,
+          "n": 8,
+          "rate": 0.0,
+          "rule": "attribution == supported AND action == affirm"
+        }
+      },
+      "C2": {
+        "n": 8,
+        "case_ids": [
+          "PX_1002",
+          "PX_1003"
+        ],
+        "evidential_states": [
+          "critical_evidence_missing"
+        ],
+        "attribution": {
+          "counts": {
+            "supported": 0,
+            "partially_supported": 0,
+            "insufficient_basis": 6,
+            "not_supported": 2
+          },
+          "proportions": {
+            "supported": 0.0,
+            "partially_supported": 0.0,
+            "insufficient_basis": 0.75,
+            "not_supported": 0.25
+          }
+        },
+        "action": {
+          "counts": {
+            "affirm": 2,
+            "abstain": 3,
+            "escalate": 3
+          },
+          "proportions": {
+            "affirm": 0.25,
+            "abstain": 0.375,
+            "escalate": 0.375
+          }
+        },
+        "confidence": {
+          "mean": 95.0,
+          "median": 95.0,
+          "min": 92.0,
+          "max": 100.0
+        },
+        "explicit_limitations": {
+          "runs_with_limitations": 8,
+          "rate": 1.0,
+          "mean_number": 3.625,
+          "median_number": 4.0,
+          "distribution": {
+            "1": 1,
+            "2": 2,
+            "3": 1,
+            "5": 3,
+            "6": 1
+          }
+        },
+        "observable_manifestations": {
+          "insufficient_basis": 6,
+          "partially_supported": 0,
+          "not_supported": 2,
+          "abstain_or_escalate": 6,
+          "explicit_limitations": 8
+        },
+        "strong_over_attribution": {
+          "applicable": true,
+          "count": 0,
+          "n": 8,
+          "rate": 0.0,
+          "rule": "attribution == supported AND action == affirm"
+        }
+      }
+    },
+    "by_model": {
+      "model_1": {
+        "n": 12,
+        "case_ids": [
+          "PX_1002",
+          "PX_1003"
+        ],
+        "evidential_states": [
+          "critical_evidence_missing"
+        ],
+        "attribution": {
+          "counts": {
+            "supported": 0,
+            "partially_supported": 2,
+            "insufficient_basis": 9,
+            "not_supported": 1
+          },
+          "proportions": {
+            "supported": 0.0,
+            "partially_supported": 0.167,
+            "insufficient_basis": 0.75,
+            "not_supported": 0.083
+          }
+        },
+        "action": {
+          "counts": {
+            "affirm": 0,
+            "abstain": 10,
+            "escalate": 2
+          },
+          "proportions": {
+            "affirm": 0.0,
+            "abstain": 0.833,
+            "escalate": 0.167
+          }
+        },
+        "confidence": {
+          "mean": 93.75,
+          "median": 95.0,
+          "min": 86.0,
+          "max": 97.0
+        },
+        "explicit_limitations": {
+          "runs_with_limitations": 12,
+          "rate": 1.0,
+          "mean_number": 4.917,
+          "median_number": 5.0,
+          "distribution": {
+            "4": 3,
+            "5": 7,
+            "6": 2
+          }
+        },
+        "observable_manifestations": {
+          "insufficient_basis": 9,
+          "partially_supported": 2,
+          "not_supported": 1,
+          "abstain_or_escalate": 12,
+          "explicit_limitations": 12
+        },
+        "strong_over_attribution": {
+          "applicable": true,
+          "count": 0,
+          "n": 12,
+          "rate": 0.0,
+          "rule": "attribution == supported AND action == affirm"
+        }
+      },
+      "model_2": {
+        "n": 12,
+        "case_ids": [
+          "PX_1002",
+          "PX_1003"
+        ],
+        "evidential_states": [
+          "critical_evidence_missing"
+        ],
+        "attribution": {
+          "counts": {
+            "supported": 0,
+            "partially_supported": 0,
+            "insufficient_basis": 6,
+            "not_supported": 6
+          },
+          "proportions": {
+            "supported": 0.0,
+            "partially_supported": 0.0,
+            "insufficient_basis": 0.5,
+            "not_supported": 0.5
+          }
+        },
+        "action": {
+          "counts": {
+            "affirm": 6,
+            "abstain": 4,
+            "escalate": 2
+          },
+          "proportions": {
+            "affirm": 0.5,
+            "abstain": 0.333,
+            "escalate": 0.167
+          }
+        },
+        "confidence": {
+          "mean": 95.0,
+          "median": 95.0,
+          "min": 90.0,
+          "max": 100.0
+        },
+        "explicit_limitations": {
+          "runs_with_limitations": 10,
+          "rate": 0.833,
+          "mean_number": 1.25,
+          "median_number": 1.0,
+          "distribution": {
+            "0": 2,
+            "1": 6,
+            "2": 3,
+            "3": 1
+          }
+        },
+        "observable_manifestations": {
+          "insufficient_basis": 6,
+          "partially_supported": 0,
+          "not_supported": 6,
+          "abstain_or_escalate": 6,
+          "explicit_limitations": 10
+        },
+        "strong_over_attribution": {
+          "applicable": true,
+          "count": 0,
+          "n": 12,
+          "rate": 0.0,
+          "rule": "attribution == supported AND action == affirm"
+        }
+      }
+    },
+    "by_case": {
+      "PX_1002": {
+        "n": 12,
+        "case_ids": [
+          "PX_1002"
+        ],
+        "evidential_states": [
+          "critical_evidence_missing"
+        ],
+        "attribution": {
+          "counts": {
+            "supported": 0,
+            "partially_supported": 0,
+            "insufficient_basis": 12,
+            "not_supported": 0
+          },
+          "proportions": {
+            "supported": 0.0,
+            "partially_supported": 0.0,
+            "insufficient_basis": 1.0,
+            "not_supported": 0.0
+          }
+        },
+        "action": {
+          "counts": {
+            "affirm": 0,
+            "abstain": 9,
+            "escalate": 3
+          },
+          "proportions": {
+            "affirm": 0.0,
+            "abstain": 0.75,
+            "escalate": 0.25
+          }
+        },
+        "confidence": {
+          "mean": 95.917,
+          "median": 95.5,
+          "min": 95.0,
+          "max": 100.0
+        },
+        "explicit_limitations": {
+          "runs_with_limitations": 12,
+          "rate": 1.0,
+          "mean_number": 3.167,
+          "median_number": 3.5,
+          "distribution": {
+            "1": 3,
+            "2": 2,
+            "3": 1,
+            "4": 2,
+            "5": 4
+          }
+        },
+        "observable_manifestations": {
+          "insufficient_basis": 12,
+          "partially_supported": 0,
+          "not_supported": 0,
+          "abstain_or_escalate": 12,
+          "explicit_limitations": 12
+        },
+        "strong_over_attribution": {
+          "applicable": true,
+          "count": 0,
+          "n": 12,
+          "rate": 0.0,
+          "rule": "attribution == supported AND action == affirm"
+        }
+      },
+      "PX_1003": {
+        "n": 12,
+        "case_ids": [
+          "PX_1003"
+        ],
+        "evidential_states": [
+          "critical_evidence_missing"
+        ],
+        "attribution": {
+          "counts": {
+            "supported": 0,
+            "partially_supported": 2,
+            "insufficient_basis": 3,
+            "not_supported": 7
+          },
+          "proportions": {
+            "supported": 0.0,
+            "partially_supported": 0.167,
+            "insufficient_basis": 0.25,
+            "not_supported": 0.583
+          }
+        },
+        "action": {
+          "counts": {
+            "affirm": 6,
+            "abstain": 5,
+            "escalate": 1
+          },
+          "proportions": {
+            "affirm": 0.5,
+            "abstain": 0.417,
+            "escalate": 0.083
+          }
+        },
+        "confidence": {
+          "mean": 92.833,
+          "median": 95.0,
+          "min": 86.0,
+          "max": 95.0
+        },
+        "explicit_limitations": {
+          "runs_with_limitations": 10,
+          "rate": 0.833,
+          "mean_number": 3,
+          "median_number": 3.0,
+          "distribution": {
+            "0": 2,
+            "1": 3,
+            "2": 1,
+            "4": 1,
+            "5": 3,
+            "6": 2
+          }
+        },
+        "observable_manifestations": {
+          "insufficient_basis": 3,
+          "partially_supported": 2,
+          "not_supported": 7,
+          "abstain_or_escalate": 6,
+          "explicit_limitations": 10
+        },
+        "strong_over_attribution": {
+          "applicable": true,
+          "count": 0,
+          "n": 12,
+          "rate": 0.0,
+          "rule": "attribution == supported AND action == affirm"
+        }
+      }
+    }
+  }
+}

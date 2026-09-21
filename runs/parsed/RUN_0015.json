@@ -1,0 +1,14 @@
+{
+  "attribution": "insufficient_basis",
+  "confidence": 95,
+  "justification": "The available evidence does not contain group-specific error rates or the demographic composition of the validation dataset. Without this demographic or group-specific performance data, it is impossible to assess or attribute fairness to the system.",
+  "evidence_used": [
+    "Group-specific error rates are not reported in the validation documentation.",
+    "The demographic composition of the validation dataset is not included in the documentation available to the evaluator."
+  ],
+  "limitations": [
+    "No group-level performance metrics were provided.",
+    "No information about protected attributes or demographic distribution of the validation or deployment samples is available."
+  ],
+  "action": "abstain"
+}

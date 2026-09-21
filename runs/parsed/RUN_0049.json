@@ -1,0 +1,21 @@
+{
+  "attribution": "partially_supported",
+  "confidence": 86,
+  "justification": "The evidence shows the system maintains high validation accuracy under several predefined perturbations and has a functioning out-of-distribution mechanism that detected most excluded-class samples; the reported results were also independently reproduced. This supports some operational robustness for the described document-classification workflow. However, the evidence is limited to validation tests and does not directly demonstrate robustness in live deployment conditions or across the full range of operational variation.",
+  "evidence_used": [
+    "Standard-condition validation accuracy: 95.2%.",
+    "With 10% randomly removed non-critical fields, accuracy was 93.7%.",
+    "With the predefined OCR degradation transformation, accuracy was 92.1%.",
+    "Across the predefined formatting-variation set, accuracy ranged from 91.6% to 94.8%.",
+    "Of the 1,200 out-of-distribution samples, 1,127 were flagged by the out-of-distribution mechanism.",
+    "The validation protocol contains three predefined perturbation tests; corresponding accuracies were 92.8%, 90.9%, and 93.4%.",
+    "A separate validation team reproduced the reported tests."
+  ],
+  "limitations": [
+    "Evidence is based on predefined validation perturbations rather than observed operational deployment.",
+    "No direct evidence is provided for performance under unlisted or more severe real-world document variations.",
+    "The out-of-distribution test results do not specify false positive behavior or performance on in-distribution edge cases.",
+    "Staff review before downstream processing may mitigate risk, but the extent of that mitigation is not quantified in the evidence."
+  ],
+  "action": "affirm"
+}

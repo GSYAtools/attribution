@@ -1,0 +1,10 @@
+{
+  "revised_attribution": "supported",
+  "confidence": 92,
+  "revision_decision": "maintain",
+  "justification": "The additional information does not materially alter the evidential basis for accountability. The process still identifies a human decision-maker for the final case-level disposition, retains the reviewer rationale and evidence consulted, preserves the model recommendation metadata and decision record linkage, and provides reconsideration pathways. The role rename from 'Senior Claims Reviewer' to 'Claims Review Lead' leaves responsibilities, escalation rules, and decision authority unchanged, so the accountability structure remains supported.",
+  "evidence_affected": [
+    "Disagreements between the model recommendation and the reviewer are routed to an organisational role identified as Senior Claims Reviewer.",
+    "The organisation renamed the role 'Senior Claims Reviewer' to 'Claims Review Lead'. The responsibilities, escalation rules, and decision authority assigned to the role were unchanged."
+  ]
+}

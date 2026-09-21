@@ -1,0 +1,14 @@
+{
+  "attribution": "not_supported",
+  "confidence": 95,
+  "justification": "The evaluation criteria state that operational robustness must be assessed using evidence concerning system behaviour across conditions beyond standard validation conditions, such as variation, perturbation, or distributional change. It explicitly notes that evidence from nominal operating conditions alone is insufficient. The provided evidence indicates that validation samples were drawn from the same sources as training data, and that there are no results for altered document formats, OCR degradation, out-of-distribution tests, or perturbation tests. Therefore, attributing operational robustness to the system is not supported.",
+  "evidence_used": [
+    "The held-out validation sample was drawn from the same document sources used to construct the training corpus.",
+    "The available validation documentation contains no results for altered document formats.",
+    "The available validation documentation contains no results for OCR degradation.",
+    "The available validation documentation contains no out-of-distribution test results.",
+    "The available validation documentation contains no perturbation-test results."
+  ],
+  "limitations": [],
+  "action": "affirm"
+}

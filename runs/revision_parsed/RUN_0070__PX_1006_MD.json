@@ -1,0 +1,15 @@
+{
+  "revised_attribution": "partially_supported",
+  "confidence": 90,
+  "revision_decision": "maintain",
+  "justification": "The additional audit information reinforces, rather than undermines, the earlier conclusion that accountable decision-making is partially supported. The documented procedure still assigns the final case-level decision to the claims reviewer, reviewers still provide a free-text rationale, the human review record identifies consulted evidence, and reconsideration outcomes remain attached to the original decision record. These features continue to support identifiable responsibility and some ability to reconstruct and review decisions. The new evidence also shows that reviewer performance assessments include an agreement-rate indicator and that overrides above 12% trigger managerial review, which adds an oversight mechanism tied to reviewer decision behavior. However, this also introduces a performance-management influence on reviewer behavior: 17 of 21 reviewers reported considering the agreement-rate indicator when deciding whether to override a recommendation. That means the process is not fully transparent as a pure accountability mechanism, because reviewer choices may be shaped by managerial consequences not previously documented. Overall, the evidence still supports accountable decision-making in part, but not enough to elevate the attribution to fully supported.",
+  "evidence_affected": [
+    "The documented procedure assigns the final case-level decision to the claims reviewer.",
+    "Reviewers enter a free-text rationale when finalising a disposition.",
+    "The human review record identifies the evidence consulted.",
+    "Reconsideration outcomes are retained with the original decision record.",
+    "An internal audit found that reviewer performance assessments include an agreement-rate indicator comparing final decisions with model recommendations.",
+    "An override rate above 12% triggers managerial review of the reviewer's case history.",
+    "17 of 21 reviewers reported considering the agreement-rate indicator when deciding whether to override a recommendation."
+  ]
+}

@@ -1,0 +1,1252 @@
+{
+  "design": {
+    "items": 72,
+    "evaluators": 3,
+    "human_observations": 216,
+    "interpretation": "Descriptive external observations of the evidence-justification relationship; no human ground truth or consensus label is constructed."
+  },
+  "aggregate": {
+    "human_observations": 216,
+    "grounding": {
+      "n": 216,
+      "mean": 3.241,
+      "median": 3.0,
+      "distribution": {
+        "1": 7,
+        "2": 29,
+        "3": 85,
+        "4": 95
+      },
+      "well_or_critically_grounded": 180,
+      "well_or_critically_grounded_rate": 0.833
+    },
+    "limitation_recognition": {
+      "n": 216,
+      "0": 14,
+      "1": 202,
+      "positive_rate": 0.935
+    },
+    "unsupported_evidence": {
+      "n": 216,
+      "0": 213,
+      "1": 3,
+      "positive_rate": 0.014
+    }
+  },
+  "by_evaluator": {
+    "A": {
+      "human_observations": 72,
+      "grounding": {
+        "n": 72,
+        "mean": 2.819,
+        "median": 3.0,
+        "distribution": {
+          "1": 7,
+          "2": 22,
+          "3": 20,
+          "4": 23
+        },
+        "well_or_critically_grounded": 43,
+        "well_or_critically_grounded_rate": 0.597
+      },
+      "limitation_recognition": {
+        "n": 72,
+        "0": 4,
+        "1": 68,
+        "positive_rate": 0.944
+      },
+      "unsupported_evidence": {
+        "n": 72,
+        "0": 72,
+        "1": 0,
+        "positive_rate": 0.0
+      }
+    },
+    "B": {
+      "human_observations": 72,
+      "grounding": {
+        "n": 72,
+        "mean": 3.556,
+        "median": 4.0,
+        "distribution": {
+          "2": 1,
+          "3": 30,
+          "4": 41
+        },
+        "well_or_critically_grounded": 71,
+        "well_or_critically_grounded_rate": 0.986
+      },
+      "limitation_recognition": {
+        "n": 72,
+        "0": 5,
+        "1": 67,
+        "positive_rate": 0.931
+      },
+      "unsupported_evidence": {
+        "n": 72,
+        "0": 69,
+        "1": 3,
+        "positive_rate": 0.042
+      }
+    },
+    "C": {
+      "human_observations": 72,
+      "grounding": {
+        "n": 72,
+        "mean": 3.347,
+        "median": 3.0,
+        "distribution": {
+          "2": 6,
+          "3": 35,
+          "4": 31
+        },
+        "well_or_critically_grounded": 66,
+        "well_or_critically_grounded_rate": 0.917
+      },
+      "limitation_recognition": {
+        "n": 72,
+        "0": 5,
+        "1": 67,
+        "positive_rate": 0.931
+      },
+      "unsupported_evidence": {
+        "n": 72,
+        "0": 72,
+        "1": 0,
+        "positive_rate": 0.0
+      }
+    }
+  },
+  "item_level_observability": {
+    "items": 72,
+    "grounding_convergence": {
+      "unanimous": 10,
+      "two_same_one_different": 47,
+      "all_different": 15
+    },
+    "grounding_range": {
+      "0": 10,
+      "1": 41,
+      "2": 16,
+      "3": 5
+    },
+    "number_of_assessors_rating_grounding_ge_3": {
+      "1": 7,
+      "2": 22,
+      "3": 43
+    },
+    "limitation_recognition": {
+      "unanimous_items": 71,
+      "unanimous_rate": 0.986,
+      "number_of_positive_assessors": {
+        "0": 4,
+        "1": 1,
+        "3": 67
+      }
+    },
+    "unsupported_evidence": {
+      "unanimous_items": 69,
+      "unanimous_rate": 0.958,
+      "number_of_positive_assessors": {
+        "0": 69,
+        "1": 3
+      }
+    }
+  },
+  "by_evidential_condition": {
+    "E0": {
+      "source_condition": "C0",
+      "items": 24,
+      "human_observations": 72,
+      "grounding": {
+        "n": 72,
+        "mean": 3.097,
+        "median": 3.0,
+        "distribution": {
+          "1": 4,
+          "2": 15,
+          "3": 23,
+          "4": 30
+        },
+        "well_or_critically_grounded": 53,
+        "well_or_critically_grounded_rate": 0.736
+      },
+      "limitation_recognition": {
+        "n": 72,
+        "0": 9,
+        "1": 63,
+        "positive_rate": 0.875
+      },
+      "unsupported_evidence": {
+        "n": 72,
+        "0": 72,
+        "1": 0,
+        "positive_rate": 0.0
+      },
+      "by_evaluator": {
+        "A": {
+          "human_observations": 24,
+          "grounding": {
+            "n": 24,
+            "mean": 2.417,
+            "median": 2.0,
+            "distribution": {
+              "1": 4,
+              "2": 10,
+              "3": 6,
+              "4": 4
+            },
+            "well_or_critically_grounded": 10,
+            "well_or_critically_grounded_rate": 0.417
+          },
+          "limitation_recognition": {
+            "n": 24,
+            "0": 3,
+            "1": 21,
+            "positive_rate": 0.875
+          },
+          "unsupported_evidence": {
+            "n": 24,
+            "0": 24,
+            "1": 0,
+            "positive_rate": 0.0
+          }
+        },
+        "B": {
+          "human_observations": 24,
+          "grounding": {
+            "n": 24,
+            "mean": 3.708,
+            "median": 4.0,
+            "distribution": {
+              "2": 1,
+              "3": 5,
+              "4": 18
+            },
+            "well_or_critically_grounded": 23,
+            "well_or_critically_grounded_rate": 0.958
+          },
+          "limitation_recognition": {
+            "n": 24,
+            "0": 3,
+            "1": 21,
+            "positive_rate": 0.875
+          },
+          "unsupported_evidence": {
+            "n": 24,
+            "0": 24,
+            "1": 0,
+            "positive_rate": 0.0
+          }
+        },
+        "C": {
+          "human_observations": 24,
+          "grounding": {
+            "n": 24,
+            "mean": 3.167,
+            "median": 3.0,
+            "distribution": {
+              "2": 4,
+              "3": 12,
+              "4": 8
+            },
+            "well_or_critically_grounded": 20,
+            "well_or_critically_grounded_rate": 0.833
+          },
+          "limitation_recognition": {
+            "n": 24,
+            "0": 3,
+            "1": 21,
+            "positive_rate": 0.875
+          },
+          "unsupported_evidence": {
+            "n": 24,
+            "0": 24,
+            "1": 0,
+            "positive_rate": 0.0
+          }
+        }
+      }
+    },
+    "E1": {
+      "source_condition": "C1",
+      "items": 24,
+      "human_observations": 72,
+      "grounding": {
+        "n": 72,
+        "mean": 3.264,
+        "median": 3.0,
+        "distribution": {
+          "1": 1,
+          "2": 9,
+          "3": 32,
+          "4": 30
+        },
+        "well_or_critically_grounded": 62,
+        "well_or_critically_grounded_rate": 0.861
+      },
+      "limitation_recognition": {
+        "n": 72,
+        "0": 2,
+        "1": 70,
+        "positive_rate": 0.972
+      },
+      "unsupported_evidence": {
+        "n": 72,
+        "0": 71,
+        "1": 1,
+        "positive_rate": 0.014
+      },
+      "by_evaluator": {
+        "A": {
+          "human_observations": 24,
+          "grounding": {
+            "n": 24,
+            "mean": 2.917,
+            "median": 3.0,
+            "distribution": {
+              "1": 1,
+              "2": 8,
+              "3": 7,
+              "4": 8
+            },
+            "well_or_critically_grounded": 15,
+            "well_or_critically_grounded_rate": 0.625
+          },
+          "limitation_recognition": {
+            "n": 24,
+            "0": 0,
+            "1": 24,
+            "positive_rate": 1.0
+          },
+          "unsupported_evidence": {
+            "n": 24,
+            "0": 24,
+            "1": 0,
+            "positive_rate": 0.0
+          }
+        },
+        "B": {
+          "human_observations": 24,
+          "grounding": {
+            "n": 24,
+            "mean": 3.458,
+            "median": 3.0,
+            "distribution": {
+              "3": 13,
+              "4": 11
+            },
+            "well_or_critically_grounded": 24,
+            "well_or_critically_grounded_rate": 1.0
+          },
+          "limitation_recognition": {
+            "n": 24,
+            "0": 1,
+            "1": 23,
+            "positive_rate": 0.958
+          },
+          "unsupported_evidence": {
+            "n": 24,
+            "0": 23,
+            "1": 1,
+            "positive_rate": 0.042
+          }
+        },
+        "C": {
+          "human_observations": 24,
+          "grounding": {
+            "n": 24,
+            "mean": 3.417,
+            "median": 3.0,
+            "distribution": {
+              "2": 1,
+              "3": 12,
+              "4": 11
+            },
+            "well_or_critically_grounded": 23,
+            "well_or_critically_grounded_rate": 0.958
+          },
+          "limitation_recognition": {
+            "n": 24,
+            "0": 1,
+            "1": 23,
+            "positive_rate": 0.958
+          },
+          "unsupported_evidence": {
+            "n": 24,
+            "0": 24,
+            "1": 0,
+            "positive_rate": 0.0
+          }
+        }
+      }
+    },
+    "E2": {
+      "source_condition": "C2",
+      "items": 24,
+      "human_observations": 72,
+      "grounding": {
+        "n": 72,
+        "mean": 3.361,
+        "median": 3.0,
+        "distribution": {
+          "1": 2,
+          "2": 5,
+          "3": 30,
+          "4": 35
+        },
+        "well_or_critically_grounded": 65,
+        "well_or_critically_grounded_rate": 0.903
+      },
+      "limitation_recognition": {
+        "n": 72,
+        "0": 3,
+        "1": 69,
+        "positive_rate": 0.958
+      },
+      "unsupported_evidence": {
+        "n": 72,
+        "0": 70,
+        "1": 2,
+        "positive_rate": 0.028
+      },
+      "by_evaluator": {
+        "A": {
+          "human_observations": 24,
+          "grounding": {
+            "n": 24,
+            "mean": 3.125,
+            "median": 3.0,
+            "distribution": {
+              "1": 2,
+              "2": 4,
+              "3": 7,
+              "4": 11
+            },
+            "well_or_critically_grounded": 18,
+            "well_or_critically_grounded_rate": 0.75
+          },
+          "limitation_recognition": {
+            "n": 24,
+            "0": 1,
+            "1": 23,
+            "positive_rate": 0.958
+          },
+          "unsupported_evidence": {
+            "n": 24,
+            "0": 24,
+            "1": 0,
+            "positive_rate": 0.0
+          }
+        },
+        "B": {
+          "human_observations": 24,
+          "grounding": {
+            "n": 24,
+            "mean": 3.5,
+            "median": 3.5,
+            "distribution": {
+              "3": 12,
+              "4": 12
+            },
+            "well_or_critically_grounded": 24,
+            "well_or_critically_grounded_rate": 1.0
+          },
+          "limitation_recognition": {
+            "n": 24,
+            "0": 1,
+            "1": 23,
+            "positive_rate": 0.958
+          },
+          "unsupported_evidence": {
+            "n": 24,
+            "0": 22,
+            "1": 2,
+            "positive_rate": 0.083
+          }
+        },
+        "C": {
+          "human_observations": 24,
+          "grounding": {
+            "n": 24,
+            "mean": 3.458,
+            "median": 3.5,
+            "distribution": {
+              "2": 1,
+              "3": 11,
+              "4": 12
+            },
+            "well_or_critically_grounded": 23,
+            "well_or_critically_grounded_rate": 0.958
+          },
+          "limitation_recognition": {
+            "n": 24,
+            "0": 1,
+            "1": 23,
+            "positive_rate": 0.958
+          },
+          "unsupported_evidence": {
+            "n": 24,
+            "0": 24,
+            "1": 0,
+            "positive_rate": 0.0
+          }
+        }
+      }
+    }
+  },
+  "by_pre_specified_evidential_state": {
+    "broad_evidence_present": {
+      "case_ids": [
+        "PX_1001",
+        "PX_1005"
+      ],
+      "items": 24,
+      "human_observations": 72,
+      "grounding": {
+        "n": 72,
+        "mean": 3.25,
+        "median": 3.0,
+        "distribution": {
+          "1": 1,
+          "2": 10,
+          "3": 31,
+          "4": 30
+        },
+        "well_or_critically_grounded": 61,
+        "well_or_critically_grounded_rate": 0.847
+      },
+      "limitation_recognition": {
+        "n": 72,
+        "0": 3,
+        "1": 69,
+        "positive_rate": 0.958
+      },
+      "unsupported_evidence": {
+        "n": 72,
+        "0": 72,
+        "1": 0,
+        "positive_rate": 0.0
+      },
+      "by_evaluator": {
+        "A": {
+          "human_observations": 24,
+          "grounding": {
+            "n": 24,
+            "mean": 2.917,
+            "median": 3.0,
+            "distribution": {
+              "1": 1,
+              "2": 8,
+              "3": 7,
+              "4": 8
+            },
+            "well_or_critically_grounded": 15,
+            "well_or_critically_grounded_rate": 0.625
+          },
+          "limitation_recognition": {
+            "n": 24,
+            "0": 1,
+            "1": 23,
+            "positive_rate": 0.958
+          },
+          "unsupported_evidence": {
+            "n": 24,
+            "0": 24,
+            "1": 0,
+            "positive_rate": 0.0
+          }
+        },
+        "B": {
+          "human_observations": 24,
+          "grounding": {
+            "n": 24,
+            "mean": 3.5,
+            "median": 4.0,
+            "distribution": {
+              "2": 1,
+              "3": 10,
+              "4": 13
+            },
+            "well_or_critically_grounded": 23,
+            "well_or_critically_grounded_rate": 0.958
+          },
+          "limitation_recognition": {
+            "n": 24,
+            "0": 1,
+            "1": 23,
+            "positive_rate": 0.958
+          },
+          "unsupported_evidence": {
+            "n": 24,
+            "0": 24,
+            "1": 0,
+            "positive_rate": 0.0
+          }
+        },
+        "C": {
+          "human_observations": 24,
+          "grounding": {
+            "n": 24,
+            "mean": 3.333,
+            "median": 3.0,
+            "distribution": {
+              "2": 1,
+              "3": 14,
+              "4": 9
+            },
+            "well_or_critically_grounded": 23,
+            "well_or_critically_grounded_rate": 0.958
+          },
+          "limitation_recognition": {
+            "n": 24,
+            "0": 1,
+            "1": 23,
+            "positive_rate": 0.958
+          },
+          "unsupported_evidence": {
+            "n": 24,
+            "0": 24,
+            "1": 0,
+            "positive_rate": 0.0
+          }
+        }
+      }
+    },
+    "broad_procedural_evidence_present": {
+      "case_ids": [
+        "PX_1006"
+      ],
+      "items": 12,
+      "human_observations": 36,
+      "grounding": {
+        "n": 36,
+        "mean": 3.361,
+        "median": 4.0,
+        "distribution": {
+          "1": 2,
+          "2": 2,
+          "3": 13,
+          "4": 19
+        },
+        "well_or_critically_grounded": 32,
+        "well_or_critically_grounded_rate": 0.889
+      },
+      "limitation_recognition": {
+        "n": 36,
+        "0": 6,
+        "1": 30,
+        "positive_rate": 0.833
+      },
+      "unsupported_evidence": {
+        "n": 36,
+        "0": 35,
+        "1": 1,
+        "positive_rate": 0.028
+      },
+      "by_evaluator": {
+        "A": {
+          "human_observations": 12,
+          "grounding": {
+            "n": 12,
+            "mean": 2.917,
+            "median": 3.0,
+            "distribution": {
+              "1": 2,
+              "3": 7,
+              "4": 3
+            },
+            "well_or_critically_grounded": 10,
+            "well_or_critically_grounded_rate": 0.833
+          },
+          "limitation_recognition": {
+            "n": 12,
+            "0": 2,
+            "1": 10,
+            "positive_rate": 0.833
+          },
+          "unsupported_evidence": {
+            "n": 12,
+            "0": 12,
+            "1": 0,
+            "positive_rate": 0.0
+          }
+        },
+        "B": {
+          "human_observations": 12,
+          "grounding": {
+            "n": 12,
+            "mean": 3.833,
+            "median": 4.0,
+            "distribution": {
+              "3": 2,
+              "4": 10
+            },
+            "well_or_critically_grounded": 12,
+            "well_or_critically_grounded_rate": 1.0
+          },
+          "limitation_recognition": {
+            "n": 12,
+            "0": 2,
+            "1": 10,
+            "positive_rate": 0.833
+          },
+          "unsupported_evidence": {
+            "n": 12,
+            "0": 11,
+            "1": 1,
+            "positive_rate": 0.083
+          }
+        },
+        "C": {
+          "human_observations": 12,
+          "grounding": {
+            "n": 12,
+            "mean": 3.333,
+            "median": 3.5,
+            "distribution": {
+              "2": 2,
+              "3": 4,
+              "4": 6
+            },
+            "well_or_critically_grounded": 10,
+            "well_or_critically_grounded_rate": 0.833
+          },
+          "limitation_recognition": {
+            "n": 12,
+            "0": 2,
+            "1": 10,
+            "positive_rate": 0.833
+          },
+          "unsupported_evidence": {
+            "n": 12,
+            "0": 12,
+            "1": 0,
+            "positive_rate": 0.0
+          }
+        }
+      }
+    },
+    "critical_evidence_missing": {
+      "case_ids": [
+        "PX_1002",
+        "PX_1003"
+      ],
+      "items": 24,
+      "human_observations": 72,
+      "grounding": {
+        "n": 72,
+        "mean": 3.264,
+        "median": 4.0,
+        "distribution": {
+          "1": 4,
+          "2": 12,
+          "3": 17,
+          "4": 39
+        },
+        "well_or_critically_grounded": 56,
+        "well_or_critically_grounded_rate": 0.778
+      },
+      "limitation_recognition": {
+        "n": 72,
+        "0": 5,
+        "1": 67,
+        "positive_rate": 0.931
+      },
+      "unsupported_evidence": {
+        "n": 72,
+        "0": 71,
+        "1": 1,
+        "positive_rate": 0.014
+      },
+      "by_evaluator": {
+        "A": {
+          "human_observations": 24,
+          "grounding": {
+            "n": 24,
+            "mean": 2.542,
+            "median": 2.0,
+            "distribution": {
+              "1": 4,
+              "2": 10,
+              "3": 3,
+              "4": 7
+            },
+            "well_or_critically_grounded": 10,
+            "well_or_critically_grounded_rate": 0.417
+          },
+          "limitation_recognition": {
+            "n": 24,
+            "0": 1,
+            "1": 23,
+            "positive_rate": 0.958
+          },
+          "unsupported_evidence": {
+            "n": 24,
+            "0": 24,
+            "1": 0,
+            "positive_rate": 0.0
+          }
+        },
+        "B": {
+          "human_observations": 24,
+          "grounding": {
+            "n": 24,
+            "mean": 3.708,
+            "median": 4.0,
+            "distribution": {
+              "3": 7,
+              "4": 17
+            },
+            "well_or_critically_grounded": 24,
+            "well_or_critically_grounded_rate": 1.0
+          },
+          "limitation_recognition": {
+            "n": 24,
+            "0": 2,
+            "1": 22,
+            "positive_rate": 0.917
+          },
+          "unsupported_evidence": {
+            "n": 24,
+            "0": 23,
+            "1": 1,
+            "positive_rate": 0.042
+          }
+        },
+        "C": {
+          "human_observations": 24,
+          "grounding": {
+            "n": 24,
+            "mean": 3.542,
+            "median": 4.0,
+            "distribution": {
+              "2": 2,
+              "3": 7,
+              "4": 15
+            },
+            "well_or_critically_grounded": 22,
+            "well_or_critically_grounded_rate": 0.917
+          },
+          "limitation_recognition": {
+            "n": 24,
+            "0": 2,
+            "1": 22,
+            "positive_rate": 0.917
+          },
+          "unsupported_evidence": {
+            "n": 24,
+            "0": 24,
+            "1": 0,
+            "positive_rate": 0.0
+          }
+        }
+      }
+    },
+    "procedural_evidence_incomplete": {
+      "case_ids": [
+        "PX_1004"
+      ],
+      "items": 12,
+      "human_observations": 36,
+      "grounding": {
+        "n": 36,
+        "mean": 3.056,
+        "median": 3.0,
+        "distribution": {
+          "2": 5,
+          "3": 24,
+          "4": 7
+        },
+        "well_or_critically_grounded": 31,
+        "well_or_critically_grounded_rate": 0.861
+      },
+      "limitation_recognition": {
+        "n": 36,
+        "0": 0,
+        "1": 36,
+        "positive_rate": 1.0
+      },
+      "unsupported_evidence": {
+        "n": 36,
+        "0": 35,
+        "1": 1,
+        "positive_rate": 0.028
+      },
+      "by_evaluator": {
+        "A": {
+          "human_observations": 12,
+          "grounding": {
+            "n": 12,
+            "mean": 3.083,
+            "median": 3.0,
+            "distribution": {
+              "2": 4,
+              "3": 3,
+              "4": 5
+            },
+            "well_or_critically_grounded": 8,
+            "well_or_critically_grounded_rate": 0.667
+          },
+          "limitation_recognition": {
+            "n": 12,
+            "0": 0,
+            "1": 12,
+            "positive_rate": 1.0
+          },
+          "unsupported_evidence": {
+            "n": 12,
+            "0": 12,
+            "1": 0,
+            "positive_rate": 0.0
+          }
+        },
+        "B": {
+          "human_observations": 12,
+          "grounding": {
+            "n": 12,
+            "mean": 3.083,
+            "median": 3.0,
+            "distribution": {
+              "3": 11,
+              "4": 1
+            },
+            "well_or_critically_grounded": 12,
+            "well_or_critically_grounded_rate": 1.0
+          },
+          "limitation_recognition": {
+            "n": 12,
+            "0": 0,
+            "1": 12,
+            "positive_rate": 1.0
+          },
+          "unsupported_evidence": {
+            "n": 12,
+            "0": 11,
+            "1": 1,
+            "positive_rate": 0.083
+          }
+        },
+        "C": {
+          "human_observations": 12,
+          "grounding": {
+            "n": 12,
+            "mean": 3,
+            "median": 3.0,
+            "distribution": {
+              "2": 1,
+              "3": 10,
+              "4": 1
+            },
+            "well_or_critically_grounded": 11,
+            "well_or_critically_grounded_rate": 0.917
+          },
+          "limitation_recognition": {
+            "n": 12,
+            "0": 0,
+            "1": 12,
+            "positive_rate": 1.0
+          },
+          "unsupported_evidence": {
+            "n": 12,
+            "0": 12,
+            "1": 0,
+            "positive_rate": 0.0
+          }
+        }
+      }
+    }
+  },
+  "by_evaluator_model": {
+    "model_1": {
+      "items": 36,
+      "human_observations": 108,
+      "grounding": {
+        "n": 108,
+        "mean": 3.481,
+        "median": 4.0,
+        "distribution": {
+          "2": 7,
+          "3": 42,
+          "4": 59
+        },
+        "well_or_critically_grounded": 101,
+        "well_or_critically_grounded_rate": 0.935
+      },
+      "limitation_recognition": {
+        "n": 108,
+        "0": 0,
+        "1": 108,
+        "positive_rate": 1.0
+      },
+      "unsupported_evidence": {
+        "n": 108,
+        "0": 106,
+        "1": 2,
+        "positive_rate": 0.019
+      },
+      "by_evaluator": {
+        "A": {
+          "human_observations": 36,
+          "grounding": {
+            "n": 36,
+            "mean": 3.472,
+            "median": 4.0,
+            "distribution": {
+              "2": 6,
+              "3": 7,
+              "4": 23
+            },
+            "well_or_critically_grounded": 30,
+            "well_or_critically_grounded_rate": 0.833
+          },
+          "limitation_recognition": {
+            "n": 36,
+            "0": 0,
+            "1": 36,
+            "positive_rate": 1.0
+          },
+          "unsupported_evidence": {
+            "n": 36,
+            "0": 36,
+            "1": 0,
+            "positive_rate": 0.0
+          }
+        },
+        "B": {
+          "human_observations": 36,
+          "grounding": {
+            "n": 36,
+            "mean": 3.556,
+            "median": 4.0,
+            "distribution": {
+              "2": 1,
+              "3": 14,
+              "4": 21
+            },
+            "well_or_critically_grounded": 35,
+            "well_or_critically_grounded_rate": 0.972
+          },
+          "limitation_recognition": {
+            "n": 36,
+            "0": 0,
+            "1": 36,
+            "positive_rate": 1.0
+          },
+          "unsupported_evidence": {
+            "n": 36,
+            "0": 34,
+            "1": 2,
+            "positive_rate": 0.056
+          }
+        },
+        "C": {
+          "human_observations": 36,
+          "grounding": {
+            "n": 36,
+            "mean": 3.417,
+            "median": 3.0,
+            "distribution": {
+              "3": 21,
+              "4": 15
+            },
+            "well_or_critically_grounded": 36,
+            "well_or_critically_grounded_rate": 1.0
+          },
+          "limitation_recognition": {
+            "n": 36,
+            "0": 0,
+            "1": 36,
+            "positive_rate": 1.0
+          },
+          "unsupported_evidence": {
+            "n": 36,
+            "0": 36,
+            "1": 0,
+            "positive_rate": 0.0
+          }
+        }
+      },
+      "human_convergence": {
+        "items": 36,
+        "grounding_convergence": {
+          "unanimous": 7,
+          "two_same_one_different": 27,
+          "all_different": 2
+        },
+        "grounding_range": {
+          "0": 7,
+          "1": 26,
+          "2": 3
+        },
+        "number_of_assessors_rating_grounding_ge_3": {
+          "1": 1,
+          "2": 5,
+          "3": 30
+        },
+        "limitation_recognition": {
+          "unanimous_items": 36,
+          "unanimous_rate": 1.0,
+          "number_of_positive_assessors": {
+            "3": 36
+          }
+        },
+        "unsupported_evidence": {
+          "unanimous_items": 34,
+          "unanimous_rate": 0.944,
+          "number_of_positive_assessors": {
+            "0": 34,
+            "1": 2
+          }
+        }
+      }
+    },
+    "model_2": {
+      "items": 36,
+      "human_observations": 108,
+      "grounding": {
+        "n": 108,
+        "mean": 3,
+        "median": 3.0,
+        "distribution": {
+          "1": 7,
+          "2": 22,
+          "3": 43,
+          "4": 36
+        },
+        "well_or_critically_grounded": 79,
+        "well_or_critically_grounded_rate": 0.731
+      },
+      "limitation_recognition": {
+        "n": 108,
+        "0": 14,
+        "1": 94,
+        "positive_rate": 0.87
+      },
+      "unsupported_evidence": {
+        "n": 108,
+        "0": 107,
+        "1": 1,
+        "positive_rate": 0.009
+      },
+      "by_evaluator": {
+        "A": {
+          "human_observations": 36,
+          "grounding": {
+            "n": 36,
+            "mean": 2.167,
+            "median": 2.0,
+            "distribution": {
+              "1": 7,
+              "2": 16,
+              "3": 13
+            },
+            "well_or_critically_grounded": 13,
+            "well_or_critically_grounded_rate": 0.361
+          },
+          "limitation_recognition": {
+            "n": 36,
+            "0": 4,
+            "1": 32,
+            "positive_rate": 0.889
+          },
+          "unsupported_evidence": {
+            "n": 36,
+            "0": 36,
+            "1": 0,
+            "positive_rate": 0.0
+          }
+        },
+        "B": {
+          "human_observations": 36,
+          "grounding": {
+            "n": 36,
+            "mean": 3.556,
+            "median": 4.0,
+            "distribution": {
+              "3": 16,
+              "4": 20
+            },
+            "well_or_critically_grounded": 36,
+            "well_or_critically_grounded_rate": 1.0
+          },
+          "limitation_recognition": {
+            "n": 36,
+            "0": 5,
+            "1": 31,
+            "positive_rate": 0.861
+          },
+          "unsupported_evidence": {
+            "n": 36,
+            "0": 35,
+            "1": 1,
+            "positive_rate": 0.028
+          }
+        },
+        "C": {
+          "human_observations": 36,
+          "grounding": {
+            "n": 36,
+            "mean": 3.278,
+            "median": 3.0,
+            "distribution": {
+              "2": 6,
+              "3": 14,
+              "4": 16
+            },
+            "well_or_critically_grounded": 30,
+            "well_or_critically_grounded_rate": 0.833
+          },
+          "limitation_recognition": {
+            "n": 36,
+            "0": 5,
+            "1": 31,
+            "positive_rate": 0.861
+          },
+          "unsupported_evidence": {
+            "n": 36,
+            "0": 36,
+            "1": 0,
+            "positive_rate": 0.0
+          }
+        }
+      },
+      "human_convergence": {
+        "items": 36,
+        "grounding_convergence": {
+          "unanimous": 3,
+          "two_same_one_different": 20,
+          "all_different": 13
+        },
+        "grounding_range": {
+          "0": 3,
+          "1": 15,
+          "2": 13,
+          "3": 5
+        },
+        "number_of_assessors_rating_grounding_ge_3": {
+          "1": 6,
+          "2": 17,
+          "3": 13
+        },
+        "limitation_recognition": {
+          "unanimous_items": 35,
+          "unanimous_rate": 0.972,
+          "number_of_positive_assessors": {
+            "0": 4,
+            "1": 1,
+            "3": 31
+          }
+        },
+        "unsupported_evidence": {
+          "unanimous_items": 35,
+          "unanimous_rate": 0.972,
+          "number_of_positive_assessors": {
+            "0": 35,
+            "1": 1
+          }
+        }
+      }
+    }
+  }
+}

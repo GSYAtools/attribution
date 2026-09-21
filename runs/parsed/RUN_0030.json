@@ -1,0 +1,24 @@
+{
+  "attribution": "insufficient_basis",
+  "confidence": 95,
+  "justification": "The evidence shows strong nominal performance in standard validation and pilot deployment, but it does not demonstrate robustness across relevant deployment conditions. The validation sample came from the same sources as training, and the available documentation contains no results for altered document formats, OCR degradation, out-of-distribution conditions, or perturbation tests. The pilot modification rate also does not by itself establish robustness across such conditions.",
+  "evidence_used": [
+    "Standard validation accuracy: 96.4%.",
+    "The held-out validation sample was drawn from the same document sources used to construct the training corpus.",
+    "Pilot deployment accuracy: 94.9%.",
+    "During the pilot, 18,420 documents were processed.",
+    "Human operators modified 3.1% of model classifications before downstream processing.",
+    "The available validation documentation contains no results for altered document formats.",
+    "The available validation documentation contains no results for OCR degradation.",
+    "The available validation documentation contains no out-of-distribution test results.",
+    "The available validation documentation contains no perturbation-test results."
+  ],
+  "limitations": [
+    "No evidence of performance under altered document formats.",
+    "No evidence of performance under OCR degradation.",
+    "No evidence of performance under out-of-distribution conditions.",
+    "No perturbation-test results are available.",
+    "Validation data came from the same sources as training, limiting support for broader deployment robustness."
+  ],
+  "action": "abstain"
+}

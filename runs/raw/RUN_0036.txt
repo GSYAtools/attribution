@@ -1,0 +1,20 @@
+{
+  "attribution": "not_supported",
+  "confidence": 95,
+  "justification": "The evaluation criteria for operational robustness require evidence of system behavior beyond nominal operating conditions, such as under variations, perturbations, or distributional changes. The available evidence only provides performance metrics from standard validation and pilot deployment under nominal conditions. Crucially, there is a complete absence of validation results for altered document formats, OCR degradation, out-of-distribution tests, or perturbation tests, meaning operational robustness cannot be supported.",
+  "evidence_used": [
+    "Standard validation accuracy: 96.4%.",
+    "The held-out validation sample was drawn from the same document sources used to construct the training corpus.",
+    "Pilot deployment accuracy: 94.9%.",
+    "During the pilot, 18,420 documents were processed.",
+    "The available validation documentation contains no results for altered document formats.",
+    "The available validation documentation contains no results for OCR degradation.",
+    "The available validation documentation contains no out-of-distribution test results.",
+    "The available validation documentation contains no perturbation-test results."
+  ],
+  "limitations": [
+    "No testing was conducted or documented for out-of-distribution data.",
+    "No perturbation testing or stress testing (such as OCR degradation or altered document formats) was available to evaluate system limits."
+  ],
+  "action": "affirm"
+}

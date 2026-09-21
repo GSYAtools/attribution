@@ -1,0 +1,1314 @@
+{
+  "design": {
+    "runs": 72,
+    "interpretation": "Discriminative capacity is examined descriptively through the relation between pre-specified evidential states and resulting attributional profiles. No state is assigned a normatively correct attribution."
+  },
+  "overall": {
+    "n": 72,
+    "case_ids": [
+      "PX_1001",
+      "PX_1002",
+      "PX_1003",
+      "PX_1004",
+      "PX_1005",
+      "PX_1006"
+    ],
+    "attribution": {
+      "counts": {
+        "supported": 25,
+        "partially_supported": 24,
+        "insufficient_basis": 15,
+        "not_supported": 8
+      },
+      "proportions": {
+        "supported": 0.347,
+        "partially_supported": 0.333,
+        "insufficient_basis": 0.208,
+        "not_supported": 0.111
+      },
+      "categories_observed": 4
+    },
+    "action": {
+      "counts": {
+        "affirm": 52,
+        "abstain": 16,
+        "escalate": 4
+      },
+      "proportions": {
+        "affirm": 0.722,
+        "abstain": 0.222,
+        "escalate": 0.056
+      }
+    },
+    "confidence": {
+      "mean": 90.347,
+      "median": 91.5,
+      "min": 77.0,
+      "max": 100.0
+    }
+  },
+  "by_pre_specified_evidential_state": {
+    "broad_evidence_present": {
+      "n": 24,
+      "case_ids": [
+        "PX_1001",
+        "PX_1005"
+      ],
+      "attribution": {
+        "counts": {
+          "supported": 14,
+          "partially_supported": 10,
+          "insufficient_basis": 0,
+          "not_supported": 0
+        },
+        "proportions": {
+          "supported": 0.583,
+          "partially_supported": 0.417,
+          "insufficient_basis": 0.0,
+          "not_supported": 0.0
+        },
+        "categories_observed": 2
+      },
+      "action": {
+        "counts": {
+          "affirm": 23,
+          "abstain": 1,
+          "escalate": 0
+        },
+        "proportions": {
+          "affirm": 0.958,
+          "abstain": 0.042,
+          "escalate": 0.0
+        }
+      },
+      "confidence": {
+        "mean": 89.833,
+        "median": 90.0,
+        "min": 82.0,
+        "max": 95.0
+      }
+    },
+    "broad_procedural_evidence_present": {
+      "n": 12,
+      "case_ids": [
+        "PX_1006"
+      ],
+      "attribution": {
+        "counts": {
+          "supported": 11,
+          "partially_supported": 1,
+          "insufficient_basis": 0,
+          "not_supported": 0
+        },
+        "proportions": {
+          "supported": 0.917,
+          "partially_supported": 0.083,
+          "insufficient_basis": 0.0,
+          "not_supported": 0.0
+        },
+        "categories_observed": 2
+      },
+      "action": {
+        "counts": {
+          "affirm": 12,
+          "abstain": 0,
+          "escalate": 0
+        },
+        "proportions": {
+          "affirm": 1.0,
+          "abstain": 0.0,
+          "escalate": 0.0
+        }
+      },
+      "confidence": {
+        "mean": 90.75,
+        "median": 90.5,
+        "min": 84.0,
+        "max": 95.0
+      }
+    },
+    "critical_evidence_missing": {
+      "n": 24,
+      "case_ids": [
+        "PX_1002",
+        "PX_1003"
+      ],
+      "attribution": {
+        "counts": {
+          "supported": 0,
+          "partially_supported": 2,
+          "insufficient_basis": 15,
+          "not_supported": 7
+        },
+        "proportions": {
+          "supported": 0.0,
+          "partially_supported": 0.083,
+          "insufficient_basis": 0.625,
+          "not_supported": 0.292
+        },
+        "categories_observed": 3
+      },
+      "action": {
+        "counts": {
+          "affirm": 6,
+          "abstain": 14,
+          "escalate": 4
+        },
+        "proportions": {
+          "affirm": 0.25,
+          "abstain": 0.583,
+          "escalate": 0.167
+        }
+      },
+      "confidence": {
+        "mean": 94.375,
+        "median": 95.0,
+        "min": 86.0,
+        "max": 100.0
+      }
+    },
+    "procedural_evidence_incomplete": {
+      "n": 12,
+      "case_ids": [
+        "PX_1004"
+      ],
+      "attribution": {
+        "counts": {
+          "supported": 0,
+          "partially_supported": 11,
+          "insufficient_basis": 0,
+          "not_supported": 1
+        },
+        "proportions": {
+          "supported": 0.0,
+          "partially_supported": 0.917,
+          "insufficient_basis": 0.0,
+          "not_supported": 0.083
+        },
+        "categories_observed": 2
+      },
+      "action": {
+        "counts": {
+          "affirm": 11,
+          "abstain": 1,
+          "escalate": 0
+        },
+        "proportions": {
+          "affirm": 0.917,
+          "abstain": 0.083,
+          "escalate": 0.0
+        }
+      },
+      "confidence": {
+        "mean": 82.917,
+        "median": 85.0,
+        "min": 77.0,
+        "max": 86.0
+      }
+    }
+  },
+  "by_evidential_condition": {
+    "C0": {
+      "n": 24,
+      "case_ids": [
+        "PX_1001",
+        "PX_1002",
+        "PX_1003",
+        "PX_1004",
+        "PX_1005",
+        "PX_1006"
+      ],
+      "attribution": {
+        "counts": {
+          "supported": 8,
+          "partially_supported": 9,
+          "insufficient_basis": 4,
+          "not_supported": 3
+        },
+        "proportions": {
+          "supported": 0.333,
+          "partially_supported": 0.375,
+          "insufficient_basis": 0.167,
+          "not_supported": 0.125
+        },
+        "categories_observed": 4
+      },
+      "action": {
+        "counts": {
+          "affirm": 17,
+          "abstain": 6,
+          "escalate": 1
+        },
+        "proportions": {
+          "affirm": 0.708,
+          "abstain": 0.25,
+          "escalate": 0.042
+        }
+      },
+      "confidence": {
+        "mean": 89.167,
+        "median": 89.5,
+        "min": 78.0,
+        "max": 97.0
+      }
+    },
+    "C1": {
+      "n": 24,
+      "case_ids": [
+        "PX_1001",
+        "PX_1002",
+        "PX_1003",
+        "PX_1004",
+        "PX_1005",
+        "PX_1006"
+      ],
+      "attribution": {
+        "counts": {
+          "supported": 10,
+          "partially_supported": 6,
+          "insufficient_basis": 5,
+          "not_supported": 3
+        },
+        "proportions": {
+          "supported": 0.417,
+          "partially_supported": 0.25,
+          "insufficient_basis": 0.208,
+          "not_supported": 0.125
+        },
+        "categories_observed": 4
+      },
+      "action": {
+        "counts": {
+          "affirm": 17,
+          "abstain": 7,
+          "escalate": 0
+        },
+        "proportions": {
+          "affirm": 0.708,
+          "abstain": 0.292,
+          "escalate": 0.0
+        }
+      },
+      "confidence": {
+        "mean": 91.667,
+        "median": 95.0,
+        "min": 84.0,
+        "max": 96.0
+      }
+    },
+    "C2": {
+      "n": 24,
+      "case_ids": [
+        "PX_1001",
+        "PX_1002",
+        "PX_1003",
+        "PX_1004",
+        "PX_1005",
+        "PX_1006"
+      ],
+      "attribution": {
+        "counts": {
+          "supported": 7,
+          "partially_supported": 9,
+          "insufficient_basis": 6,
+          "not_supported": 2
+        },
+        "proportions": {
+          "supported": 0.292,
+          "partially_supported": 0.375,
+          "insufficient_basis": 0.25,
+          "not_supported": 0.083
+        },
+        "categories_observed": 4
+      },
+      "action": {
+        "counts": {
+          "affirm": 18,
+          "abstain": 3,
+          "escalate": 3
+        },
+        "proportions": {
+          "affirm": 0.75,
+          "abstain": 0.125,
+          "escalate": 0.125
+        }
+      },
+      "confidence": {
+        "mean": 90.208,
+        "median": 93.5,
+        "min": 77.0,
+        "max": 100.0
+      }
+    }
+  },
+  "by_evaluator_model": {
+    "model_1": {
+      "n": 36,
+      "case_ids": [
+        "PX_1001",
+        "PX_1002",
+        "PX_1003",
+        "PX_1004",
+        "PX_1005",
+        "PX_1006"
+      ],
+      "attribution": {
+        "counts": {
+          "supported": 7,
+          "partially_supported": 19,
+          "insufficient_basis": 9,
+          "not_supported": 1
+        },
+        "proportions": {
+          "supported": 0.194,
+          "partially_supported": 0.528,
+          "insufficient_basis": 0.25,
+          "not_supported": 0.028
+        },
+        "categories_observed": 4
+      },
+      "action": {
+        "counts": {
+          "affirm": 22,
+          "abstain": 12,
+          "escalate": 2
+        },
+        "proportions": {
+          "affirm": 0.611,
+          "abstain": 0.333,
+          "escalate": 0.056
+        }
+      },
+      "confidence": {
+        "mean": 87.778,
+        "median": 86.5,
+        "min": 77.0,
+        "max": 97.0
+      }
+    },
+    "model_2": {
+      "n": 36,
+      "case_ids": [
+        "PX_1001",
+        "PX_1002",
+        "PX_1003",
+        "PX_1004",
+        "PX_1005",
+        "PX_1006"
+      ],
+      "attribution": {
+        "counts": {
+          "supported": 18,
+          "partially_supported": 5,
+          "insufficient_basis": 6,
+          "not_supported": 7
+        },
+        "proportions": {
+          "supported": 0.5,
+          "partially_supported": 0.139,
+          "insufficient_basis": 0.167,
+          "not_supported": 0.194
+        },
+        "categories_observed": 4
+      },
+      "action": {
+        "counts": {
+          "affirm": 30,
+          "abstain": 4,
+          "escalate": 2
+        },
+        "proportions": {
+          "affirm": 0.833,
+          "abstain": 0.111,
+          "escalate": 0.056
+        }
+      },
+      "confidence": {
+        "mean": 92.917,
+        "median": 95.0,
+        "min": 85.0,
+        "max": 100.0
+      }
+    }
+  },
+  "by_state_and_condition": {
+    "broad_evidence_present": {
+      "C0": {
+        "n": 8,
+        "case_ids": [
+          "PX_1001",
+          "PX_1005"
+        ],
+        "attribution": {
+          "counts": {
+            "supported": 4,
+            "partially_supported": 4,
+            "insufficient_basis": 0,
+            "not_supported": 0
+          },
+          "proportions": {
+            "supported": 0.5,
+            "partially_supported": 0.5,
+            "insufficient_basis": 0.0,
+            "not_supported": 0.0
+          },
+          "categories_observed": 2
+        },
+        "action": {
+          "counts": {
+            "affirm": 7,
+            "abstain": 1,
+            "escalate": 0
+          },
+          "proportions": {
+            "affirm": 0.875,
+            "abstain": 0.125,
+            "escalate": 0.0
+          }
+        },
+        "confidence": {
+          "mean": 88.25,
+          "median": 88.0,
+          "min": 82.0,
+          "max": 95.0
+        }
+      },
+      "C1": {
+        "n": 8,
+        "case_ids": [
+          "PX_1001",
+          "PX_1005"
+        ],
+        "attribution": {
+          "counts": {
+            "supported": 6,
+            "partially_supported": 2,
+            "insufficient_basis": 0,
+            "not_supported": 0
+          },
+          "proportions": {
+            "supported": 0.75,
+            "partially_supported": 0.25,
+            "insufficient_basis": 0.0,
+            "not_supported": 0.0
+          },
+          "categories_observed": 2
+        },
+        "action": {
+          "counts": {
+            "affirm": 8,
+            "abstain": 0,
+            "escalate": 0
+          },
+          "proportions": {
+            "affirm": 1.0,
+            "abstain": 0.0,
+            "escalate": 0.0
+          }
+        },
+        "confidence": {
+          "mean": 91.5,
+          "median": 92.5,
+          "min": 84.0,
+          "max": 95.0
+        }
+      },
+      "C2": {
+        "n": 8,
+        "case_ids": [
+          "PX_1001",
+          "PX_1005"
+        ],
+        "attribution": {
+          "counts": {
+            "supported": 4,
+            "partially_supported": 4,
+            "insufficient_basis": 0,
+            "not_supported": 0
+          },
+          "proportions": {
+            "supported": 0.5,
+            "partially_supported": 0.5,
+            "insufficient_basis": 0.0,
+            "not_supported": 0.0
+          },
+          "categories_observed": 2
+        },
+        "action": {
+          "counts": {
+            "affirm": 8,
+            "abstain": 0,
+            "escalate": 0
+          },
+          "proportions": {
+            "affirm": 1.0,
+            "abstain": 0.0,
+            "escalate": 0.0
+          }
+        },
+        "confidence": {
+          "mean": 89.75,
+          "median": 90.5,
+          "min": 84.0,
+          "max": 95.0
+        }
+      }
+    },
+    "broad_procedural_evidence_present": {
+      "C0": {
+        "n": 4,
+        "case_ids": [
+          "PX_1006"
+        ],
+        "attribution": {
+          "counts": {
+            "supported": 4,
+            "partially_supported": 0,
+            "insufficient_basis": 0,
+            "not_supported": 0
+          },
+          "proportions": {
+            "supported": 1.0,
+            "partially_supported": 0.0,
+            "insufficient_basis": 0.0,
+            "not_supported": 0.0
+          },
+          "categories_observed": 1
+        },
+        "action": {
+          "counts": {
+            "affirm": 4,
+            "abstain": 0,
+            "escalate": 0
+          },
+          "proportions": {
+            "affirm": 1.0,
+            "abstain": 0.0,
+            "escalate": 0.0
+          }
+        },
+        "confidence": {
+          "mean": 91.25,
+          "median": 91.5,
+          "min": 87.0,
+          "max": 95.0
+        }
+      },
+      "C1": {
+        "n": 4,
+        "case_ids": [
+          "PX_1006"
+        ],
+        "attribution": {
+          "counts": {
+            "supported": 4,
+            "partially_supported": 0,
+            "insufficient_basis": 0,
+            "not_supported": 0
+          },
+          "proportions": {
+            "supported": 1.0,
+            "partially_supported": 0.0,
+            "insufficient_basis": 0.0,
+            "not_supported": 0.0
+          },
+          "categories_observed": 1
+        },
+        "action": {
+          "counts": {
+            "affirm": 4,
+            "abstain": 0,
+            "escalate": 0
+          },
+          "proportions": {
+            "affirm": 1.0,
+            "abstain": 0.0,
+            "escalate": 0.0
+          }
+        },
+        "confidence": {
+          "mean": 91.5,
+          "median": 90.5,
+          "min": 90.0,
+          "max": 95.0
+        }
+      },
+      "C2": {
+        "n": 4,
+        "case_ids": [
+          "PX_1006"
+        ],
+        "attribution": {
+          "counts": {
+            "supported": 3,
+            "partially_supported": 1,
+            "insufficient_basis": 0,
+            "not_supported": 0
+          },
+          "proportions": {
+            "supported": 0.75,
+            "partially_supported": 0.25,
+            "insufficient_basis": 0.0,
+            "not_supported": 0.0
+          },
+          "categories_observed": 2
+        },
+        "action": {
+          "counts": {
+            "affirm": 4,
+            "abstain": 0,
+            "escalate": 0
+          },
+          "proportions": {
+            "affirm": 1.0,
+            "abstain": 0.0,
+            "escalate": 0.0
+          }
+        },
+        "confidence": {
+          "mean": 89.5,
+          "median": 89.5,
+          "min": 84.0,
+          "max": 95.0
+        }
+      }
+    },
+    "critical_evidence_missing": {
+      "C0": {
+        "n": 8,
+        "case_ids": [
+          "PX_1002",
+          "PX_1003"
+        ],
+        "attribution": {
+          "counts": {
+            "supported": 0,
+            "partially_supported": 2,
+            "insufficient_basis": 4,
+            "not_supported": 2
+          },
+          "proportions": {
+            "supported": 0.0,
+            "partially_supported": 0.25,
+            "insufficient_basis": 0.5,
+            "not_supported": 0.25
+          },
+          "categories_observed": 3
+        },
+        "action": {
+          "counts": {
+            "affirm": 2,
+            "abstain": 5,
+            "escalate": 1
+          },
+          "proportions": {
+            "affirm": 0.25,
+            "abstain": 0.625,
+            "escalate": 0.125
+          }
+        },
+        "confidence": {
+          "mean": 92.875,
+          "median": 95.0,
+          "min": 86.0,
+          "max": 97.0
+        }
+      },
+      "C1": {
+        "n": 8,
+        "case_ids": [
+          "PX_1002",
+          "PX_1003"
+        ],
+        "attribution": {
+          "counts": {
+            "supported": 0,
+            "partially_supported": 0,
+            "insufficient_basis": 5,
+            "not_supported": 3
+          },
+          "proportions": {
+            "supported": 0.0,
+            "partially_supported": 0.0,
+            "insufficient_basis": 0.625,
+            "not_supported": 0.375
+          },
+          "categories_observed": 2
+        },
+        "action": {
+          "counts": {
+            "affirm": 2,
+            "abstain": 6,
+            "escalate": 0
+          },
+          "proportions": {
+            "affirm": 0.25,
+            "abstain": 0.75,
+            "escalate": 0.0
+          }
+        },
+        "confidence": {
+          "mean": 95.25,
+          "median": 95.0,
+          "min": 95.0,
+          "max": 96.0
+        }
+      },
+      "C2": {
+        "n": 8,
+        "case_ids": [
+          "PX_1002",
+          "PX_1003"
+        ],
+        "attribution": {
+          "counts": {
+            "supported": 0,
+            "partially_supported": 0,
+            "insufficient_basis": 6,
+            "not_supported": 2
+          },
+          "proportions": {
+            "supported": 0.0,
+            "partially_supported": 0.0,
+            "insufficient_basis": 0.75,
+            "not_supported": 0.25
+          },
+          "categories_observed": 2
+        },
+        "action": {
+          "counts": {
+            "affirm": 2,
+            "abstain": 3,
+            "escalate": 3
+          },
+          "proportions": {
+            "affirm": 0.25,
+            "abstain": 0.375,
+            "escalate": 0.375
+          }
+        },
+        "confidence": {
+          "mean": 95.0,
+          "median": 95.0,
+          "min": 92.0,
+          "max": 100.0
+        }
+      }
+    },
+    "procedural_evidence_incomplete": {
+      "C0": {
+        "n": 4,
+        "case_ids": [
+          "PX_1004"
+        ],
+        "attribution": {
+          "counts": {
+            "supported": 0,
+            "partially_supported": 3,
+            "insufficient_basis": 0,
+            "not_supported": 1
+          },
+          "proportions": {
+            "supported": 0.0,
+            "partially_supported": 0.75,
+            "insufficient_basis": 0.0,
+            "not_supported": 0.25
+          },
+          "categories_observed": 2
+        },
+        "action": {
+          "counts": {
+            "affirm": 4,
+            "abstain": 0,
+            "escalate": 0
+          },
+          "proportions": {
+            "affirm": 1.0,
+            "abstain": 0.0,
+            "escalate": 0.0
+          }
+        },
+        "confidence": {
+          "mean": 81.5,
+          "median": 81.5,
+          "min": 78.0,
+          "max": 85.0
+        }
+      },
+      "C1": {
+        "n": 4,
+        "case_ids": [
+          "PX_1004"
+        ],
+        "attribution": {
+          "counts": {
+            "supported": 0,
+            "partially_supported": 4,
+            "insufficient_basis": 0,
+            "not_supported": 0
+          },
+          "proportions": {
+            "supported": 0.0,
+            "partially_supported": 1.0,
+            "insufficient_basis": 0.0,
+            "not_supported": 0.0
+          },
+          "categories_observed": 1
+        },
+        "action": {
+          "counts": {
+            "affirm": 3,
+            "abstain": 1,
+            "escalate": 0
+          },
+          "proportions": {
+            "affirm": 0.75,
+            "abstain": 0.25,
+            "escalate": 0.0
+          }
+        },
+        "confidence": {
+          "mean": 85.0,
+          "median": 85.0,
+          "min": 84.0,
+          "max": 86.0
+        }
+      },
+      "C2": {
+        "n": 4,
+        "case_ids": [
+          "PX_1004"
+        ],
+        "attribution": {
+          "counts": {
+            "supported": 0,
+            "partially_supported": 4,
+            "insufficient_basis": 0,
+            "not_supported": 0
+          },
+          "proportions": {
+            "supported": 0.0,
+            "partially_supported": 1.0,
+            "insufficient_basis": 0.0,
+            "not_supported": 0.0
+          },
+          "categories_observed": 1
+        },
+        "action": {
+          "counts": {
+            "affirm": 4,
+            "abstain": 0,
+            "escalate": 0
+          },
+          "proportions": {
+            "affirm": 1.0,
+            "abstain": 0.0,
+            "escalate": 0.0
+          }
+        },
+        "confidence": {
+          "mean": 82.25,
+          "median": 83.5,
+          "min": 77.0,
+          "max": 85.0
+        }
+      }
+    }
+  },
+  "by_state_and_model": {
+    "broad_evidence_present": {
+      "model_1": {
+        "n": 12,
+        "case_ids": [
+          "PX_1001",
+          "PX_1005"
+        ],
+        "attribution": {
+          "counts": {
+            "supported": 2,
+            "partially_supported": 10,
+            "insufficient_basis": 0,
+            "not_supported": 0
+          },
+          "proportions": {
+            "supported": 0.167,
+            "partially_supported": 0.833,
+            "insufficient_basis": 0.0,
+            "not_supported": 0.0
+          },
+          "categories_observed": 2
+        },
+        "action": {
+          "counts": {
+            "affirm": 11,
+            "abstain": 1,
+            "escalate": 0
+          },
+          "proportions": {
+            "affirm": 0.917,
+            "abstain": 0.083,
+            "escalate": 0.0
+          }
+        },
+        "confidence": {
+          "mean": 85.5,
+          "median": 84.0,
+          "min": 82.0,
+          "max": 90.0
+        }
+      },
+      "model_2": {
+        "n": 12,
+        "case_ids": [
+          "PX_1001",
+          "PX_1005"
+        ],
+        "attribution": {
+          "counts": {
+            "supported": 12,
+            "partially_supported": 0,
+            "insufficient_basis": 0,
+            "not_supported": 0
+          },
+          "proportions": {
+            "supported": 1.0,
+            "partially_supported": 0.0,
+            "insufficient_basis": 0.0,
+            "not_supported": 0.0
+          },
+          "categories_observed": 1
+        },
+        "action": {
+          "counts": {
+            "affirm": 12,
+            "abstain": 0,
+            "escalate": 0
+          },
+          "proportions": {
+            "affirm": 1.0,
+            "abstain": 0.0,
+            "escalate": 0.0
+          }
+        },
+        "confidence": {
+          "mean": 94.167,
+          "median": 95.0,
+          "min": 90.0,
+          "max": 95.0
+        }
+      }
+    },
+    "broad_procedural_evidence_present": {
+      "model_1": {
+        "n": 6,
+        "case_ids": [
+          "PX_1006"
+        ],
+        "attribution": {
+          "counts": {
+            "supported": 5,
+            "partially_supported": 1,
+            "insufficient_basis": 0,
+            "not_supported": 0
+          },
+          "proportions": {
+            "supported": 0.833,
+            "partially_supported": 0.167,
+            "insufficient_basis": 0.0,
+            "not_supported": 0.0
+          },
+          "categories_observed": 2
+        },
+        "action": {
+          "counts": {
+            "affirm": 6,
+            "abstain": 0,
+            "escalate": 0
+          },
+          "proportions": {
+            "affirm": 1.0,
+            "abstain": 0.0,
+            "escalate": 0.0
+          }
+        },
+        "confidence": {
+          "mean": 87.333,
+          "median": 87.5,
+          "min": 84.0,
+          "max": 91.0
+        }
+      },
+      "model_2": {
+        "n": 6,
+        "case_ids": [
+          "PX_1006"
+        ],
+        "attribution": {
+          "counts": {
+            "supported": 6,
+            "partially_supported": 0,
+            "insufficient_basis": 0,
+            "not_supported": 0
+          },
+          "proportions": {
+            "supported": 1.0,
+            "partially_supported": 0.0,
+            "insufficient_basis": 0.0,
+            "not_supported": 0.0
+          },
+          "categories_observed": 1
+        },
+        "action": {
+          "counts": {
+            "affirm": 6,
+            "abstain": 0,
+            "escalate": 0
+          },
+          "proportions": {
+            "affirm": 1.0,
+            "abstain": 0.0,
+            "escalate": 0.0
+          }
+        },
+        "confidence": {
+          "mean": 94.167,
+          "median": 95.0,
+          "min": 90.0,
+          "max": 95.0
+        }
+      }
+    },
+    "critical_evidence_missing": {
+      "model_1": {
+        "n": 12,
+        "case_ids": [
+          "PX_1002",
+          "PX_1003"
+        ],
+        "attribution": {
+          "counts": {
+            "supported": 0,
+            "partially_supported": 2,
+            "insufficient_basis": 9,
+            "not_supported": 1
+          },
+          "proportions": {
+            "supported": 0.0,
+            "partially_supported": 0.167,
+            "insufficient_basis": 0.75,
+            "not_supported": 0.083
+          },
+          "categories_observed": 3
+        },
+        "action": {
+          "counts": {
+            "affirm": 0,
+            "abstain": 10,
+            "escalate": 2
+          },
+          "proportions": {
+            "affirm": 0.0,
+            "abstain": 0.833,
+            "escalate": 0.167
+          }
+        },
+        "confidence": {
+          "mean": 93.75,
+          "median": 95.0,
+          "min": 86.0,
+          "max": 97.0
+        }
+      },
+      "model_2": {
+        "n": 12,
+        "case_ids": [
+          "PX_1002",
+          "PX_1003"
+        ],
+        "attribution": {
+          "counts": {
+            "supported": 0,
+            "partially_supported": 0,
+            "insufficient_basis": 6,
+            "not_supported": 6
+          },
+          "proportions": {
+            "supported": 0.0,
+            "partially_supported": 0.0,
+            "insufficient_basis": 0.5,
+            "not_supported": 0.5
+          },
+          "categories_observed": 2
+        },
+        "action": {
+          "counts": {
+            "affirm": 6,
+            "abstain": 4,
+            "escalate": 2
+          },
+          "proportions": {
+            "affirm": 0.5,
+            "abstain": 0.333,
+            "escalate": 0.167
+          }
+        },
+        "confidence": {
+          "mean": 95.0,
+          "median": 95.0,
+          "min": 90.0,
+          "max": 100.0
+        }
+      }
+    },
+    "procedural_evidence_incomplete": {
+      "model_1": {
+        "n": 6,
+        "case_ids": [
+          "PX_1004"
+        ],
+        "attribution": {
+          "counts": {
+            "supported": 0,
+            "partially_supported": 6,
+            "insufficient_basis": 0,
+            "not_supported": 0
+          },
+          "proportions": {
+            "supported": 0.0,
+            "partially_supported": 1.0,
+            "insufficient_basis": 0.0,
+            "not_supported": 0.0
+          },
+          "categories_observed": 1
+        },
+        "action": {
+          "counts": {
+            "affirm": 5,
+            "abstain": 1,
+            "escalate": 0
+          },
+          "proportions": {
+            "affirm": 0.833,
+            "abstain": 0.167,
+            "escalate": 0.0
+          }
+        },
+        "confidence": {
+          "mean": 80.833,
+          "median": 80.0,
+          "min": 77.0,
+          "max": 86.0
+        }
+      },
+      "model_2": {
+        "n": 6,
+        "case_ids": [
+          "PX_1004"
+        ],
+        "attribution": {
+          "counts": {
+            "supported": 0,
+            "partially_supported": 5,
+            "insufficient_basis": 0,
+            "not_supported": 1
+          },
+          "proportions": {
+            "supported": 0.0,
+            "partially_supported": 0.833,
+            "insufficient_basis": 0.0,
+            "not_supported": 0.167
+          },
+          "categories_observed": 2
+        },
+        "action": {
+          "counts": {
+            "affirm": 6,
+            "abstain": 0,
+            "escalate": 0
+          },
+          "proportions": {
+            "affirm": 1.0,
+            "abstain": 0.0,
+            "escalate": 0.0
+          }
+        },
+        "confidence": {
+          "mean": 85.0,
+          "median": 85.0,
+          "min": 85.0,
+          "max": 85.0
+        }
+      }
+    }
+  },
+  "attribution_profiles": {
+    "broad_evidence_present": {
+      "n": 24,
+      "counts": {
+        "supported": 14,
+        "partially_supported": 10,
+        "insufficient_basis": 0,
+        "not_supported": 0
+      },
+      "proportions": {
+        "supported": 0.583,
+        "partially_supported": 0.417,
+        "insufficient_basis": 0.0,
+        "not_supported": 0.0
+      }
+    },
+    "broad_procedural_evidence_present": {
+      "n": 12,
+      "counts": {
+        "supported": 11,
+        "partially_supported": 1,
+        "insufficient_basis": 0,
+        "not_supported": 0
+      },
+      "proportions": {
+        "supported": 0.917,
+        "partially_supported": 0.083,
+        "insufficient_basis": 0.0,
+        "not_supported": 0.0
+      }
+    },
+    "critical_evidence_missing": {
+      "n": 24,
+      "counts": {
+        "supported": 0,
+        "partially_supported": 2,
+        "insufficient_basis": 15,
+        "not_supported": 7
+      },
+      "proportions": {
+        "supported": 0.0,
+        "partially_supported": 0.083,
+        "insufficient_basis": 0.625,
+        "not_supported": 0.292
+      }
+    },
+    "procedural_evidence_incomplete": {
+      "n": 12,
+      "counts": {
+        "supported": 0,
+        "partially_supported": 11,
+        "insufficient_basis": 0,
+        "not_supported": 1
+      },
+      "proportions": {
+        "supported": 0.0,
+        "partially_supported": 0.917,
+        "insufficient_basis": 0.0,
+        "not_supported": 0.083
+      }
+    }
+  },
+  "pairwise_attribution_profile_tv_distance": {
+    "broad_evidence_present__vs__broad_procedural_evidence_present": 0.334,
+    "broad_evidence_present__vs__critical_evidence_missing": 0.917,
+    "broad_evidence_present__vs__procedural_evidence_incomplete": 0.583,
+    "broad_procedural_evidence_present__vs__critical_evidence_missing": 0.917,
+    "broad_procedural_evidence_present__vs__procedural_evidence_incomplete": 0.917,
+    "critical_evidence_missing__vs__procedural_evidence_incomplete": 0.834
+  }
+}

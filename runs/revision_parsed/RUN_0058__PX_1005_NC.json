@@ -1,0 +1,16 @@
+{
+  "revised_attribution": "partially_supported",
+  "confidence": 93,
+  "revision_decision": "maintain",
+  "justification": "The additional information states that the robustness-test report was migrated to a new document-management system while the datasets, tested conditions, test procedures, and reported results remained unchanged. This does not materially alter the evidential basis. The existing evidence still shows robustness beyond nominal conditions through multiple perturbation tests, formatting variation, OCR degradation, random removal of non-critical fields, and out-of-distribution flagging, but it remains limited to the predefined validation scope and does not establish robustness across the full deployment context. The incomplete out-of-distribution detection also remains relevant. Therefore, the prior qualified attribution is still warranted and should be maintained.",
+  "evidence_affected": [
+    "The robustness-test report was migrated to a new document-management system.",
+    "The datasets, tested conditions, test procedures, and reported results were unchanged.",
+    "With 10% randomly removed non-critical fields, accuracy was 93.7%.",
+    "With the predefined OCR degradation transformation, accuracy was 92.1%.",
+    "Across the predefined formatting-variation set, accuracy ranged from 91.6% to 94.8%.",
+    "Of the 1,200 out-of-distribution samples, 1,127 were flagged by the out-of-distribution mechanism.",
+    "The validation protocol contains three predefined perturbation tests; corresponding accuracies were 92.8%, 90.9%, and 93.4%.",
+    "A separate validation team reproduced the reported tests."
+  ]
+}

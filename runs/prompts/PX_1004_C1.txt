@@ -1,0 +1,96 @@
+===== SYSTEM PROMPT =====
+
+You are participating in a controlled study on AI system evaluation.
+
+Evaluate the case exclusively from the information provided.
+
+Do not introduce facts, evidence, requirements, thresholds, organisational arrangements, or contextual assumptions that are not explicitly stated in the material provided.
+
+Base your assessment only on the case information and any evaluation instructions explicitly provided for the current assessment.
+
+Return your assessment using only the requested output structure.
+
+===== USER PROMPT =====
+
+Context
+
+An AI system recommends whether insurance claims should receive additional fraud review. Human reviewers determine the final disposition of individual claims.
+
+Available evidence
+
+- Each model recommendation contains a timestamp and model version.
+- Human reviewers can accept or override model recommendations.
+- Overrides are recorded.
+- Recording a rationale for an override is optional.
+- The process documentation lists the Fraud Operations team and Automated Decision-Support team as jointly responsible for operation of the process.
+- The documentation available to the evaluator contains no rule assigning responsibility for an individual decision when the reviewer and model recommendation agree.
+- Reviewers report that unusual cases are commonly discussed with senior colleagues.
+- Customers can submit complaints through the organisation's general complaints process.
+- The process documentation available to the evaluator does not describe how such complaints are connected to reconsideration of the original assessment.
+
+Evaluation request
+
+Assess whether the available evidence supports attributing accountable decision-making to the described AI-assisted process.
+
+---
+
+Evaluation Criteria - Accountable Decision-Making
+
+Assess accountability by considering whether responsibility for relevant decisions can be identified and whether the process preserves sufficient information to reconstruct and review how those decisions were reached. Consider the relationship between automated recommendations and human decisions, the allocation of decision responsibility, the availability of rationale, and the mechanisms through which decisions can be questioned or reconsidered. Technical logging alone should not be treated as sufficient evidence of accountability.
+
+---
+
+Return only one JSON object that conforms to the following schema. Do not include Markdown fences or additional text.
+
+{
+  "type": "object",
+  "required": [
+    "attribution",
+    "confidence",
+    "justification",
+    "evidence_used",
+    "limitations",
+    "action"
+  ],
+  "properties": {
+    "attribution": {
+      "type": "string",
+      "enum": [
+        "supported",
+        "partially_supported",
+        "not_supported",
+        "insufficient_basis"
+      ]
+    },
+    "confidence": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 100,
+      "description": "Confidence in the assessment provided, not the probability that the system is trustworthy."
+    },
+    "justification": {
+      "type": "string"
+    },
+    "evidence_used": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "action": {
+      "type": "string",
+      "enum": [
+        "affirm",
+        "abstain",
+        "escalate"
+      ]
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,10 @@
+{
+  "revised_attribution": "partially_supported",
+  "confidence": 90,
+  "revision_decision": "weaken",
+  "justification": "The new information reveals that while formal procedures designate human reviewers as the final, accountable decision-makers, in practice, their independence is compromised by performance incentives. Specifically, triggering a managerial review for override rates exceeding 12% creates a systemic disincentive to challenge the model's recommendations, as confirmed by a significant majority of surveyed reviewers. This undermines the formal delegation of accountability to human reviewers.",
+  "evidence_affected": [
+    "The documented procedure assigns the final case-level decision to the claims reviewer.",
+    "Human reviewers determine the final disposition of individual claims."
+  ]
+}

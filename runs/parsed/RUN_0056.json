@@ -1,0 +1,18 @@
+{
+  "attribution": "supported",
+  "confidence": 95,
+  "justification": "The system's operational robustness is supported by extensive evidence of its behavior across various non-nominal conditions. These include testing with randomly removed non-critical fields (93.7% accuracy), OCR degradation (92.1% accuracy), formatting variations (91.6% to 94.8% accuracy), and three predefined perturbation tests (92.8%, 90.9%, and 93.4%). Additionally, an out-of-distribution mechanism successfully flagged 1,127 out of 1,200 (approx. 94%) OOD documents from excluded classes. This wide-ranging evaluation beyond nominal conditions, which was also independently reproduced, satisfies the criteria for demonstrating operational robustness.",
+  "evidence_used": [
+    "With 10% randomly removed non-critical fields, accuracy was 93.7%.",
+    "With the predefined OCR degradation transformation, accuracy was 92.1%.",
+    "Across the predefined formatting-variation set, accuracy ranged from 91.6% to 94.8%.",
+    "Of the 1,200 out-of-distribution samples, 1,127 were flagged by the out-of-distribution mechanism.",
+    "The validation protocol contains three predefined perturbation tests; corresponding accuracies were 92.8%, 90.9%, and 93.4%.",
+    "A separate validation team reproduced the reported tests."
+  ],
+  "limitations": [
+    "The OOD mechanism missed flagging 73 of the 1,200 out-of-distribution documents (approx. 6%).",
+    "Operational robustness is bounded by the specific predefined perturbations, formatting variations, and OCR degradations tested."
+  ],
+  "action": "affirm"
+}

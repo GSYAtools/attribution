@@ -1,0 +1,14 @@
+{
+  "attribution": "not_supported",
+  "confidence": 95,
+  "justification": "The claim of operational robustness is not supported because the validation documentation explicitly lacks evaluation results for stressful conditions such as altered document formats, OCR degradation, out-of-distribution samples, or perturbation testing. Furthermore, standard validation was conducted on samples drawn from the same sources as the training corpus, which does not test for robustness.",
+  "evidence_used": [
+    "The available validation documentation contains no results for altered document formats.",
+    "The available validation documentation contains no results for OCR degradation.",
+    "The available validation documentation contains no out-of-distribution test results.",
+    "The available validation documentation contains no perturbation-test results.",
+    "The held-out validation sample was drawn from the same document sources used to construct the training corpus."
+  ],
+  "limitations": [],
+  "action": "affirm"
+}

@@ -1,0 +1,535 @@
+{
+  "design": {
+    "revision_runs": 48,
+    "source_dataset": "analysis/round2_dataset.csv",
+    "interpretation": "Revision intensity is a secondary diagnostic of selective revisability. It characterises whether the categorical attribution changed and how confidence changed after an evidential update. It does not replace the paired selective-revisability analysis.",
+    "confidence_interpretation": "Confidence represents commitment to the resulting attribution. A material defeater therefore need not produce a negative confidence delta: the evaluator may become more confident in a weakened attribution."
+  },
+  "by_update_type": {
+    "material_defeater": {
+      "n": 24,
+      "attribution_changed": {
+        "count": 15,
+        "rate": 0.625
+      },
+      "confidence_delta": {
+        "mean": -0.25,
+        "min": -6.0,
+        "max": 9.0,
+        "distribution": {
+          "-6": 1,
+          "-5": 7,
+          "-4": 1,
+          "-3": 1,
+          "-2": 1,
+          "0": 5,
+          "2": 2,
+          "5": 1,
+          "6": 3,
+          "8": 1,
+          "9": 1
+        }
+      }
+    },
+    "non_material_control": {
+      "n": 24,
+      "attribution_changed": {
+        "count": 0,
+        "rate": 0.0
+      },
+      "confidence_delta": {
+        "mean": 3.208,
+        "min": 0.0,
+        "max": 12.0,
+        "distribution": {
+          "0": 12,
+          "2": 2,
+          "5": 2,
+          "6": 2,
+          "7": 2,
+          "8": 2,
+          "9": 1,
+          "12": 1
+        }
+      }
+    }
+  },
+  "by_case_and_model": {
+    "PX_1005": {
+      "model_1": {
+        "material_defeater": {
+          "n": 6,
+          "attribution_changed": {
+            "count": 1,
+            "rate": 0.167
+          },
+          "confidence_delta": {
+            "mean": 6.0,
+            "min": 2.0,
+            "max": 9.0,
+            "distribution": {
+              "2": 1,
+              "5": 1,
+              "6": 2,
+              "8": 1,
+              "9": 1
+            }
+          },
+          "confidence_deltas": [
+            6.0,
+            5.0,
+            8.0,
+            9.0,
+            6.0,
+            2.0
+          ]
+        },
+        "non_material_control": {
+          "n": 6,
+          "attribution_changed": {
+            "count": 0,
+            "rate": 0.0
+          },
+          "confidence_delta": {
+            "mean": 5.833,
+            "min": 2.0,
+            "max": 8.0,
+            "distribution": {
+              "2": 1,
+              "5": 1,
+              "6": 1,
+              "7": 2,
+              "8": 1
+            }
+          },
+          "confidence_deltas": [
+            5.0,
+            7.0,
+            8.0,
+            7.0,
+            6.0,
+            2.0
+          ]
+        }
+      },
+      "model_2": {
+        "material_defeater": {
+          "n": 6,
+          "attribution_changed": {
+            "count": 6,
+            "rate": 1.0
+          },
+          "confidence_delta": {
+            "mean": -1.667,
+            "min": -5.0,
+            "max": 0.0,
+            "distribution": {
+              "-5": 2,
+              "0": 4
+            }
+          },
+          "confidence_deltas": [
+            -5.0,
+            0.0,
+            -5.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "non_material_control": {
+          "n": 6,
+          "attribution_changed": {
+            "count": 0,
+            "rate": 0.0
+          },
+          "confidence_delta": {
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "distribution": {
+              "0": 6
+            }
+          },
+          "confidence_deltas": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      }
+    },
+    "PX_1006": {
+      "model_1": {
+        "material_defeater": {
+          "n": 6,
+          "attribution_changed": {
+            "count": 2,
+            "rate": 0.333
+          },
+          "confidence_delta": {
+            "mean": -1.167,
+            "min": -6.0,
+            "max": 6.0,
+            "distribution": {
+              "-6": 1,
+              "-4": 1,
+              "-3": 1,
+              "-2": 1,
+              "2": 1,
+              "6": 1
+            }
+          },
+          "confidence_deltas": [
+            6.0,
+            -4.0,
+            -2.0,
+            -6.0,
+            2.0,
+            -3.0
+          ]
+        },
+        "non_material_control": {
+          "n": 6,
+          "attribution_changed": {
+            "count": 0,
+            "rate": 0.0
+          },
+          "confidence_delta": {
+            "mean": 7.0,
+            "min": 2.0,
+            "max": 12.0,
+            "distribution": {
+              "2": 1,
+              "5": 1,
+              "6": 1,
+              "8": 1,
+              "9": 1,
+              "12": 1
+            }
+          },
+          "confidence_deltas": [
+            8.0,
+            9.0,
+            5.0,
+            2.0,
+            12.0,
+            6.0
+          ]
+        }
+      },
+      "model_2": {
+        "material_defeater": {
+          "n": 6,
+          "attribution_changed": {
+            "count": 6,
+            "rate": 1.0
+          },
+          "confidence_delta": {
+            "mean": -4.167,
+            "min": -5.0,
+            "max": 0.0,
+            "distribution": {
+              "-5": 5,
+              "0": 1
+            }
+          },
+          "confidence_deltas": [
+            -5.0,
+            -5.0,
+            0.0,
+            -5.0,
+            -5.0,
+            -5.0
+          ]
+        },
+        "non_material_control": {
+          "n": 6,
+          "attribution_changed": {
+            "count": 0,
+            "rate": 0.0
+          },
+          "confidence_delta": {
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "distribution": {
+              "0": 6
+            }
+          },
+          "confidence_deltas": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      }
+    }
+  },
+  "by_model": {
+    "model_1": {
+      "material_defeater": {
+        "n": 12,
+        "attribution_changed": {
+          "count": 3,
+          "rate": 0.25
+        },
+        "confidence_delta": {
+          "mean": 2.417,
+          "min": -6.0,
+          "max": 9.0,
+          "distribution": {
+            "-6": 1,
+            "-4": 1,
+            "-3": 1,
+            "-2": 1,
+            "2": 2,
+            "5": 1,
+            "6": 3,
+            "8": 1,
+            "9": 1
+          }
+        }
+      },
+      "non_material_control": {
+        "n": 12,
+        "attribution_changed": {
+          "count": 0,
+          "rate": 0.0
+        },
+        "confidence_delta": {
+          "mean": 6.417,
+          "min": 2.0,
+          "max": 12.0,
+          "distribution": {
+            "2": 2,
+            "5": 2,
+            "6": 2,
+            "7": 2,
+            "8": 2,
+            "9": 1,
+            "12": 1
+          }
+        }
+      }
+    },
+    "model_2": {
+      "material_defeater": {
+        "n": 12,
+        "attribution_changed": {
+          "count": 12,
+          "rate": 1.0
+        },
+        "confidence_delta": {
+          "mean": -2.917,
+          "min": -5.0,
+          "max": 0.0,
+          "distribution": {
+            "-5": 7,
+            "0": 5
+          }
+        }
+      },
+      "non_material_control": {
+        "n": 12,
+        "attribution_changed": {
+          "count": 0,
+          "rate": 0.0
+        },
+        "confidence_delta": {
+          "mean": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "distribution": {
+            "0": 12
+          }
+        }
+      }
+    }
+  },
+  "by_condition": {
+    "C0": {
+      "material_defeater": {
+        "n": 8,
+        "attribution_changed": {
+          "count": 5,
+          "rate": 0.625
+        },
+        "confidence_delta": {
+          "mean": -1.0,
+          "min": -5.0,
+          "max": 8.0,
+          "distribution": {
+            "-5": 3,
+            "-4": 1,
+            "-3": 1,
+            "0": 1,
+            "6": 1,
+            "8": 1
+          }
+        }
+      },
+      "non_material_control": {
+        "n": 8,
+        "attribution_changed": {
+          "count": 0,
+          "rate": 0.0
+        },
+        "confidence_delta": {
+          "mean": 3.625,
+          "min": 0.0,
+          "max": 9.0,
+          "distribution": {
+            "0": 4,
+            "6": 2,
+            "8": 1,
+            "9": 1
+          }
+        }
+      }
+    },
+    "C1": {
+      "material_defeater": {
+        "n": 8,
+        "attribution_changed": {
+          "count": 5,
+          "rate": 0.625
+        },
+        "confidence_delta": {
+          "mean": -1.25,
+          "min": -6.0,
+          "max": 6.0,
+          "distribution": {
+            "-6": 1,
+            "-5": 2,
+            "-2": 1,
+            "0": 2,
+            "2": 1,
+            "6": 1
+          }
+        }
+      },
+      "non_material_control": {
+        "n": 8,
+        "attribution_changed": {
+          "count": 0,
+          "rate": 0.0
+        },
+        "confidence_delta": {
+          "mean": 1.75,
+          "min": 0.0,
+          "max": 5.0,
+          "distribution": {
+            "0": 4,
+            "2": 2,
+            "5": 2
+          }
+        }
+      }
+    },
+    "C2": {
+      "material_defeater": {
+        "n": 8,
+        "attribution_changed": {
+          "count": 5,
+          "rate": 0.625
+        },
+        "confidence_delta": {
+          "mean": 1.5,
+          "min": -5.0,
+          "max": 9.0,
+          "distribution": {
+            "-5": 2,
+            "0": 2,
+            "2": 1,
+            "5": 1,
+            "6": 1,
+            "9": 1
+          }
+        }
+      },
+      "non_material_control": {
+        "n": 8,
+        "attribution_changed": {
+          "count": 0,
+          "rate": 0.0
+        },
+        "confidence_delta": {
+          "mean": 4.25,
+          "min": 0.0,
+          "max": 12.0,
+          "distribution": {
+            "0": 4,
+            "7": 2,
+            "8": 1,
+            "12": 1
+          }
+        }
+      }
+    }
+  },
+  "non_selective_material_defeaters": [
+    {
+      "initial_run_id": "RUN_0070",
+      "revision_run_id": "RUN_0070__PX_1006_MD",
+      "case_id": "PX_1006",
+      "condition": "C2",
+      "model_slot": "model_1",
+      "repetition": 2,
+      "initial_attribution": "partially_supported",
+      "revised_attribution": "partially_supported",
+      "initial_confidence": 84.0,
+      "revised_confidence": 90.0,
+      "confidence_delta": 6.0,
+      "revision_decision": "maintain"
+    },
+    {
+      "initial_run_id": "RUN_0065",
+      "revision_run_id": "RUN_0065__PX_1006_MD",
+      "case_id": "PX_1006",
+      "condition": "C1",
+      "model_slot": "model_1",
+      "repetition": 1,
+      "initial_attribution": "supported",
+      "revised_attribution": "supported",
+      "initial_confidence": 91.0,
+      "revised_confidence": 89.0,
+      "confidence_delta": -2.0,
+      "revision_decision": "maintain"
+    },
+    {
+      "initial_run_id": "RUN_0066",
+      "revision_run_id": "RUN_0066__PX_1006_MD",
+      "case_id": "PX_1006",
+      "condition": "C1",
+      "model_slot": "model_1",
+      "repetition": 2,
+      "initial_attribution": "supported",
+      "revised_attribution": "supported",
+      "initial_confidence": 90.0,
+      "revised_confidence": 84.0,
+      "confidence_delta": -6.0,
+      "revision_decision": "maintain"
+    },
+    {
+      "initial_run_id": "RUN_0061",
+      "revision_run_id": "RUN_0061__PX_1006_MD",
+      "case_id": "PX_1006",
+      "condition": "C0",
+      "model_slot": "model_1",
+      "repetition": 1,
+      "initial_attribution": "supported",
+      "revised_attribution": "supported",
+      "initial_confidence": 87.0,
+      "revised_confidence": 84.0,
+      "confidence_delta": -3.0,
+      "revision_decision": "maintain"
+    }
+  ]
+}

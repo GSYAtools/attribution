@@ -1,0 +1,16 @@
+{
+  "attribution": "partially_supported",
+  "confidence": 85,
+  "justification": "While there are mechanisms for human oversight (human reviewers make the final disposition and overrides are recorded) and process ownership is defined, several critical accountability gaps exist. Specifically, there is no assigned responsibility when a reviewer and the model agree, recording a rationale for overrides is optional, and there is no documented link between customer complaints and the reconsideration of original assessments.",
+  "evidence_used": [
+    "Human reviewers determine the final disposition of individual claims.",
+    "Overrides are recorded.",
+    "Recording a rationale for an override is optional.",
+    "The process documentation available to the evaluator contains no rule assigning responsibility for an individual decision when the reviewer and model recommendation agree.",
+    "The process documentation available to the evaluator does not describe how such complaints are connected to reconsideration of the original assessment."
+  ],
+  "limitations": [
+    "The assessment is limited to the provided process documentation and does not include empirical observations of how complaints are handled in practice."
+  ],
+  "action": "affirm"
+}

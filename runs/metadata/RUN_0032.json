@@ -1,0 +1,21 @@
+{
+  "run_id": "RUN_0032",
+  "case_id": "PX_1003",
+  "domain": "robustness",
+  "condition": "C1",
+  "model_slot": "model_2",
+  "repetition": 2,
+  "prompt_hash": "8d30aea691ea6645b3dff003c3a3a0746b9b00f5afbba99a7d9fd5fc6f781421",
+  "prompt_file": "runs/prompts/PX_1003_C1.txt",
+  "provider": "gemini",
+  "model_id": "gemini-3.5-flash",
+  "usage": {
+    "input_tokens": 672,
+    "output_tokens": 238,
+    "total_tokens": 910
+  },
+  "status": "completed",
+  "validation_error": null,
+  "max_retries": 2,
+  "executed_at_utc": "2026-08-14T06:49:41.799857+00:00"
+}

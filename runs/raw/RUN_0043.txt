@@ -1,0 +1,16 @@
+{
+  "attribution": "partially_supported",
+  "confidence": 85,
+  "justification": "While there are mechanisms for human reviewers to accept or override recommendations, and override actions are recorded, accountability is only partially supported. The documentation available lacks clear rules assigning responsibility for individual decisions when the reviewer and model agree. Furthermore, recording a rationale for an override is optional, meaning the 'why' behind decisions cannot always be reconstructed. Finally, while general complaints exist, the documentation does not outline how they connect to a reconsideration of the original assessment.",
+  "evidence_used": [
+    "Human reviewers can accept or override model recommendations.",
+    "Overrides are recorded.",
+    "Recording a rationale for an override is optional.",
+    "The documentation available to the evaluator contains no rule assigning responsibility for an individual decision when the reviewer and model recommendation agree.",
+    "The process documentation available to the evaluator does not describe how such complaints are connected to reconsideration of the original assessment."
+  ],
+  "limitations": [
+    "The evaluation is restricted to the provided process documentation and lacks access to the actual system logs or the contents of recorded overrides."
+  ],
+  "action": "affirm"
+}

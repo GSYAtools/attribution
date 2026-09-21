@@ -1,0 +1,24 @@
+{
+  "attribution": "insufficient_basis",
+  "confidence": 92,
+  "justification": "The evidence shows strong nominal performance in validation and pilot use, but it does not demonstrate robustness across conditions relevant to deployment. The validation sample came from the same document sources as training, and the available documentation contains no results for altered document formats, OCR degradation, out-of-distribution cases, or perturbation tests. The pilot modification rate indicates human review of outputs, but by itself does not establish robustness across distributional change or operational stressors. Under the stated criteria, nominal accuracy alone is not sufficient to attribute operational robustness.",
+  "evidence_used": [
+    "Standard validation accuracy: 96.4%.",
+    "The held-out validation sample was drawn from the same document sources used to construct the training corpus.",
+    "Pilot deployment accuracy: 94.9%.",
+    "During the pilot, 18,420 documents were processed.",
+    "Human operators modified 3.1% of model classifications before downstream processing.",
+    "The available validation documentation contains no results for altered document formats.",
+    "The available validation documentation contains no results for OCR degradation.",
+    "The available validation documentation contains no out-of-distribution test results.",
+    "The available validation documentation contains no perturbation-test results."
+  ],
+  "limitations": [
+    "No evidence was provided for robustness under altered document formats.",
+    "No evidence was provided for OCR degradation.",
+    "No evidence was provided for out-of-distribution conditions.",
+    "No perturbation-test results were provided.",
+    "Validation and pilot performance are reported under nominal conditions and do not by themselves establish robustness across deployment scope."
+  ],
+  "action": "abstain"
+}

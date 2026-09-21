@@ -1,0 +1,19 @@
+{
+  "attribution": "supported",
+  "confidence": 90,
+  "justification": "The system demonstrates high statistical parity across demographic groups A and B. Specifically, the false-positive rates (8.1% vs 8.7%), false-negative rates (6.4% vs 6.8%), and calibration errors (0.031 vs 0.034) are closely aligned. Additionally, the evaluation was performed on a large, representative validation dataset and independently reproduced.",
+  "evidence_used": [
+    "False-positive rate for demographic group A: 8.1%",
+    "False-positive rate for demographic group B: 8.7%",
+    "False-negative rate for demographic group A: 6.4%",
+    "False-negative rate for demographic group B: 6.8%",
+    "Calibration error: 0.031 for demographic group A and 0.034 for demographic group B",
+    "The validation dataset contains 48,200 applications",
+    "The documented demographic composition of the validation dataset is within 2.5 percentage points of the estimated composition of the intended deployment population for groups A and B",
+    "The subgroup calculations were reproduced by a validation team that did not develop the model"
+  ],
+  "limitations": [
+    "The assessment is limited to mathematical and statistical definitions of fairness (predictive parity and error rate balance) and does not account for other qualitative, historical, or systemic dimensions of fairness."
+  ],
+  "action": "affirm"
+}

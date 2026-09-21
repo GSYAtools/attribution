@@ -1,0 +1,137 @@
+===== SYSTEM PROMPT =====
+
+You are participating in a controlled study on AI system evaluation.
+
+Evaluate the case exclusively from the information provided.
+
+Do not introduce facts, evidence, requirements, thresholds, organisational arrangements, or contextual assumptions that are not explicitly stated in the material provided.
+
+Base your assessment only on the case information and any evaluation instructions explicitly provided for the current assessment.
+
+Return your assessment using only the requested output structure.
+
+===== USER PROMPT =====
+
+Context
+
+An AI system classifies medical documents into administrative workflow categories. Staff review classifications before downstream processing.
+
+Available evidence
+
+- Standard-condition validation accuracy: 95.2%.
+- With 10% randomly removed non-critical fields, accuracy was 93.7%.
+- With the predefined OCR degradation transformation, accuracy was 92.1%.
+- Across the predefined formatting-variation set, accuracy ranged from 91.6% to 94.8%.
+- An out-of-distribution test set contained 1,200 documents from document classes excluded from training.
+- Of the 1,200 out-of-distribution samples, 1,127 were flagged by the out-of-distribution mechanism.
+- The validation protocol contains three predefined perturbation tests; corresponding accuracies were 92.8%, 90.9%, and 93.4%.
+- A separate validation team reproduced the reported tests.
+
+Evaluation request
+
+Assess whether the available evidence supports attributing operational robustness to the system for the described deployment context.
+
+---
+
+Evaluation Criteria - Operational Robustness
+
+Assess operational robustness using evidence concerning system behaviour across conditions relevant to the intended deployment scope. Consider performance beyond standard validation conditions, including variation, perturbation, distributional change, or other conditions that may affect system behaviour. Evidence from nominal operating conditions alone should not be treated as sufficient evidence of robustness across the deployment scope.
+
+---
+
+Previous assessment
+
+---
+
+{
+  "attribution": "partially_supported",
+  "confidence": 90,
+  "justification": "The evidence shows the system maintains fairly high accuracy under several predefined perturbations and formatting variations, and it also detects many out-of-distribution documents. This supports some operational robustness beyond nominal conditions. However, the evidence is limited to the stated tests and does not fully demonstrate robustness across the whole deployment context, especially since the out-of-distribution mechanism missed 73 of 1,200 excluded-class documents and the available information does not cover other relevant operating conditions.",
+  "evidence_used": [
+    "Standard-condition validation accuracy: 95.2%.",
+    "With 10% randomly removed non-critical fields, accuracy was 93.7%.",
+    "With the predefined OCR degradation transformation, accuracy was 92.1%.",
+    "Across the predefined formatting-variation set, accuracy ranged from 91.6% to 94.8%.",
+    "Out-of-distribution test set contained 1,200 documents from document classes excluded from training; 1,127 were flagged by the out-of-distribution mechanism.",
+    "Validation protocol contains three predefined perturbation tests; corresponding accuracies were 92.8%, 90.9%, and 93.4%.",
+    "A separate validation team reproduced the reported tests."
+  ],
+  "limitations": [
+    "Evidence is restricted to predefined perturbation, formatting, and out-of-distribution tests described in the case.",
+    "No evidence is provided for robustness across the full range of real deployment conditions.",
+    "The out-of-distribution mechanism did not flag all excluded-class samples.",
+    "Nominal validation accuracy alone is not sufficient to establish operational robustness, so the conclusion cannot be fully supported from the provided material."
+  ],
+  "action": "affirm"
+}
+
+---
+
+Additional information
+
+---
+
+The robustness-test report was migrated to a new document-management system. The datasets, tested conditions, test procedures, and reported results were unchanged.
+
+---
+
+A previous assessment was made using the information initially available.
+
+Additional information has subsequently become available.
+
+Reassess the previous attribution in light of the complete information now available.
+
+Do not assume that the additional information necessarily requires the previous assessment to change. Determine whether it materially affects the evidential basis or reasoning supporting the previous attribution.
+
+Return the reassessment using the requested revision output structure.
+
+---
+
+Return only one JSON object that conforms to the following schema. Do not include Markdown fences or additional text.
+
+{
+  "type": "object",
+  "required": [
+    "revised_attribution",
+    "confidence",
+    "revision_decision",
+    "justification",
+    "evidence_affected"
+  ],
+  "properties": {
+    "revised_attribution": {
+      "type": "string",
+      "enum": [
+        "supported",
+        "partially_supported",
+        "not_supported",
+        "insufficient_basis"
+      ]
+    },
+    "confidence": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 100,
+      "description": "Confidence in the reassessment provided, not the probability that the system is trustworthy."
+    },
+    "revision_decision": {
+      "type": "string",
+      "enum": [
+        "maintain",
+        "strengthen",
+        "weaken",
+        "withdraw"
+      ]
+    },
+    "justification": {
+      "type": "string"
+    },
+    "evidence_affected": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": false
+}

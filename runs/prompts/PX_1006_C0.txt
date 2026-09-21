@@ -1,0 +1,90 @@
+===== SYSTEM PROMPT =====
+
+You are participating in a controlled study on AI system evaluation.
+
+Evaluate the case exclusively from the information provided.
+
+Do not introduce facts, evidence, requirements, thresholds, organisational arrangements, or contextual assumptions that are not explicitly stated in the material provided.
+
+Base your assessment only on the case information and any evaluation instructions explicitly provided for the current assessment.
+
+Return your assessment using only the requested output structure.
+
+===== USER PROMPT =====
+
+Context
+
+An AI system recommends whether insurance claims should receive additional fraud review. Human reviewers determine the final disposition of individual claims.
+
+Available evidence
+
+- Each model recommendation record contains the model version, timestamp, and a reference to the input record.
+- The human review record identifies the evidence consulted.
+- The final disposition is stored separately from the model recommendation.
+- Reviewers enter a free-text rationale when finalising a disposition.
+- The documented procedure assigns the final case-level decision to the claims reviewer.
+- Disagreements between the model recommendation and the reviewer are routed to an organisational role identified as Senior Claims Reviewer.
+- Customers may request reconsideration of an adverse disposition.
+- Reconsideration outcomes are retained with the original decision record.
+- Model maintenance is assigned to the Model Operations team.
+
+Evaluation request
+
+Assess whether the available evidence supports attributing accountable decision-making to the described AI-assisted process.
+
+---
+
+Return only one JSON object that conforms to the following schema. Do not include Markdown fences or additional text.
+
+{
+  "type": "object",
+  "required": [
+    "attribution",
+    "confidence",
+    "justification",
+    "evidence_used",
+    "limitations",
+    "action"
+  ],
+  "properties": {
+    "attribution": {
+      "type": "string",
+      "enum": [
+        "supported",
+        "partially_supported",
+        "not_supported",
+        "insufficient_basis"
+      ]
+    },
+    "confidence": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 100,
+      "description": "Confidence in the assessment provided, not the probability that the system is trustworthy."
+    },
+    "justification": {
+      "type": "string"
+    },
+    "evidence_used": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "action": {
+      "type": "string",
+      "enum": [
+        "affirm",
+        "abstain",
+        "escalate"
+      ]
+    }
+  },
+  "additionalProperties": false
+}

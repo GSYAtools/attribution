@@ -1,0 +1,18 @@
+{
+  "attribution": "partially_supported",
+  "confidence": 85,
+  "justification": "While there is clear human involvement in final decisions and technical logging (timestamps, model versions, and override records), the evidence reveals gaps in accountability. Specifically, recording an override rationale is optional, there is no documented assignment of responsibility when a reviewer and the model agree, and the process documentation does not specify how customer complaints are linked to the reconsideration of original decisions.",
+  "evidence_used": [
+    "Each model recommendation contains a timestamp and model version.",
+    "Human reviewers can accept or override model recommendations.",
+    "Overrides are recorded.",
+    "Recording a rationale for an override is optional.",
+    "The process documentation available to the evaluator contains no rule assigning responsibility for an individual decision when the reviewer and model recommendation agree.",
+    "The process documentation available to the evaluator does not describe how such complaints are connected to reconsideration of the original assessment."
+  ],
+  "limitations": [
+    "The documentation available to the evaluator is incomplete regarding the link between the general complaints process and decision reconsideration.",
+    "There is no documented rule for responsibility assignment during agreement between reviewers and the model."
+  ],
+  "action": "affirm"
+}

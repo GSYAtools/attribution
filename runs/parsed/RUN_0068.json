@@ -1,0 +1,20 @@
+{
+  "attribution": "supported",
+  "confidence": 90,
+  "justification": "The available evidence supports attributing accountable decision-making. The documentation clearly allocates case-level decision responsibility to human claims reviewers, and routing for disagreements is assigned to a Senior Claims Reviewer. Accountability and the ability to reconstruct how decisions were reached are preserved through detailed records, including model recommendation metadata, human-consulted evidence, free-text rationales for final dispositions, and the retention of customer reconsideration outcomes with original records.",
+  "evidence_used": [
+    "The documented procedure assigns the final case-level decision to the claims reviewer.",
+    "Human reviewers determine the final disposition of individual claims.",
+    "Reviewers enter a free-text rationale when finalising a disposition.",
+    "Disagreements between the model recommendation and the reviewer are routed to an organisational role identified as Senior Claims Reviewer.",
+    "The human review record identifies the evidence consulted.",
+    "Customers may request reconsideration of an adverse disposition.",
+    "Reconsideration outcomes are retained with the original decision record.",
+    "Each model recommendation record contains the model version, timestamp, and a reference to the input record."
+  ],
+  "limitations": [
+    "The evidence does not specify the criteria or guidelines the Senior Claims Reviewer uses to resolve disagreements.",
+    "The final disposition is stored separately from the model recommendation, requiring linkage to fully reconstruct the decision path."
+  ],
+  "action": "affirm"
+}

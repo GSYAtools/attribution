@@ -1,0 +1,24 @@
+{
+  "attribution": "partially_supported",
+  "confidence": 84,
+  "justification": "The evidence supports some elements of accountable decision-making because human reviewers make the final disposition, overrides are recorded, model recommendations are timestamped and versioned, and the process documentation assigns joint operational responsibility to two teams. However, accountability is only partially supported because the available documentation does not assign responsibility for individual decisions when reviewer and model agree, rationale for overrides is optional, and the complaint process is not shown to connect to reconsideration of the original assessment. Technical logging alone is not sufficient to establish full accountability.",
+  "evidence_used": [
+    "Human reviewers determine the final disposition of individual claims.",
+    "Human reviewers can accept or override model recommendations.",
+    "Overrides are recorded.",
+    "Each model recommendation contains a timestamp and model version.",
+    "Recording a rationale for an override is optional.",
+    "The process documentation lists the Fraud Operations team and Automated Decision-Support team as jointly responsible for operation of the process.",
+    "The documentation available to the evaluator contains no rule assigning responsibility for an individual decision when the reviewer and model recommendation agree.",
+    "Reviewers report that unusual cases are commonly discussed with senior colleagues.",
+    "Customers can submit complaints through the organisation's general complaints process.",
+    "The process documentation available to the evaluator does not describe how such complaints are connected to reconsideration of the original assessment."
+  ],
+  "limitations": [
+    "No evidence identifies who is accountable for individual decisions when human and model recommendations align.",
+    "Optional rationales limit reconstructability of why overrides occurred.",
+    "The complaint/reconsideration pathway is not documented.",
+    "Logging of timestamps and model versions does not by itself establish accountable decision-making."
+  ],
+  "action": "affirm"
+}

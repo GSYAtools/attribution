@@ -1,0 +1,22 @@
+{
+  "attribution": "partially_supported",
+  "confidence": 84,
+  "justification": "The evidence supports attributing accountable decision-making in part because the process assigns the final case-level decision to the claims reviewer, requires reviewers to record a free-text rationale, preserves the human review evidence consulted, and retains reconsideration outcomes with the original decision record. These features indicate identifiable responsibility and some capacity to reconstruct and review decisions. However, the record of the AI recommendation is separate from the final disposition, and the evidence only shows technical and procedural artifacts, not the full extent to which decision accountability is operationally exercised across all cases or how the Senior Claims Reviewer role functions in practice. On the provided information, accountability is supported but not fully established for the entire AI-assisted process.",
+  "evidence_used": [
+    "The documented procedure assigns the final case-level decision to the claims reviewer.",
+    "The human review record identifies the evidence consulted.",
+    "Reviewers enter a free-text rationale when finalising a disposition.",
+    "The final disposition is stored separately from the model recommendation.",
+    "Disagreements between the model recommendation and the reviewer are routed to an organisational role identified as Senior Claims Reviewer.",
+    "Customers may request reconsideration of an adverse disposition.",
+    "Reconsideration outcomes are retained with the original decision record."
+  ],
+  "limitations": [
+    "No evidence describes how the Senior Claims Reviewer resolves disagreements or whether that role affects final accountability.",
+    "No evidence shows how often recommendations and reviewer decisions disagree or whether disagreement handling is consistently applied.",
+    "Technical logging is present, but the case does not show whether records are sufficient in practice to reconstruct every decision basis.",
+    "No information is provided on audit, oversight, or correction mechanisms beyond reconsideration retention.",
+    "Model maintenance by the Model Operations team is noted, but its relevance to decision accountability is not specified."
+  ],
+  "action": "affirm"
+}

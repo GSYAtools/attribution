@@ -1,0 +1,9 @@
+{
+  "revised_attribution": "supported",
+  "confidence": 90,
+  "revision_decision": "maintain",
+  "justification": "The additional information indicates that the role 'Senior Claims Reviewer' was renamed to 'Claims Review Lead' but notes that responsibilities, escalation rules, and decision authority remain completely unchanged. Since this is a purely administrative title change, it does not affect the substance of the accountability structures or the validity of the previous assessment.",
+  "evidence_affected": [
+    "Disagreements between the model recommendation and the reviewer are routed to an organisational role identified as Senior Claims Reviewer."
+  ]
+}

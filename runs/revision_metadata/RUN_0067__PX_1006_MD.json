@@ -1,0 +1,24 @@
+{
+  "revision_run_id": "RUN_0067__PX_1006_MD",
+  "initial_run_id": "RUN_0067",
+  "case_id": "PX_1006",
+  "domain": "accountability",
+  "condition": "C1",
+  "model_slot": "model_2",
+  "repetition": 1,
+  "update_id": "PX_1006_MD",
+  "update_type": "material_defeater",
+  "prompt_hash": "1f2acf0d599a560ab79b5b9031623c3dfeb38bea170964411df38b65cd2af9aa",
+  "prompt_file": "runs/revision_prompts/REV_0009_PX_1006_C1_model_2_1_PX_1006_MD.txt",
+  "provider": "gemini",
+  "model_id": "gemini-3.5-flash",
+  "usage": {
+    "input_tokens": 1177,
+    "output_tokens": 190,
+    "total_tokens": 1596
+  },
+  "status": "completed",
+  "validation_error": null,
+  "max_retries": 2,
+  "executed_at_utc": "2026-08-14T12:31:56.641275+00:00"
+}

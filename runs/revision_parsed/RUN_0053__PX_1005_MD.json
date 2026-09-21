@@ -1,0 +1,16 @@
+{
+  "revised_attribution": "partially_supported",
+  "confidence": 96,
+  "revision_decision": "weaken",
+  "justification": "The added evidence materially weakens the robustness case for the deployment context. Although the system showed only moderate drops under predefined perturbations and some out-of-distribution documents were flagged, the new hospital data show a large accuracy decline to 72.6% on 4,830 documents using templates that were not represented in the original validation corpus, despite those templates falling within the specified deployment categories. The out-of-distribution mechanism also flagged only 31.2% of these documents, indicating that a deployment-relevant variation was not handled robustly. This does not fully negate the earlier evidence of resilience under predefined tests, so the overall attribution remains partially supported rather than fully supported or unsupported.",
+  "evidence_affected": [
+    "A second hospital began using document templates that were not represented in the original validation corpus. These templates fall within the deployment categories specified for the system.",
+    "Accuracy for 4,830 documents using these templates was 72.6%.",
+    "The out-of-distribution mechanism flagged 31.2% of these documents.",
+    "No other measured deployment category showed a comparable change during the same period.",
+    "With 10% randomly removed non-critical fields, accuracy was 93.7%.",
+    "With the predefined OCR degradation transformation, accuracy was 92.1%.",
+    "Across the predefined formatting-variation set, accuracy ranged from 91.6% to 94.8%.",
+    "The validation protocol contains three predefined perturbation tests; corresponding accuracies were 92.8%, 90.9%, and 93.4%."
+  ]
+}

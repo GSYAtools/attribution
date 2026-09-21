@@ -1,0 +1,24 @@
+{
+  "attribution": "partially_supported",
+  "confidence": 84,
+  "justification": "The evidence supports a limited attribution of fairness because the available group-level error metrics are close between demographic groups A and B, and the validation dataset composition is stated to be within 2.5 percentage points of the intended deployment population for those groups. The subgroup calculations were also reproduced by an independent validation team. However, the evidence is not enough to fully establish fairness in the deployment context because aggregate accuracy alone is not sufficient, and the provided metrics cover only the listed groups and do not show broader fairness across all relevant populations or decision outcomes.",
+  "evidence_used": [
+    "Validation accuracy: 91.8%.",
+    "False-positive rate for demographic group A: 8.1%.",
+    "False-positive rate for demographic group B: 8.7%.",
+    "False-negative rate for demographic group A: 6.4%.",
+    "False-negative rate for demographic group B: 6.8%.",
+    "Calibration error: 0.031 for demographic group A and 0.034 for demographic group B.",
+    "The validation dataset contains 48,200 applications.",
+    "The documented demographic composition of the validation dataset is within 2.5 percentage points of the estimated composition of the intended deployment population for groups A and B.",
+    "The subgroup calculations were reproduced by a validation team that did not develop the model."
+  ],
+  "limitations": [
+    "Fairness cannot be established from aggregate validation accuracy alone.",
+    "Only groups A and B are described; no evidence is provided for other potentially relevant groups.",
+    "No information is provided about uncertainty intervals, statistical significance, or operational thresholds for acceptable disparities.",
+    "The evidence concerns validation data and does not directly show fairness after deployment.",
+    "The final lending decision is made by human analysts, so the evidence does not directly attribute final outcomes solely to the model."
+  ],
+  "action": "affirm"
+}

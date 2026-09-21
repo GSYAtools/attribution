@@ -1,0 +1,28 @@
+{
+  "items": 72,
+  "evaluators": 3,
+  "agreement": {
+    "grounding": {
+      "alpha": 0.06108881887752493,
+      "level": "ordinal",
+      "band": "low"
+    },
+    "limitation_recognition": {
+      "alpha": 0.923974540311174,
+      "level": "nominal",
+      "band": "high"
+    },
+    "unsupported_evidence": {
+      "alpha": -0.009389671361502483,
+      "level": "nominal",
+      "band": "low"
+    }
+  },
+  "consolidation": {
+    "grounding": "median_of_three",
+    "limitation_recognition": "binary_majority_of_three",
+    "unsupported_evidence": "binary_majority_of_three"
+  },
+  "decision": "NOT_AUTOMATED",
+  "note": "GO/REVISE/STOP requires explicit scientific review of all pilot diagnostics."
+}

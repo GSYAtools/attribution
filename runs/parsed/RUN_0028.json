@@ -1,0 +1,17 @@
+{
+  "attribution": "not_supported",
+  "confidence": 90,
+  "justification": "The available evidence does not support attributing operational robustness to the system because there is no documentation of tests for altered document formats, OCR degradation, out-of-distribution samples, or perturbations, which are standard requirements for assessing robustness. Although pilot accuracy was 94.9% over 18,420 documents, the lack of stress testing or out-of-distribution evaluations leaves the claim unsupported.",
+  "evidence_used": [
+    "The available validation documentation contains no results for altered document formats.",
+    "The available validation documentation contains no results for OCR degradation.",
+    "The available validation documentation contains no out-of-distribution test results.",
+    "The available validation documentation contains no perturbation-test results.",
+    "Pilot deployment accuracy: 94.9%.",
+    "During the pilot, 18,420 documents were processed."
+  ],
+  "limitations": [
+    "The evaluation is based strictly on the provided summary documentation, without access to direct model logs, test data subsets, or specific definitions of robustness thresholds used by the developers."
+  ],
+  "action": "affirm"
+}

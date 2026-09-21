@@ -1,0 +1,17 @@
+{
+  "grounding": {
+    "alpha": 0.06108881887752493,
+    "level": "ordinal",
+    "band": "low"
+  },
+  "limitation_recognition": {
+    "alpha": 0.923974540311174,
+    "level": "nominal",
+    "band": "high"
+  },
+  "unsupported_evidence": {
+    "alpha": -0.009389671361502483,
+    "level": "nominal",
+    "band": "low"
+  }
+}

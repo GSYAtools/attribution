@@ -1,0 +1,13 @@
+{
+  "attribution": "insufficient_basis",
+  "confidence": 95,
+  "justification": "The available evidence does not contain group-specific error rates or demographic composition of the validation dataset. Without demographic data or sub-group performance metrics, it is impossible to evaluate fairness across different protected groups, making the basis for assessing fairness insufficient.",
+  "evidence_used": [
+    "Group-specific error rates are not reported in the validation documentation.",
+    "The demographic composition of the validation dataset is not included in the documentation available to the evaluator."
+  ],
+  "limitations": [
+    "The evaluation is restricted solely to the provided documentation, which lacks sub-group analysis."
+  ],
+  "action": "abstain"
+}

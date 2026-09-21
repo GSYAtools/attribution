@@ -1,0 +1,22 @@
+{
+  "attribution": "partially_supported",
+  "confidence": 86,
+  "justification": "The evidence shows some accountability features: human reviewers make the final disposition, overrides are recorded, each model recommendation is timestamped and versioned, and two teams are jointly responsible for operating the process. However, the available documentation does not assign responsibility for cases where the reviewer and model agree, recording rationale for overrides is optional, and the complaint process is not shown to connect to reconsideration of the original assessment. Taken together, the process preserves some reviewability but does not fully establish accountable decision-making for all decisions in the AI-assisted workflow.",
+  "evidence_used": [
+    "Human reviewers determine the final disposition of individual claims.",
+    "Human reviewers can accept or override model recommendations.",
+    "Overrides are recorded.",
+    "Each model recommendation contains a timestamp and model version.",
+    "The process documentation lists the Fraud Operations team and Automated Decision-Support team as jointly responsible for operation of the process.",
+    "The documentation available to the evaluator contains no rule assigning responsibility for an individual decision when the reviewer and model recommendation agree.",
+    "Recording a rationale for an override is optional.",
+    "Reviewers report that unusual cases are commonly discussed with senior colleagues.",
+    "Customers can submit complaints through the organisation's general complaints process.",
+    "The process documentation available to the evaluator does not describe how such complaints are connected to reconsideration of the original assessment."
+  ],
+  "limitations": [
+    "The documentation available to the evaluator is incomplete and may omit relevant accountability rules or complaint-handling details.",
+    "Technical logging is present, but the extent to which it supports reconstruction and review is limited by missing rationale requirements and missing responsibility assignment for agreement cases."
+  ],
+  "action": "abstain"
+}

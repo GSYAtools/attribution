@@ -1,0 +1,7 @@
+{
+  "revised_attribution": "supported",
+  "confidence": 95,
+  "revision_decision": "maintain",
+  "justification": "The additional information regarding the migration of the robustness-test report to a new document-management system does not alter the underlying test datasets, conditions, procedures, or results. Therefore, the evidential basis and reasoning for the previous attribution remain entirely unchanged.",
+  "evidence_affected": []
+}

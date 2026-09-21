@@ -1,0 +1,13 @@
+{
+  "revised_attribution": "supported",
+  "confidence": 89,
+  "revision_decision": "maintain",
+  "justification": "The additional information does not materially undermine the original basis for accountable decision-making. The process still clearly assigns final case-level responsibility to the claims reviewer, preserves reviewer rationale and evidence consulted, separates model recommendations from final dispositions, and retains reconsideration outcomes. The new audit findings add a performance-management layer: reviewers are assessed on agreement-rate with model recommendations, and high override rates trigger managerial review. This may influence reviewer behavior, but it does not remove identifiable human responsibility for the final decision or negate the existing review and reconsideration mechanisms. If anything, it adds another documented oversight path, though the absence of a trigger for high agreement rates indicates the oversight is asymmetrical and may shape incentives. Overall, the evidence still supports attributing accountable decision-making to the AI-assisted process.",
+  "evidence_affected": [
+    "An internal audit found that reviewer performance assessments include an agreement-rate indicator comparing final decisions with model recommendations.",
+    "An override rate above 12% triggers managerial review of the reviewer's case history.",
+    "No corresponding review is triggered by high agreement rates.",
+    "In interviews conducted during the audit, 17 of 21 reviewers reported considering the agreement-rate indicator when deciding whether to override a recommendation.",
+    "These performance-management arrangements were not included in the documentation used for the initial assessment."
+  ]
+}

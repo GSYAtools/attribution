@@ -1,0 +1,10 @@
+{
+  "revised_attribution": "partially_supported",
+  "confidence": 92,
+  "revision_decision": "maintain",
+  "justification": "The additional information does not materially alter the evidential basis for accountability. The role formerly identified as Senior Claims Reviewer has been renamed Claims Review Lead, but its responsibilities, escalation rules, and decision authority are unchanged. The existing evidence still supports accountable decision-making in part: the final case-level decision is assigned to the claims reviewer, reviewers must provide a free-text rationale, the human review record identifies consulted evidence, final disposition is stored separately from the model recommendation, and reconsideration outcomes are retained with the original decision record. These features identify human responsibility and preserve information for reconstruction and review. However, the record still does not establish full operational accountability for the entire AI-assisted process, especially regarding how escalated disagreements are handled in practice beyond the unchanged role description. The renaming alone does not strengthen or weaken the attribution.",
+  "evidence_affected": [
+    "Disagreements between the model recommendation and the reviewer are routed to an organisational role identified as Senior Claims Reviewer.",
+    "The organisation renamed the role 'Senior Claims Reviewer' to 'Claims Review Lead'. The responsibilities, escalation rules, and decision authority assigned to the role were unchanged."
+  ]
+}

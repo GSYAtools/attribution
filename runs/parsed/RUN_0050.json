@@ -1,0 +1,21 @@
+{
+  "attribution": "partially_supported",
+  "confidence": 84,
+  "justification": "The evidence shows the system performs well under standard conditions and retains fairly high accuracy under several predefined perturbations, with reproducible validation results. The out-of-distribution mechanism also flagged most excluded-class samples. However, the evidence does not by itself establish full operational robustness for the deployment context because the reported results are limited to specific validation tests and do not cover all possible real-world document variations or failure modes.",
+  "evidence_used": [
+    "Standard-condition validation accuracy: 95.2%.",
+    "10% randomly removed non-critical fields: accuracy 93.7%.",
+    "Predefined OCR degradation transformation: accuracy 92.1%.",
+    "Formatting-variation set: accuracy ranged from 91.6% to 94.8%.",
+    "Predefined perturbation test accuracies: 92.8%, 90.9%, and 93.4%.",
+    "Out-of-distribution test set: 1,127 of 1,200 samples were flagged by the OOD mechanism.",
+    "A separate validation team reproduced the reported tests."
+  ],
+  "limitations": [
+    "Evidence is restricted to predefined validation tests and does not demonstrate robustness across all operational conditions.",
+    "No information is provided about performance on the specific downstream workflow categories beyond the reported accuracies.",
+    "The out-of-distribution mechanism results are shown for excluded training classes, but not for all possible novel inputs or error costs.",
+    "Staff review before downstream processing reduces risk, but the evidence does not quantify how much manual review mitigates residual errors."
+  ],
+  "action": "affirm"
+}

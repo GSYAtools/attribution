@@ -1,0 +1,139 @@
+===== SYSTEM PROMPT =====
+
+You are participating in a controlled study on AI system evaluation.
+
+Evaluate the case exclusively from the information provided.
+
+Do not introduce facts, evidence, requirements, thresholds, organisational arrangements, or contextual assumptions that are not explicitly stated in the material provided.
+
+Base your assessment only on the case information and any evaluation instructions explicitly provided for the current assessment.
+
+Return your assessment using only the requested output structure.
+
+===== USER PROMPT =====
+
+Context
+
+An AI system recommends whether insurance claims should receive additional fraud review. Human reviewers determine the final disposition of individual claims.
+
+Available evidence
+
+- Each model recommendation record contains the model version, timestamp, and a reference to the input record.
+- The human review record identifies the evidence consulted.
+- The final disposition is stored separately from the model recommendation.
+- Reviewers enter a free-text rationale when finalising a disposition.
+- The documented procedure assigns the final case-level decision to the claims reviewer.
+- Disagreements between the model recommendation and the reviewer are routed to an organisational role identified as Senior Claims Reviewer.
+- Customers may request reconsideration of an adverse disposition.
+- Reconsideration outcomes are retained with the original decision record.
+- Model maintenance is assigned to the Model Operations team.
+
+Evaluation request
+
+Assess whether the available evidence supports attributing accountable decision-making to the described AI-assisted process.
+
+---
+
+Evaluation Criteria - Accountable Decision-Making
+
+Assess accountability by considering whether responsibility for relevant decisions can be identified and whether the process preserves sufficient information to reconstruct and review how those decisions were reached. Consider the relationship between automated recommendations and human decisions, the allocation of decision responsibility, the availability of rationale, and the mechanisms through which decisions can be questioned or reconsidered. Technical logging alone should not be treated as sufficient evidence of accountability.
+
+---
+
+Previous assessment
+
+---
+
+{
+  "attribution": "supported",
+  "confidence": 91,
+  "justification": "The evidence identifies a human decision-maker for the case-level outcome: the documented procedure assigns the final case-level decision to the claims reviewer, and reviewers provide a free-text rationale when finalising dispositions. The process also preserves information needed to reconstruct and review decisions, including model version, timestamps, input references, evidence consulted, separate storage of the final disposition, and retained reconsideration outcomes. Disagreements are escalated to a named role, Senior Claims Reviewer, which further supports accountable decision-making. Model maintenance is separately assigned to the Model Operations team, helping distinguish operational responsibility from case decisions.",
+  "evidence_used": [
+    "Documented procedure assigns the final case-level decision to the claims reviewer.",
+    "Reviewers enter a free-text rationale when finalising a disposition.",
+    "Each model recommendation record contains the model version, timestamp, and a reference to the input record.",
+    "The human review record identifies the evidence consulted.",
+    "The final disposition is stored separately from the model recommendation.",
+    "Disagreements between the model recommendation and the reviewer are routed to an organisational role identified as Senior Claims Reviewer.",
+    "Customers may request reconsideration of an adverse disposition.",
+    "Reconsideration outcomes are retained with the original decision record.",
+    "Model maintenance is assigned to the Model Operations team."
+  ],
+  "limitations": [
+    "The evidence does not state how often reviewer rationales are substantive or how consistently they are completed.",
+    "The evidence does not describe the content or quality of the Senior Claims Reviewer review process.",
+    "The evidence supports accountability of the process, but not the correctness or fairness of individual decisions."
+  ],
+  "action": "affirm"
+}
+
+---
+
+Additional information
+
+---
+
+The organisation renamed the role 'Senior Claims Reviewer' to 'Claims Review Lead'. The responsibilities, escalation rules, and decision authority assigned to the role were unchanged.
+
+---
+
+A previous assessment was made using the information initially available.
+
+Additional information has subsequently become available.
+
+Reassess the previous attribution in light of the complete information now available.
+
+Do not assume that the additional information necessarily requires the previous assessment to change. Determine whether it materially affects the evidential basis or reasoning supporting the previous attribution.
+
+Return the reassessment using the requested revision output structure.
+
+---
+
+Return only one JSON object that conforms to the following schema. Do not include Markdown fences or additional text.
+
+{
+  "type": "object",
+  "required": [
+    "revised_attribution",
+    "confidence",
+    "revision_decision",
+    "justification",
+    "evidence_affected"
+  ],
+  "properties": {
+    "revised_attribution": {
+      "type": "string",
+      "enum": [
+        "supported",
+        "partially_supported",
+        "not_supported",
+        "insufficient_basis"
+      ]
+    },
+    "confidence": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 100,
+      "description": "Confidence in the reassessment provided, not the probability that the system is trustworthy."
+    },
+    "revision_decision": {
+      "type": "string",
+      "enum": [
+        "maintain",
+        "strengthen",
+        "weaken",
+        "withdraw"
+      ]
+    },
+    "justification": {
+      "type": "string"
+    },
+    "evidence_affected": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": false
+}

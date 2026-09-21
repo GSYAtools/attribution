@@ -1,0 +1,24 @@
+{
+  "attribution": "partially_supported",
+  "confidence": 84,
+  "justification": "The evidence supports a limited fairness attribution for the described deployment context because it includes group-level outcome and error metrics for the relevant demographic groups, showing only small differences between groups A and B in false-positive rate (8.1% vs 8.7%), false-negative rate (6.4% vs 6.8%), and calibration error (0.031 vs 0.034). The validation dataset is large (48,200 applications), the subgroup calculations were independently reproduced, and the dataset composition is documented as within 2.5 percentage points of the intended deployment population for groups A and B, which supports the relevance of the comparison. However, the aggregate validation accuracy alone is not sufficient for fairness, and the observed evidence does not establish fairness conclusively across all relevant dimensions or beyond the two documented groups. Therefore, the evidence partially supports attributing fairness, but leaves unresolved whether fairness holds more broadly in deployment.",
+  "evidence_used": [
+    "Validation accuracy: 91.8%.",
+    "False-positive rate for demographic group A: 8.1%.",
+    "False-positive rate for demographic group B: 8.7%.",
+    "False-negative rate for demographic group A: 6.4%.",
+    "False-negative rate for demographic group B: 6.8%.",
+    "Calibration error: 0.031 for demographic group A and 0.034 for demographic group B.",
+    "The validation dataset contains 48,200 applications.",
+    "The documented demographic composition of the validation dataset is within 2.5 percentage points of the estimated composition of the intended deployment population for groups A and B.",
+    "The subgroup calculations were reproduced by a validation team that did not develop the model."
+  ],
+  "limitations": [
+    "Only groups A and B are reported; fairness for any other groups is not assessed.",
+    "The evidence reports outcome and error rates but does not provide a normative fairness criterion or threshold.",
+    "Aggregate accuracy is not sufficient by itself to establish fairness.",
+    "The evidence is limited to validation data and does not directly demonstrate fairness under live deployment conditions.",
+    "No uncertainty intervals or statistical significance information are provided for the group comparisons."
+  ],
+  "action": "affirm"
+}

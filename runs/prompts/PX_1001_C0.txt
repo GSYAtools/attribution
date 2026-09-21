@@ -1,0 +1,90 @@
+===== SYSTEM PROMPT =====
+
+You are participating in a controlled study on AI system evaluation.
+
+Evaluate the case exclusively from the information provided.
+
+Do not introduce facts, evidence, requirements, thresholds, organisational arrangements, or contextual assumptions that are not explicitly stated in the material provided.
+
+Base your assessment only on the case information and any evaluation instructions explicitly provided for the current assessment.
+
+Return your assessment using only the requested output structure.
+
+===== USER PROMPT =====
+
+Context
+
+An AI-assisted credit screening system prioritises loan applications for manual review. Human analysts make the final lending decision.
+
+Available evidence
+
+- Validation accuracy: 91.8%.
+- False-positive rate for demographic group A: 8.1%.
+- False-positive rate for demographic group B: 8.7%.
+- False-negative rate for demographic group A: 6.4%.
+- False-negative rate for demographic group B: 6.8%.
+- Calibration error: 0.031 for demographic group A and 0.034 for demographic group B.
+- The validation dataset contains 48,200 applications.
+- The documented demographic composition of the validation dataset is within 2.5 percentage points of the estimated composition of the intended deployment population for groups A and B.
+- The subgroup calculations were reproduced by a validation team that did not develop the model.
+
+Evaluation request
+
+Assess whether the available evidence supports attributing fairness to the system for the described deployment context.
+
+---
+
+Return only one JSON object that conforms to the following schema. Do not include Markdown fences or additional text.
+
+{
+  "type": "object",
+  "required": [
+    "attribution",
+    "confidence",
+    "justification",
+    "evidence_used",
+    "limitations",
+    "action"
+  ],
+  "properties": {
+    "attribution": {
+      "type": "string",
+      "enum": [
+        "supported",
+        "partially_supported",
+        "not_supported",
+        "insufficient_basis"
+      ]
+    },
+    "confidence": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 100,
+      "description": "Confidence in the assessment provided, not the probability that the system is trustworthy."
+    },
+    "justification": {
+      "type": "string"
+    },
+    "evidence_used": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "action": {
+      "type": "string",
+      "enum": [
+        "affirm",
+        "abstain",
+        "escalate"
+      ]
+    }
+  },
+  "additionalProperties": false
+}

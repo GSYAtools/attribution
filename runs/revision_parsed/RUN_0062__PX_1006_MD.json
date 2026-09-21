@@ -1,0 +1,14 @@
+{
+  "revised_attribution": "partially_supported",
+  "confidence": 84,
+  "revision_decision": "weaken",
+  "justification": "The original evidence still supports attributing accountable decision-making to the process in a limited sense: the documented procedure assigns the final case-level decision to the claims reviewer, the reviewer records evidence consulted and a free-text rationale, and disagreements can be escalated to a Senior Claims Reviewer. However, the additional audit information materially weakens the attribution because reviewer performance assessments include an agreement-rate indicator comparing final decisions with model recommendations, and an override rate above 12% triggers managerial review of the reviewer’s case history. Interview evidence that 17 of 21 reviewers considered the agreement-rate indicator when deciding whether to override a recommendation shows that the model agreement metric is influencing reviewer behaviour. This creates a stronger basis for saying the process is not purely attributable to the human final decision-maker alone, even though the human reviewer still formally holds the final disposition. The evidence therefore supports accountable decision-making only partially rather than straightforwardly.",
+  "evidence_affected": [
+    "The documented procedure assigns the final case-level decision to the claims reviewer.",
+    "Reviewers enter a free-text rationale when finalising a disposition.",
+    "Disagreements between the model recommendation and the reviewer are routed to an organisational role identified as Senior Claims Reviewer.",
+    "An internal audit found that reviewer performance assessments include an agreement-rate indicator comparing final decisions with model recommendations.",
+    "An override rate above 12% triggers managerial review of the reviewer's case history.",
+    "In interviews during the audit, 17 of 21 reviewers reported considering the agreement-rate indicator when deciding whether to override a recommendation."
+  ]
+}

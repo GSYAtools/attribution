@@ -1,0 +1,9 @@
+{
+  "revised_attribution": "partially_supported",
+  "confidence": 90,
+  "revision_decision": "weaken",
+  "justification": "The additional information reveals that performance-management metrics penalize reviewers for overriding model recommendations above a 12% threshold, without equivalent scrutiny for high agreement rates. This structural incentive compromises the independence of the human reviewer, as 17 of 21 surveyed reviewers admit to factoring this into their decisions. Consequently, while procedural roles and logging are documented, the actual allocation of decision-making responsibility to the human reviewer is undermined in practice, meaning accountability is only partially supported.",
+  "evidence_affected": [
+    "The documented procedure assigns the final case-level decision to the claims reviewer."
+  ]
+}

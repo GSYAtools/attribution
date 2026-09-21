@@ -10,3 +10,4 @@ pytest
 jsonschema
 openai
 google-genai
+matplotlib

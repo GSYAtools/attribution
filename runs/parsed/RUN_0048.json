@@ -1,0 +1,19 @@
+{
+  "attribution": "partially_supported",
+  "confidence": 85,
+  "justification": "The evidence partially supports accountable decision-making. While there are mechanisms in place to trace recommendations (via timestamps and model versions) and to record when reviewers override recommendations, several gaps prevent full support. Specifically, recording an override rationale is optional, meaning the justification for decisions may not be fully reconstructible. Furthermore, there is no documented rule assigning responsibility when reviewers and model recommendations agree, and the process documentation does not describe how customer complaints are linked to the reconsideration of assessments.",
+  "evidence_used": [
+    "Each model recommendation contains a timestamp and model version.",
+    "Human reviewers can accept or override model recommendations.",
+    "Overrides are recorded.",
+    "Recording a rationale for an override is optional.",
+    "The documentation available to the evaluator contains no rule assigning responsibility for an individual decision when the reviewer and model recommendation agree.",
+    "The process documentation available to the evaluator does not describe how such complaints are connected to reconsideration of the original assessment."
+  ],
+  "limitations": [
+    "No mandatory requirement to record rationales for overrides.",
+    "Lack of explicit documentation on responsibility assignment when model and reviewer agree.",
+    "Lack of documented connection between customer complaints and reconsideration processes."
+  ],
+  "action": "affirm"
+}

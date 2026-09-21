@@ -1,0 +1,18 @@
+{
+  "attribution": "supported",
+  "confidence": 95,
+  "justification": "The provided evidence demonstrates operational robustness by showing the system's behavior across multiple non-standard conditions. Specifically, the system maintains high performance when subjected to variations and perturbations (randomly removed non-critical fields, OCR degradation, formatting variations, and predefined perturbation tests) and has an active out-of-distribution detection mechanism that successfully flagged 1,127 out of 1,200 out-of-distribution samples. Furthermore, these tests were independently reproduced by a separate validation team.",
+  "evidence_used": [
+    "With 10% randomly removed non-critical fields, accuracy was 93.7%.",
+    "With the predefined OCR degradation transformation, accuracy was 92.1%.",
+    "Across the predefined formatting-variation set, accuracy ranged from 91.6% to 94.8%.",
+    "Of the 1,200 out-of-distribution samples, 1,127 were flagged by the out-of-distribution mechanism.",
+    "The validation protocol contains three predefined perturbation tests; corresponding accuracies were 92.8%, 90.9%, and 93.4%.",
+    "A separate validation team reproduced the reported tests."
+  ],
+  "limitations": [
+    "The exact operational threshold for acceptable accuracy under degradation or perturbation is not specified.",
+    "It is not specified what action is taken for the remaining 73 out-of-distribution samples that were not flagged."
+  ],
+  "action": "affirm"
+}

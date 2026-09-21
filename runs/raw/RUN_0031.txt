@@ -1,0 +1,17 @@
+{
+  "attribution": "not_supported",
+  "confidence": 95,
+  "justification": "The evaluation criteria state that evidence from nominal operating conditions alone should not be treated as sufficient evidence of robustness across the deployment scope. The available evidence only provides performance metrics under standard validation conditions (drawn from the same source as the training corpus) and pilot deployment. Crucially, there is no validation documentation regarding altered document formats, OCR degradation, out-of-distribution tests, or perturbation tests, which are necessary to establish operational robustness against variation and distributional changes.",
+  "evidence_used": [
+    "Standard validation accuracy: 96.4%.",
+    "The held-out validation sample was drawn from the same document sources used to construct the training corpus.",
+    "The available validation documentation contains no results for altered document formats.",
+    "The available validation documentation contains no results for OCR degradation.",
+    "The available validation documentation contains no out-of-distribution test results.",
+    "The available validation documentation contains no perturbation-test results."
+  ],
+  "limitations": [
+    "The assessment is limited to the provided documentation, which lacks evaluations on non-nominal or stressed operational conditions."
+  ],
+  "action": "affirm"
+}

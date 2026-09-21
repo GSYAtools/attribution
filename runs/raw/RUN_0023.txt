@@ -1,0 +1,14 @@
+{
+  "attribution": "insufficient_basis",
+  "confidence": 100,
+  "justification": "The evaluation criteria for fairness require analyzing the distribution of outcomes and errors across relevant demographic groups, explicitly noting that aggregate performance alone is insufficient. Since both group-specific error rates and the demographic composition of the validation dataset are missing from the documentation, there is an insufficient basis to assess or attribute fairness.",
+  "evidence_used": [
+    "Group-specific error rates are not reported in the validation documentation.",
+    "The demographic composition of the validation dataset is not included in the documentation available to the evaluator."
+  ],
+  "limitations": [
+    "No information is available regarding the demographic makeup of the validation dataset.",
+    "No group-level outcome or error rate data is provided to conduct a comparative analysis."
+  ],
+  "action": "escalate"
+}

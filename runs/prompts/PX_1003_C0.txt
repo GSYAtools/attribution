@@ -1,0 +1,90 @@
+===== SYSTEM PROMPT =====
+
+You are participating in a controlled study on AI system evaluation.
+
+Evaluate the case exclusively from the information provided.
+
+Do not introduce facts, evidence, requirements, thresholds, organisational arrangements, or contextual assumptions that are not explicitly stated in the material provided.
+
+Base your assessment only on the case information and any evaluation instructions explicitly provided for the current assessment.
+
+Return your assessment using only the requested output structure.
+
+===== USER PROMPT =====
+
+Context
+
+An AI system classifies medical documents into administrative workflow categories. Staff review classifications before downstream processing.
+
+Available evidence
+
+- Standard validation accuracy: 96.4%.
+- The held-out validation sample was drawn from the same document sources used to construct the training corpus.
+- Pilot deployment accuracy: 94.9%.
+- During the pilot, 18,420 documents were processed.
+- Human operators modified 3.1% of model classifications before downstream processing.
+- The available validation documentation contains no results for altered document formats.
+- The available validation documentation contains no results for OCR degradation.
+- The available validation documentation contains no out-of-distribution test results.
+- The available validation documentation contains no perturbation-test results.
+
+Evaluation request
+
+Assess whether the available evidence supports attributing operational robustness to the system for the described deployment context.
+
+---
+
+Return only one JSON object that conforms to the following schema. Do not include Markdown fences or additional text.
+
+{
+  "type": "object",
+  "required": [
+    "attribution",
+    "confidence",
+    "justification",
+    "evidence_used",
+    "limitations",
+    "action"
+  ],
+  "properties": {
+    "attribution": {
+      "type": "string",
+      "enum": [
+        "supported",
+        "partially_supported",
+        "not_supported",
+        "insufficient_basis"
+      ]
+    },
+    "confidence": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 100,
+      "description": "Confidence in the assessment provided, not the probability that the system is trustworthy."
+    },
+    "justification": {
+      "type": "string"
+    },
+    "evidence_used": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "action": {
+      "type": "string",
+      "enum": [
+        "affirm",
+        "abstain",
+        "escalate"
+      ]
+    }
+  },
+  "additionalProperties": false
+}

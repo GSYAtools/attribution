@@ -1,0 +1,18 @@
+{
+  "attribution": "insufficient_basis",
+  "confidence": 95,
+  "justification": "The evaluation criteria specify that fairness must be assessed using evidence relevant to the distribution of outcomes and errors across different groups, and that aggregate predictive performance alone is insufficient. Because the available documentation does not report group-specific error rates or the demographic composition of the validation dataset, it is impossible to perform the necessary group-level comparisons to evaluate fairness.",
+  "evidence_used": [
+    "Group-specific error rates are not reported in the validation documentation.",
+    "The demographic composition of the validation dataset is not included in the documentation available to the evaluator.",
+    "Validation accuracy: 93.1%.",
+    "Overall false-positive rate: 7.9%.",
+    "Overall false-negative rate: 6.2%."
+  ],
+  "limitations": [
+    "No demographic breakdown of the validation dataset is available.",
+    "No group-specific error rates or performance metrics are reported.",
+    "Ongoing complaints regarding lending decisions have not yet completed investigation."
+  ],
+  "action": "escalate"
+}

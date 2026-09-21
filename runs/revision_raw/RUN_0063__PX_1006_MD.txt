@@ -1,0 +1,11 @@
+{
+  "revised_attribution": "partially_supported",
+  "confidence": 90,
+  "revision_decision": "weaken",
+  "justification": "The previous assessment attributed accountable human decision-making to the process based on documented procedures where reviewers make the final decision and override disagreements. However, the newly introduced audit information reveals that performance-management incentives heavily discourage reviewers from overriding the AI's recommendations (overrides >12% trigger managerial reviews, with 17 of 21 reviewers admitting this influences their decisions). This materially weakens the actual human accountability and agency, indicating that the formal delegation of authority is compromised in practice by systemic pressures to align with the AI.",
+  "evidence_affected": [
+    "Human reviewers determine the final disposition of individual claims.",
+    "The documented procedure assigns the final case-level decision to the claims reviewer.",
+    "Disagreements between the model recommendation and the reviewer are routed to an organisational role identified as Senior Claims Reviewer."
+  ]
+}

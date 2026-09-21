@@ -1,0 +1,10 @@
+{
+  "revised_attribution": "partially_supported",
+  "confidence": 90,
+  "revision_decision": "weaken",
+  "justification": "While the formal documented procedures place final decisions in human hands, the new audit findings reveal performance-management structures that disincentivize overrides. Reviewers face managerial scrutiny if their override rate exceeds 12%, and interviews confirm this influences their decisions. This compromise to independent human oversight undermines the claim that human reviewers maintain full, unaccountable authority over the final disposition.",
+  "evidence_affected": [
+    "The documented procedure assigns the final case-level decision to the claims reviewer.",
+    "Human reviewers determine the final disposition of individual claims."
+  ]
+}

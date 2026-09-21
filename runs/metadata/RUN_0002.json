@@ -1,0 +1,21 @@
+{
+  "run_id": "RUN_0002",
+  "case_id": "PX_1001",
+  "domain": "fairness",
+  "condition": "C0",
+  "model_slot": "model_1",
+  "repetition": 2,
+  "prompt_hash": "98b7de00b2c08b65cdc406b4e54eac3939c7400c81293ef8ab890455f6f8e97e",
+  "prompt_file": "runs/prompts/PX_1001_C0.txt",
+  "provider": "openai",
+  "model_id": "gpt-5.4-mini-2026-03-17",
+  "usage": {
+    "input_tokens": 683,
+    "output_tokens": 363,
+    "total_tokens": 1046
+  },
+  "status": "completed",
+  "validation_error": null,
+  "max_retries": 2,
+  "executed_at_utc": "2026-08-14T06:48:13.830560+00:00"
+}

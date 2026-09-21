@@ -1,0 +1,10 @@
+{
+  "revised_attribution": "partially_supported",
+  "confidence": 90,
+  "revision_decision": "weaken",
+  "justification": "The additional evidence demonstrates that when the system is deployed using new document templates from a second hospital (which fall within the deployment categories), its performance drops significantly to 72.6%, and the out-of-distribution mechanism only flags 31.2% of them. This shows that the system lacks robustness against realistic template variations encountered within its intended deployment scope, meaning the operational robustness is only partially supported by the initial synthetic validation tests.",
+  "evidence_affected": [
+    "Across the predefined formatting-variation set, accuracy ranged from 91.6% to 94.8%.",
+    "Of the 1,200 out-of-distribution samples, 1,127 were flagged by the out-of-distribution mechanism."
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "attribution": "supported",
+  "confidence": 95,
+  "justification": "The evaluation evidence provides specific, group-level error rates (false-positive and false-negative rates) and calibration errors for both demographic groups A and B, showing minimal disparities. Additionally, the validation dataset's demographic composition closely aligns with the expected deployment population (within 2.5 percentage points), and the calculations were independently reproduced by a separate validation team, satisfying the criteria for representative, group-level comparison.",
+  "evidence_used": [
+    "False-positive rate for demographic group A: 8.1%",
+    "False-positive rate for demographic group B: 8.7%",
+    "False-negative rate for demographic group A: 6.4%",
+    "False-negative rate for demographic group B: 6.8%",
+    "Calibration error: 0.031 for demographic group A and 0.034 for demographic group B",
+    "The validation dataset contains 48,200 applications",
+    "The documented demographic composition of the validation dataset is within 2.5 percentage points of the estimated composition of the intended deployment population for groups A and B",
+    "The subgroup calculations were reproduced by a validation team that did not develop the model"
+  ],
+  "limitations": [
+    "The evaluation is restricted to demographic groups A and B, meaning other potentially relevant subgroups or intersectional demographics are not accounted for in the provided evidence."
+  ],
+  "action": "affirm"
+}

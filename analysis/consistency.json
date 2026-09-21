@@ -1,0 +1,190 @@
+{
+  "design": {
+    "runs": 72,
+    "pairs": 36,
+    "repetitions_per_pair": 2,
+    "pairing_key": [
+      "case_id",
+      "condition",
+      "model_slot"
+    ],
+    "interpretation": "Consistency is assessed as stability across independent repetitions preserving case, evidential condition, and evaluator-model realisation. Exact textual identity is not required."
+  },
+  "pairs_without_exactly_two_repetitions": {},
+  "overall": {
+    "pairs": 36,
+    "attribution_exact_agreement": {
+      "count": 31,
+      "rate": 0.861
+    },
+    "action_exact_agreement": {
+      "count": 32,
+      "rate": 0.889
+    },
+    "confidence": {
+      "mean_absolute_difference": 1.083,
+      "max_absolute_difference": 5.0
+    }
+  },
+  "by_model": {
+    "model_1": {
+      "pairs": 18,
+      "attribution_exact_agreement": {
+        "count": 14,
+        "rate": 0.778
+      },
+      "action_exact_agreement": {
+        "count": 14,
+        "rate": 0.778
+      },
+      "confidence": {
+        "mean_absolute_difference": 1.333,
+        "max_absolute_difference": 5.0
+      }
+    },
+    "model_2": {
+      "pairs": 18,
+      "attribution_exact_agreement": {
+        "count": 17,
+        "rate": 0.944
+      },
+      "action_exact_agreement": {
+        "count": 18,
+        "rate": 1.0
+      },
+      "confidence": {
+        "mean_absolute_difference": 0.833,
+        "max_absolute_difference": 5.0
+      }
+    }
+  },
+  "by_condition": {
+    "C0": {
+      "pairs": 12,
+      "attribution_exact_agreement": {
+        "count": 11,
+        "rate": 0.917
+      },
+      "action_exact_agreement": {
+        "count": 10,
+        "rate": 0.833
+      },
+      "confidence": {
+        "mean_absolute_difference": 1.167,
+        "max_absolute_difference": 5.0
+      }
+    },
+    "C1": {
+      "pairs": 12,
+      "attribution_exact_agreement": {
+        "count": 9,
+        "rate": 0.75
+      },
+      "action_exact_agreement": {
+        "count": 11,
+        "rate": 0.917
+      },
+      "confidence": {
+        "mean_absolute_difference": 1.0,
+        "max_absolute_difference": 5.0
+      }
+    },
+    "C2": {
+      "pairs": 12,
+      "attribution_exact_agreement": {
+        "count": 11,
+        "rate": 0.917
+      },
+      "action_exact_agreement": {
+        "count": 11,
+        "rate": 0.917
+      },
+      "confidence": {
+        "mean_absolute_difference": 1.083,
+        "max_absolute_difference": 5.0
+      }
+    }
+  },
+  "attribution_disagreements": [
+    {
+      "case_id": "PX_1001",
+      "condition": "C1",
+      "model_slot": "model_1",
+      "run_1": "RUN_0005",
+      "run_2": "RUN_0006",
+      "attribution_1": "supported",
+      "attribution_2": "partially_supported",
+      "attribution_agreement": false,
+      "action_1": "affirm",
+      "action_2": "affirm",
+      "action_agreement": true,
+      "confidence_1": 88.0,
+      "confidence_2": 84.0,
+      "absolute_confidence_difference": 4.0
+    },
+    {
+      "case_id": "PX_1003",
+      "condition": "C1",
+      "model_slot": "model_1",
+      "run_1": "RUN_0029",
+      "run_2": "RUN_0030",
+      "attribution_1": "not_supported",
+      "attribution_2": "insufficient_basis",
+      "attribution_agreement": false,
+      "action_1": "abstain",
+      "action_2": "abstain",
+      "action_agreement": true,
+      "confidence_1": 95.0,
+      "confidence_2": 95.0,
+      "absolute_confidence_difference": 0.0
+    },
+    {
+      "case_id": "PX_1004",
+      "condition": "C0",
+      "model_slot": "model_2",
+      "run_1": "RUN_0039",
+      "run_2": "RUN_0040",
+      "attribution_1": "partially_supported",
+      "attribution_2": "not_supported",
+      "attribution_agreement": false,
+      "action_1": "affirm",
+      "action_2": "affirm",
+      "action_agreement": true,
+      "confidence_1": 85.0,
+      "confidence_2": 85.0,
+      "absolute_confidence_difference": 0.0
+    },
+    {
+      "case_id": "PX_1005",
+      "condition": "C1",
+      "model_slot": "model_1",
+      "run_1": "RUN_0053",
+      "run_2": "RUN_0054",
+      "attribution_1": "partially_supported",
+      "attribution_2": "supported",
+      "attribution_agreement": false,
+      "action_1": "affirm",
+      "action_2": "affirm",
+      "action_agreement": true,
+      "confidence_1": 90.0,
+      "confidence_2": 90.0,
+      "absolute_confidence_difference": 0.0
+    },
+    {
+      "case_id": "PX_1006",
+      "condition": "C2",
+      "model_slot": "model_1",
+      "run_1": "RUN_0069",
+      "run_2": "RUN_0070",
+      "attribution_1": "supported",
+      "attribution_2": "partially_supported",
+      "attribution_agreement": false,
+      "action_1": "affirm",
+      "action_2": "affirm",
+      "action_agreement": true,
+      "confidence_1": 84.0,
+      "confidence_2": 84.0,
+      "absolute_confidence_difference": 0.0
+    }
+  ]
+}

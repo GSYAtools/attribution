@@ -1,0 +1,19 @@
+{
+  "attribution": "supported",
+  "confidence": 95,
+  "justification": "The provided evidence demonstrates that accountability is well-established and decisions can be reconstructed. Decision responsibility is explicitly allocated (the claims reviewer makes the final case-level decision, disagreements go to a Senior Claims Reviewer, and model maintenance is assigned to Model Operations). Information is preserved to reconstruct decisions (including model recommendations, inputs, evidence consulted, and free-text rationales). Finally, there is a clear mechanism for customers to request reconsideration of decisions, and these outcomes are retained.",
+  "evidence_used": [
+    "Each model recommendation record contains the model version, timestamp, and a reference to the input record.",
+    "The human review record identifies the evidence consulted.",
+    "Reviewers enter a free-text rationale when finalising a disposition.",
+    "The documented procedure assigns the final case-level decision to the claims reviewer.",
+    "Disagreements between the model recommendation and the reviewer are routed to an organisational role identified as Senior Claims Reviewer.",
+    "Customers may request reconsideration of an adverse disposition.",
+    "Reconsideration outcomes are retained with the original decision record.",
+    "Model maintenance is assigned to the Model Operations team."
+  ],
+  "limitations": [
+    "The evidence does not specify whether the free-text rationales are regularly audited for quality or consistency."
+  ],
+  "action": "affirm"
+}

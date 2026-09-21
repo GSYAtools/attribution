@@ -1,0 +1,19 @@
+{
+  "attribution": "supported",
+  "confidence": 90,
+  "justification": "The provided evidence demonstrates that demographic groups A and B have highly similar metrics across false-positive rates (8.1% vs 8.7%), false-negative rates (6.4% vs 6.8%), and calibration errors (0.031 vs 0.034). Furthermore, the validation dataset's demographic composition is highly representative of the deployment population (within 2.5 percentage points), and these calculations were independently reproduced by a separate validation team, indicating strong evidence of statistical fairness across these groups.",
+  "evidence_used": [
+    "False-positive rate for demographic group A: 8.1%.",
+    "False-positive rate for demographic group B: 8.7%.",
+    "False-negative rate for demographic group A: 6.4%.",
+    "False-negative rate for demographic group B: 6.8%.",
+    "Calibration error: 0.031 for demographic group A and 0.034 for demographic group B.",
+    "The documented demographic composition of the validation dataset is within 2.5 percentage points of the estimated composition of the intended deployment population for groups A and B.",
+    "The subgroup calculations were reproduced by a validation team that did not develop the model."
+  ],
+  "limitations": [
+    "The evidence only covers demographic groups A and B, and does not provide information regarding other potential subgroups or intersectional demographics.",
+    "Fairness is assessed here purely through statistical parity metrics (error rate balance and calibration) and does not account for qualitative or systemic fairness factors in the manual review stage."
+  ],
+  "action": "affirm"
+}

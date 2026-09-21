@@ -1,0 +1,17 @@
+{
+  "revised_attribution": "partially_supported",
+  "confidence": 86,
+  "revision_decision": "weaken",
+  "justification": "The original evidence still supports attributing accountability primarily to the human claims reviewer: the documented procedure assigns the final case-level decision to the reviewer, reviewers provide free-text rationales, the consulted evidence is recorded, reconsideration outcomes are retained, and disagreement handling exists. However, the added audit evidence materially weakens the accountability reading because reviewer performance assessment is tied to agreement with the model recommendation, an override-rate threshold above 12% triggers managerial review of the reviewer’s case history, and most interviewed reviewers reported taking the agreement-rate indicator into account when deciding whether to override. This shows that the human decision is not fully insulated from model alignment pressures, so the evidence no longer cleanly supports straightforward accountable decision-making for the AI-assisted process as a whole. The available records still preserve some reconstructive and review information, but the new information introduces an incentive structure that may affect how decisions are reached, leaving a partially supported attribution rather than full support.",
+  "evidence_affected": [
+    "The documented procedure assigns the final case-level decision to the claims reviewer.",
+    "Reviewers enter a free-text rationale when finalising a disposition.",
+    "The human review record identifies the evidence consulted.",
+    "Disagreements between the model recommendation and the reviewer are routed to an organisational role identified as Senior Claims Reviewer.",
+    "Customers may request reconsideration of an adverse disposition.",
+    "Reconsideration outcomes are retained with the original decision record.",
+    "An internal audit found that reviewer performance assessments include an agreement-rate indicator comparing final decisions with model recommendations.",
+    "An override rate above 12% triggers managerial review of the reviewer's case history.",
+    "In interviews conducted during the audit, 17 of 21 reviewers reported considering the agreement-rate indicator when deciding whether to override a recommendation."
+  ]
+}

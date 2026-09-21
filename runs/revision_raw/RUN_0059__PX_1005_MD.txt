@@ -1,0 +1,10 @@
+{
+  "revised_attribution": "partially_supported",
+  "confidence": 95,
+  "revision_decision": "weaken",
+  "justification": "The original attribution of 'supported' is weakened because the additional information reveals that the system's operational robustness is not fully sustained in deployment. Specifically, when exposed to document templates from a second hospital that fall within the specified deployment categories but were not in the validation corpus, system accuracy dropped severely to 72.6%. Furthermore, the out-of-distribution mechanism only flagged 31.2% of these underperforming documents, indicating that it does not reliably detect this class of operational shift. This demonstrates a significant vulnerability to realistic formatting variations within the intended scope.",
+  "evidence_affected": [
+    "Across the predefined formatting-variation set, accuracy ranged from 91.6% to 94.8%.",
+    "Of the 1,200 out-of-distribution samples, 1,127 were flagged by the out-of-distribution mechanism."
+  ]
+}

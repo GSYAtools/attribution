@@ -1,0 +1,10 @@
+{
+  "revised_attribution": "partially_supported",
+  "confidence": 90,
+  "revision_decision": "weaken",
+  "justification": "The additional information reveals that reviewers are subject to performance-management metrics that penalize high override rates (above 12%) without corresponding scrutiny for high agreement rates, and a large majority of reviewers admit to considering this indicator when deciding whether to override a model recommendation. This systemic pressure compromises the independence of the human reviewer and undermines the documented allocation of decision responsibility, meaning that accountability is only partially supported in practice because human oversight is structurally disincentivized.",
+  "evidence_affected": [
+    "The documented procedure assigns the final case-level decision to the claims reviewer.",
+    "Disagreements between the model recommendation and the reviewer are routed to an organisational role identified as Senior Claims Reviewer."
+  ]
+}

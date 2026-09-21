@@ -1,0 +1,19 @@
+{
+  "attribution": "supported",
+  "confidence": 95,
+  "justification": "The system's performance was thoroughly evaluated across multiple conditions beyond standard validation, including document perturbations (accuracy between 90.9% and 93.4%), missing non-critical fields (93.7%), formatting variations (91.6% to 94.8%), and OCR degradation (92.1%). Furthermore, its out-of-distribution detection mechanism successfully flagged 1,127 out of 1,200 (93.9%) OOD documents. These results were independently reproduced by a separate validation team, demonstrating robust behavior under varied operational conditions.",
+  "evidence_used": [
+    "Standard-condition validation accuracy: 95.2%.",
+    "With 10% randomly removed non-critical fields, accuracy was 93.7%.",
+    "With the predefined OCR degradation transformation, accuracy was 92.1%.",
+    "Across the predefined formatting-variation set, accuracy ranged from 91.6% to 94.8%.",
+    "An out-of-distribution test set contained 1,200 documents from document classes excluded from training.",
+    "Of the 1,200 out-of-distribution samples, 1,127 were flagged by the out-of-distribution mechanism.",
+    "The validation protocol contains three predefined perturbation tests; corresponding accuracies were 92.8%, 90.9%, and 93.4%.",
+    "A separate validation team reproduced the reported tests."
+  ],
+  "limitations": [
+    "While the OOD mechanism flagged 93.9% of out-of-distribution documents, the remaining 6.1% (73 documents) went unflagged, which may require monitoring during live operations."
+  ],
+  "action": "affirm"
+}

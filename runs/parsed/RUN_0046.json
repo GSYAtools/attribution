@@ -1,0 +1,25 @@
+{
+  "attribution": "partially_supported",
+  "confidence": 77,
+  "justification": "The evidence supports some elements of accountable decision-making: human reviewers make the final disposition, overrides are recorded, model recommendations are timestamped and versioned, and the process documentation identifies two teams as jointly responsible for operation. These features help reconstruct decisions and indicate some operational responsibility. However, the evidence does not fully support attribution of accountable decision-making for individual cases because there is no documented rule assigning responsibility when reviewer and model agree, rationale for overrides is optional, and the complaint process is not shown to connect complaints to reconsideration of the original assessment. As a result, accountability is present in part but not demonstrated sufficiently for the full process on the available record.",
+  "evidence_used": [
+    "Human reviewers determine the final disposition of individual claims.",
+    "Human reviewers can accept or override model recommendations.",
+    "Overrides are recorded.",
+    "Each model recommendation contains a timestamp and model version.",
+    "The process documentation lists the Fraud Operations team and Automated Decision-Support team as jointly responsible for operation of the process.",
+    "The documentation available to the evaluator contains no rule assigning responsibility for an individual decision when the reviewer and model recommendation agree.",
+    "Recording a rationale for an override is optional.",
+    "Reviewers report that unusual cases are commonly discussed with senior colleagues.",
+    "Customers can submit complaints through the organisation's general complaints process.",
+    "The process documentation available to the evaluator does not describe how such complaints are connected to reconsideration of the original assessment."
+  ],
+  "limitations": [
+    "No rule is provided for responsibility in cases where reviewer and model agree.",
+    "Optional override rationale limits the ability to reconstruct decision reasoning.",
+    "The available documentation does not explain how complaints trigger reconsideration of the original assessment.",
+    "Technical logging alone should not be treated as sufficient evidence of accountability, so timestamps and versioning cannot by themselves establish it.",
+    "The evidence does not specify how senior-colleague discussions are recorded or incorporated into the record."
+  ],
+  "action": "affirm"
+}

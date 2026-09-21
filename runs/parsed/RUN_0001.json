@@ -1,0 +1,24 @@
+{
+  "attribution": "partially_supported",
+  "confidence": 84,
+  "justification": "The evidence shows broadly similar subgroup performance for groups A and B on the reported metrics: false-positive rates differ by 0.6 percentage points, false-negative rates by 0.4 points, and calibration error by 0.003. The validation dataset is sizeable and its documented demographic composition is close to the estimated intended deployment population for the two groups, and the subgroup calculations were independently reproduced. However, the evidence only covers the reported groups and metrics on a validation dataset; it does not establish fairness for the full deployment context or across all relevant fairness dimensions.",
+  "evidence_used": [
+    "Validation accuracy: 91.8%.",
+    "False-positive rate for demographic group A: 8.1%.",
+    "False-positive rate for demographic group B: 8.7%.",
+    "False-negative rate for demographic group A: 6.4%.",
+    "False-negative rate for demographic group B: 6.8%.",
+    "Calibration error: 0.031 for demographic group A and 0.034 for demographic group B.",
+    "The validation dataset contains 48,200 applications.",
+    "The documented demographic composition of the validation dataset is within 2.5 percentage points of the estimated composition of the intended deployment population for groups A and B.",
+    "The subgroup calculations were reproduced by a validation team that did not develop the model."
+  ],
+  "limitations": [
+    "Only groups A and B are reported; other groups or intersections are not assessed.",
+    "Fairness is not established beyond the specific metrics reported (false-positive rate, false-negative rate, calibration error).",
+    "Evidence is from validation rather than observed deployment performance.",
+    "Human analysts make the final lending decision, so the evidence does not isolate the effect of the AI-assisted screening system on outcomes.",
+    "No explicit fairness criterion or threshold is provided in the case information."
+  ],
+  "action": "abstain"
+}

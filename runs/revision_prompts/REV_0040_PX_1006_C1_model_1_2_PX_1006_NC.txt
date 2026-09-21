@@ -1,0 +1,138 @@
+===== SYSTEM PROMPT =====
+
+You are participating in a controlled study on AI system evaluation.
+
+Evaluate the case exclusively from the information provided.
+
+Do not introduce facts, evidence, requirements, thresholds, organisational arrangements, or contextual assumptions that are not explicitly stated in the material provided.
+
+Base your assessment only on the case information and any evaluation instructions explicitly provided for the current assessment.
+
+Return your assessment using only the requested output structure.
+
+===== USER PROMPT =====
+
+Context
+
+An AI system recommends whether insurance claims should receive additional fraud review. Human reviewers determine the final disposition of individual claims.
+
+Available evidence
+
+- Each model recommendation record contains the model version, timestamp, and a reference to the input record.
+- The human review record identifies the evidence consulted.
+- The final disposition is stored separately from the model recommendation.
+- Reviewers enter a free-text rationale when finalising a disposition.
+- The documented procedure assigns the final case-level decision to the claims reviewer.
+- Disagreements between the model recommendation and the reviewer are routed to an organisational role identified as Senior Claims Reviewer.
+- Customers may request reconsideration of an adverse disposition.
+- Reconsideration outcomes are retained with the original decision record.
+- Model maintenance is assigned to the Model Operations team.
+
+Evaluation request
+
+Assess whether the available evidence supports attributing accountable decision-making to the described AI-assisted process.
+
+---
+
+Evaluation Criteria - Accountable Decision-Making
+
+Assess accountability by considering whether responsibility for relevant decisions can be identified and whether the process preserves sufficient information to reconstruct and review how those decisions were reached. Consider the relationship between automated recommendations and human decisions, the allocation of decision responsibility, the availability of rationale, and the mechanisms through which decisions can be questioned or reconsidered. Technical logging alone should not be treated as sufficient evidence of accountability.
+
+---
+
+Previous assessment
+
+---
+
+{
+  "attribution": "supported",
+  "confidence": 90,
+  "justification": "The evidence identifies who is responsible for the final case-level decision (the claims reviewer), records the human rationale, preserves supporting review information and the model recommendation metadata, and provides routes for challenge and reconsideration. This is sufficient to support accountable decision-making in the AI-assisted process, while the model itself is not the final decision-maker.",
+  "evidence_used": [
+    "The documented procedure assigns the final case-level decision to the claims reviewer.",
+    "Reviewers enter a free-text rationale when finalising a disposition.",
+    "The human review record identifies the evidence consulted.",
+    "Each model recommendation record contains the model version, timestamp, and a reference to the input record.",
+    "Disagreements between the model recommendation and the reviewer are routed to an organisational role identified as Senior Claims Reviewer.",
+    "Customers may request reconsideration of an adverse disposition.",
+    "Reconsideration outcomes are retained with the original decision record."
+  ],
+  "limitations": [
+    "The evidence does not describe the quality or completeness of the free-text rationales.",
+    "The evidence does not specify how the Senior Claims Reviewer resolves disagreements.",
+    "The evidence does not show whether model maintenance arrangements affect decision accountability.",
+    "Technical logging alone is not sufficient, so support rests mainly on the assigned human decision responsibility and retained rationale/reconsideration records."
+  ],
+  "action": "affirm"
+}
+
+---
+
+Additional information
+
+---
+
+The organisation renamed the role 'Senior Claims Reviewer' to 'Claims Review Lead'. The responsibilities, escalation rules, and decision authority assigned to the role were unchanged.
+
+---
+
+A previous assessment was made using the information initially available.
+
+Additional information has subsequently become available.
+
+Reassess the previous attribution in light of the complete information now available.
+
+Do not assume that the additional information necessarily requires the previous assessment to change. Determine whether it materially affects the evidential basis or reasoning supporting the previous attribution.
+
+Return the reassessment using the requested revision output structure.
+
+---
+
+Return only one JSON object that conforms to the following schema. Do not include Markdown fences or additional text.
+
+{
+  "type": "object",
+  "required": [
+    "revised_attribution",
+    "confidence",
+    "revision_decision",
+    "justification",
+    "evidence_affected"
+  ],
+  "properties": {
+    "revised_attribution": {
+      "type": "string",
+      "enum": [
+        "supported",
+        "partially_supported",
+        "not_supported",
+        "insufficient_basis"
+      ]
+    },
+    "confidence": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 100,
+      "description": "Confidence in the reassessment provided, not the probability that the system is trustworthy."
+    },
+    "revision_decision": {
+      "type": "string",
+      "enum": [
+        "maintain",
+        "strengthen",
+        "weaken",
+        "withdraw"
+      ]
+    },
+    "justification": {
+      "type": "string"
+    },
+    "evidence_affected": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": false
+}

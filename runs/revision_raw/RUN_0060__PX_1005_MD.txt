@@ -1,0 +1,10 @@
+{
+  "revised_attribution": "partially_supported",
+  "confidence": 95,
+  "revision_decision": "weaken",
+  "justification": "The previous attribution of 'supported' must be weakened because the additional evidence reveals a significant gap in operational robustness when the system is exposed to new document templates from a second hospital. Even though these templates fall within the system's intended deployment categories, accuracy dropped severely to 72.6%, and the out-of-distribution mechanism failed to flag the vast majority (68.8%) of these cases. This indicates that the validation suite did not sufficiently represent real-world template variations, and the system is not fully robust under these operational conditions.",
+  "evidence_affected": [
+    "Of the 1,200 out-of-distribution samples, 1,127 were flagged by the out-of-distribution mechanism.",
+    "Across the predefined formatting-variation set, accuracy ranged from 91.6% to 94.8%."
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "revised_attribution": "partially_supported",
+  "confidence": 92,
+  "revision_decision": "maintain",
+  "justification": "The additional information states that the robustness-test report was migrated to a new document-management system, while the datasets, tested conditions, test procedures, and reported results were unchanged. This does not materially alter the evidential basis for robustness: the evidence still shows high validation accuracy under predefined perturbations, substantial OOD flagging on excluded classes, and independent reproduction of the reported tests. As before, the support remains partial because the evidence is limited to predefined validation conditions rather than direct operational deployment evidence.",
+  "evidence_affected": [
+    "The robustness-test report was migrated to a new document-management system.",
+    "The datasets, tested conditions, test procedures, and reported results were unchanged.",
+    "Standard-condition validation accuracy: 95.2%.",
+    "With 10% randomly removed non-critical fields, accuracy was 93.7%.",
+    "With the predefined OCR degradation transformation, accuracy was 92.1%.",
+    "Across the predefined formatting-variation set, accuracy ranged from 91.6% to 94.8%.",
+    "The validation protocol contains three predefined perturbation tests; corresponding accuracies were 92.8%, 90.9%, and 93.4%.",
+    "Of the 1,200 out-of-distribution samples, 1,127 were flagged by the out-of-distribution mechanism.",
+    "A separate validation team reproduced the reported tests."
+  ]
+}

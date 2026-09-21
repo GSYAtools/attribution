@@ -1,0 +1,128 @@
+===== SYSTEM PROMPT =====
+
+You are participating in a controlled study on AI system evaluation.
+
+Evaluate the case exclusively from the information provided.
+
+Do not introduce facts, evidence, requirements, thresholds, organisational arrangements, or contextual assumptions that are not explicitly stated in the material provided.
+
+Base your assessment only on the case information and any evaluation instructions explicitly provided for the current assessment.
+
+Return your assessment using only the requested output structure.
+
+===== USER PROMPT =====
+
+Context
+
+An AI system recommends whether insurance claims should receive additional fraud review. Human reviewers determine the final disposition of individual claims.
+
+Available evidence
+
+- Each model recommendation record contains the model version, timestamp, and a reference to the input record.
+- The human review record identifies the evidence consulted.
+- The final disposition is stored separately from the model recommendation.
+- Reviewers enter a free-text rationale when finalising a disposition.
+- The documented procedure assigns the final case-level decision to the claims reviewer.
+- Disagreements between the model recommendation and the reviewer are routed to an organisational role identified as Senior Claims Reviewer.
+- Customers may request reconsideration of an adverse disposition.
+- Reconsideration outcomes are retained with the original decision record.
+- Model maintenance is assigned to the Model Operations team.
+
+Evaluation request
+
+Assess whether the available evidence supports attributing accountable decision-making to the described AI-assisted process.
+
+---
+
+Previous assessment
+
+---
+
+{
+  "attribution": "supported",
+  "confidence": 95,
+  "justification": "The evidence supports attributing accountable decision-making to the AI-assisted process. It explicitly documents that human reviewers make the final decision, records their rationales, and outlines formal escalation paths to a Senior Claims Reviewer in case of disagreements, alongside a reconsideration process for customers.",
+  "evidence_used": [
+    "The documented procedure assigns the final case-level decision to the claims reviewer.",
+    "Human reviewers determine the final disposition of individual claims.",
+    "Disagreements between the model recommendation and the reviewer are routed to an organisational role identified as Senior Claims Reviewer.",
+    "Reviewers enter a free-text rationale when finalising a disposition.",
+    "Customers may request reconsideration of an adverse disposition."
+  ],
+  "limitations": [
+    "The actual criteria used by the Senior Claims Reviewer to resolve disagreements are not detailed in the provided evidence.",
+    "There is no information on how the Model Operations team's maintenance activities impact decision-making accountability."
+  ],
+  "action": "affirm"
+}
+
+---
+
+Additional information
+
+---
+
+An internal audit found that reviewer performance assessments include an agreement-rate indicator comparing final decisions with model recommendations. An override rate above 12% triggers managerial review of the reviewer's case history. No corresponding review is triggered by high agreement rates. In interviews conducted during the audit, 17 of 21 reviewers reported considering the agreement-rate indicator when deciding whether to override a recommendation. These performance-management arrangements were not included in the documentation used for the initial assessment.
+
+---
+
+A previous assessment was made using the information initially available.
+
+Additional information has subsequently become available.
+
+Reassess the previous attribution in light of the complete information now available.
+
+Do not assume that the additional information necessarily requires the previous assessment to change. Determine whether it materially affects the evidential basis or reasoning supporting the previous attribution.
+
+Return the reassessment using the requested revision output structure.
+
+---
+
+Return only one JSON object that conforms to the following schema. Do not include Markdown fences or additional text.
+
+{
+  "type": "object",
+  "required": [
+    "revised_attribution",
+    "confidence",
+    "revision_decision",
+    "justification",
+    "evidence_affected"
+  ],
+  "properties": {
+    "revised_attribution": {
+      "type": "string",
+      "enum": [
+        "supported",
+        "partially_supported",
+        "not_supported",
+        "insufficient_basis"
+      ]
+    },
+    "confidence": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 100,
+      "description": "Confidence in the reassessment provided, not the probability that the system is trustworthy."
+    },
+    "revision_decision": {
+      "type": "string",
+      "enum": [
+        "maintain",
+        "strengthen",
+        "weaken",
+        "withdraw"
+      ]
+    },
+    "justification": {
+      "type": "string"
+    },
+    "evidence_affected": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": false
+}

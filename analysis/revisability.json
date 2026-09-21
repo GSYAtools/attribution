@@ -1,0 +1,1017 @@
+{
+  "design": {
+    "revision_runs": 48,
+    "paired_initial_runs": 24,
+    "source_dataset": "analysis/round2_dataset.csv",
+    "update_types": [
+      "material_defeater",
+      "non_material_control"
+    ],
+    "interpretation": "Selective revisability is assessed through paired responses to two controlled updates of the same initial Stage 1 assessment. A material defeater is expected to induce weakening or withdrawal, whereas a non-material control is expected to preserve the prior attribution. These directional expectations are specific to the controlled Stage 2 design and do not define a universal normative trustworthiness attribution.",
+    "material_defeater_rule": "revision_decision in {weaken, withdraw}",
+    "non_material_control_rule": "revision_decision == maintain"
+  },
+  "by_update_type": {
+    "material_defeater": {
+      "n": 24,
+      "decisions": {
+        "maintain": 4,
+        "weaken": 20,
+        "withdraw": 0
+      },
+      "expected_direction": {
+        "count": 20,
+        "rate": 0.833
+      }
+    },
+    "non_material_control": {
+      "n": 24,
+      "decisions": {
+        "maintain": 24,
+        "weaken": 0,
+        "withdraw": 0
+      },
+      "expected_direction": {
+        "count": 24,
+        "rate": 1.0
+      }
+    }
+  },
+  "by_model": {
+    "model_1": {
+      "material_defeater": {
+        "n": 12,
+        "decisions": {
+          "maintain": 4,
+          "weaken": 8,
+          "withdraw": 0
+        },
+        "expected_direction": {
+          "count": 8,
+          "rate": 0.667
+        }
+      },
+      "non_material_control": {
+        "n": 12,
+        "decisions": {
+          "maintain": 12,
+          "weaken": 0,
+          "withdraw": 0
+        },
+        "expected_direction": {
+          "count": 12,
+          "rate": 1.0
+        }
+      }
+    },
+    "model_2": {
+      "material_defeater": {
+        "n": 12,
+        "decisions": {
+          "maintain": 0,
+          "weaken": 12,
+          "withdraw": 0
+        },
+        "expected_direction": {
+          "count": 12,
+          "rate": 1.0
+        }
+      },
+      "non_material_control": {
+        "n": 12,
+        "decisions": {
+          "maintain": 12,
+          "weaken": 0,
+          "withdraw": 0
+        },
+        "expected_direction": {
+          "count": 12,
+          "rate": 1.0
+        }
+      }
+    }
+  },
+  "by_condition": {
+    "C0": {
+      "material_defeater": {
+        "n": 8,
+        "decisions": {
+          "maintain": 1,
+          "weaken": 7,
+          "withdraw": 0
+        },
+        "expected_direction": {
+          "count": 7,
+          "rate": 0.875
+        }
+      },
+      "non_material_control": {
+        "n": 8,
+        "decisions": {
+          "maintain": 8,
+          "weaken": 0,
+          "withdraw": 0
+        },
+        "expected_direction": {
+          "count": 8,
+          "rate": 1.0
+        }
+      }
+    },
+    "C1": {
+      "material_defeater": {
+        "n": 8,
+        "decisions": {
+          "maintain": 2,
+          "weaken": 6,
+          "withdraw": 0
+        },
+        "expected_direction": {
+          "count": 6,
+          "rate": 0.75
+        }
+      },
+      "non_material_control": {
+        "n": 8,
+        "decisions": {
+          "maintain": 8,
+          "weaken": 0,
+          "withdraw": 0
+        },
+        "expected_direction": {
+          "count": 8,
+          "rate": 1.0
+        }
+      }
+    },
+    "C2": {
+      "material_defeater": {
+        "n": 8,
+        "decisions": {
+          "maintain": 1,
+          "weaken": 7,
+          "withdraw": 0
+        },
+        "expected_direction": {
+          "count": 7,
+          "rate": 0.875
+        }
+      },
+      "non_material_control": {
+        "n": 8,
+        "decisions": {
+          "maintain": 8,
+          "weaken": 0,
+          "withdraw": 0
+        },
+        "expected_direction": {
+          "count": 8,
+          "rate": 1.0
+        }
+      }
+    }
+  },
+  "paired_selective_revisability": {
+    "overall": {
+      "pairs": 24,
+      "both_expected": {
+        "count": 20,
+        "rate": 0.833
+      },
+      "non_selective": 4
+    },
+    "by_model": {
+      "model_1": {
+        "pairs": 12,
+        "both_expected": {
+          "count": 8,
+          "rate": 0.667
+        },
+        "non_selective": 4
+      },
+      "model_2": {
+        "pairs": 12,
+        "both_expected": {
+          "count": 12,
+          "rate": 1.0
+        },
+        "non_selective": 0
+      }
+    },
+    "by_condition": {
+      "C0": {
+        "pairs": 8,
+        "both_expected": {
+          "count": 7,
+          "rate": 0.875
+        },
+        "non_selective": 1
+      },
+      "C1": {
+        "pairs": 8,
+        "both_expected": {
+          "count": 6,
+          "rate": 0.75
+        },
+        "non_selective": 2
+      },
+      "C2": {
+        "pairs": 8,
+        "both_expected": {
+          "count": 7,
+          "rate": 0.875
+        },
+        "non_selective": 1
+      }
+    }
+  },
+  "pairs_without_required_updates": {},
+  "pairs": [
+    {
+      "initial_run_id": "RUN_0049",
+      "case_id": "PX_1005",
+      "domain": "robustness",
+      "condition": "C0",
+      "model_slot": "model_1",
+      "repetition": 1,
+      "initial_attribution": "partially_supported",
+      "initial_confidence": 86.0,
+      "initial_action": "affirm",
+      "material_defeater": {
+        "revision_run_id": "RUN_0049__PX_1005_MD",
+        "update_id": "PX_1005_MD",
+        "revised_attribution": "partially_supported",
+        "confidence": 92.0,
+        "revision_decision": "weaken",
+        "expected_direction": true
+      },
+      "non_material_control": {
+        "revision_run_id": "RUN_0049__PX_1005_NC",
+        "update_id": "PX_1005_NC",
+        "revised_attribution": "partially_supported",
+        "confidence": 92.0,
+        "revision_decision": "maintain",
+        "expected_direction": true
+      },
+      "selective_revisability": true
+    },
+    {
+      "initial_run_id": "RUN_0050",
+      "case_id": "PX_1005",
+      "domain": "robustness",
+      "condition": "C0",
+      "model_slot": "model_1",
+      "repetition": 2,
+      "initial_attribution": "partially_supported",
+      "initial_confidence": 84.0,
+      "initial_action": "affirm",
+      "material_defeater": {
+        "revision_run_id": "RUN_0050__PX_1005_MD",
+        "update_id": "PX_1005_MD",
+        "revised_attribution": "partially_supported",
+        "confidence": 92.0,
+        "revision_decision": "weaken",
+        "expected_direction": true
+      },
+      "non_material_control": {
+        "revision_run_id": "RUN_0050__PX_1005_NC",
+        "update_id": "PX_1005_NC",
+        "revised_attribution": "partially_supported",
+        "confidence": 92.0,
+        "revision_decision": "maintain",
+        "expected_direction": true
+      },
+      "selective_revisability": true
+    },
+    {
+      "initial_run_id": "RUN_0051",
+      "case_id": "PX_1005",
+      "domain": "robustness",
+      "condition": "C0",
+      "model_slot": "model_2",
+      "repetition": 1,
+      "initial_attribution": "supported",
+      "initial_confidence": 95.0,
+      "initial_action": "affirm",
+      "material_defeater": {
+        "revision_run_id": "RUN_0051__PX_1005_MD",
+        "update_id": "PX_1005_MD",
+        "revised_attribution": "partially_supported",
+        "confidence": 95.0,
+        "revision_decision": "weaken",
+        "expected_direction": true
+      },
+      "non_material_control": {
+        "revision_run_id": "RUN_0051__PX_1005_NC",
+        "update_id": "PX_1005_NC",
+        "revised_attribution": "supported",
+        "confidence": 95.0,
+        "revision_decision": "maintain",
+        "expected_direction": true
+      },
+      "selective_revisability": true
+    },
+    {
+      "initial_run_id": "RUN_0052",
+      "case_id": "PX_1005",
+      "domain": "robustness",
+      "condition": "C0",
+      "model_slot": "model_2",
+      "repetition": 2,
+      "initial_attribution": "supported",
+      "initial_confidence": 95.0,
+      "initial_action": "affirm",
+      "material_defeater": {
+        "revision_run_id": "RUN_0052__PX_1005_MD",
+        "update_id": "PX_1005_MD",
+        "revised_attribution": "partially_supported",
+        "confidence": 90.0,
+        "revision_decision": "weaken",
+        "expected_direction": true
+      },
+      "non_material_control": {
+        "revision_run_id": "RUN_0052__PX_1005_NC",
+        "update_id": "PX_1005_NC",
+        "revised_attribution": "supported",
+        "confidence": 95.0,
+        "revision_decision": "maintain",
+        "expected_direction": true
+      },
+      "selective_revisability": true
+    },
+    {
+      "initial_run_id": "RUN_0053",
+      "case_id": "PX_1005",
+      "domain": "robustness",
+      "condition": "C1",
+      "model_slot": "model_1",
+      "repetition": 1,
+      "initial_attribution": "partially_supported",
+      "initial_confidence": 90.0,
+      "initial_action": "affirm",
+      "material_defeater": {
+        "revision_run_id": "RUN_0053__PX_1005_MD",
+        "update_id": "PX_1005_MD",
+        "revised_attribution": "partially_supported",
+        "confidence": 96.0,
+        "revision_decision": "weaken",
+        "expected_direction": true
+      },
+      "non_material_control": {
+        "revision_run_id": "RUN_0053__PX_1005_NC",
+        "update_id": "PX_1005_NC",
+        "revised_attribution": "partially_supported",
+        "confidence": 95.0,
+        "revision_decision": "maintain",
+        "expected_direction": true
+      },
+      "selective_revisability": true
+    },
+    {
+      "initial_run_id": "RUN_0054",
+      "case_id": "PX_1005",
+      "domain": "robustness",
+      "condition": "C1",
+      "model_slot": "model_1",
+      "repetition": 2,
+      "initial_attribution": "supported",
+      "initial_confidence": 90.0,
+      "initial_action": "affirm",
+      "material_defeater": {
+        "revision_run_id": "RUN_0054__PX_1005_MD",
+        "update_id": "PX_1005_MD",
+        "revised_attribution": "partially_supported",
+        "confidence": 92.0,
+        "revision_decision": "weaken",
+        "expected_direction": true
+      },
+      "non_material_control": {
+        "revision_run_id": "RUN_0054__PX_1005_NC",
+        "update_id": "PX_1005_NC",
+        "revised_attribution": "supported",
+        "confidence": 92.0,
+        "revision_decision": "maintain",
+        "expected_direction": true
+      },
+      "selective_revisability": true
+    },
+    {
+      "initial_run_id": "RUN_0055",
+      "case_id": "PX_1005",
+      "domain": "robustness",
+      "condition": "C1",
+      "model_slot": "model_2",
+      "repetition": 1,
+      "initial_attribution": "supported",
+      "initial_confidence": 95.0,
+      "initial_action": "affirm",
+      "material_defeater": {
+        "revision_run_id": "RUN_0055__PX_1005_MD",
+        "update_id": "PX_1005_MD",
+        "revised_attribution": "partially_supported",
+        "confidence": 90.0,
+        "revision_decision": "weaken",
+        "expected_direction": true
+      },
+      "non_material_control": {
+        "revision_run_id": "RUN_0055__PX_1005_NC",
+        "update_id": "PX_1005_NC",
+        "revised_attribution": "supported",
+        "confidence": 95.0,
+        "revision_decision": "maintain",
+        "expected_direction": true
+      },
+      "selective_revisability": true
+    },
+    {
+      "initial_run_id": "RUN_0056",
+      "case_id": "PX_1005",
+      "domain": "robustness",
+      "condition": "C1",
+      "model_slot": "model_2",
+      "repetition": 2,
+      "initial_attribution": "supported",
+      "initial_confidence": 95.0,
+      "initial_action": "affirm",
+      "material_defeater": {
+        "revision_run_id": "RUN_0056__PX_1005_MD",
+        "update_id": "PX_1005_MD",
+        "revised_attribution": "partially_supported",
+        "confidence": 95.0,
+        "revision_decision": "weaken",
+        "expected_direction": true
+      },
+      "non_material_control": {
+        "revision_run_id": "RUN_0056__PX_1005_NC",
+        "update_id": "PX_1005_NC",
+        "revised_attribution": "supported",
+        "confidence": 95.0,
+        "revision_decision": "maintain",
+        "expected_direction": true
+      },
+      "selective_revisability": true
+    },
+    {
+      "initial_run_id": "RUN_0057",
+      "case_id": "PX_1005",
+      "domain": "robustness",
+      "condition": "C2",
+      "model_slot": "model_1",
+      "repetition": 1,
+      "initial_attribution": "partially_supported",
+      "initial_confidence": 84.0,
+      "initial_action": "affirm",
+      "material_defeater": {
+        "revision_run_id": "RUN_0057__PX_1005_MD",
+        "update_id": "PX_1005_MD",
+        "revised_attribution": "partially_supported",
+        "confidence": 93.0,
+        "revision_decision": "weaken",
+        "expected_direction": true
+      },
+      "non_material_control": {
+        "revision_run_id": "RUN_0057__PX_1005_NC",
+        "update_id": "PX_1005_NC",
+        "revised_attribution": "partially_supported",
+        "confidence": 91.0,
+        "revision_decision": "maintain",
+        "expected_direction": true
+      },
+      "selective_revisability": true
+    },
+    {
+      "initial_run_id": "RUN_0058",
+      "case_id": "PX_1005",
+      "domain": "robustness",
+      "condition": "C2",
+      "model_slot": "model_1",
+      "repetition": 2,
+      "initial_attribution": "partially_supported",
+      "initial_confidence": 86.0,
+      "initial_action": "affirm",
+      "material_defeater": {
+        "revision_run_id": "RUN_0058__PX_1005_MD",
+        "update_id": "PX_1005_MD",
+        "revised_attribution": "partially_supported",
+        "confidence": 91.0,
+        "revision_decision": "weaken",
+        "expected_direction": true
+      },
+      "non_material_control": {
+        "revision_run_id": "RUN_0058__PX_1005_NC",
+        "update_id": "PX_1005_NC",
+        "revised_attribution": "partially_supported",
+        "confidence": 93.0,
+        "revision_decision": "maintain",
+        "expected_direction": true
+      },
+      "selective_revisability": true
+    },
+    {
+      "initial_run_id": "RUN_0059",
+      "case_id": "PX_1005",
+      "domain": "robustness",
+      "condition": "C2",
+      "model_slot": "model_2",
+      "repetition": 1,
+      "initial_attribution": "supported",
+      "initial_confidence": 95.0,
+      "initial_action": "affirm",
+      "material_defeater": {
+        "revision_run_id": "RUN_0059__PX_1005_MD",
+        "update_id": "PX_1005_MD",
+        "revised_attribution": "partially_supported",
+        "confidence": 95.0,
+        "revision_decision": "weaken",
+        "expected_direction": true
+      },
+      "non_material_control": {
+        "revision_run_id": "RUN_0059__PX_1005_NC",
+        "update_id": "PX_1005_NC",
+        "revised_attribution": "supported",
+        "confidence": 95.0,
+        "revision_decision": "maintain",
+        "expected_direction": true
+      },
+      "selective_revisability": true
+    },
+    {
+      "initial_run_id": "RUN_0060",
+      "case_id": "PX_1005",
+      "domain": "robustness",
+      "condition": "C2",
+      "model_slot": "model_2",
+      "repetition": 2,
+      "initial_attribution": "supported",
+      "initial_confidence": 95.0,
+      "initial_action": "affirm",
+      "material_defeater": {
+        "revision_run_id": "RUN_0060__PX_1005_MD",
+        "update_id": "PX_1005_MD",
+        "revised_attribution": "partially_supported",
+        "confidence": 95.0,
+        "revision_decision": "weaken",
+        "expected_direction": true
+      },
+      "non_material_control": {
+        "revision_run_id": "RUN_0060__PX_1005_NC",
+        "update_id": "PX_1005_NC",
+        "revised_attribution": "supported",
+        "confidence": 95.0,
+        "revision_decision": "maintain",
+        "expected_direction": true
+      },
+      "selective_revisability": true
+    },
+    {
+      "initial_run_id": "RUN_0061",
+      "case_id": "PX_1006",
+      "domain": "accountability",
+      "condition": "C0",
+      "model_slot": "model_1",
+      "repetition": 1,
+      "initial_attribution": "supported",
+      "initial_confidence": 87.0,
+      "initial_action": "affirm",
+      "material_defeater": {
+        "revision_run_id": "RUN_0061__PX_1006_MD",
+        "update_id": "PX_1006_MD",
+        "revised_attribution": "supported",
+        "confidence": 84.0,
+        "revision_decision": "maintain",
+        "expected_direction": false
+      },
+      "non_material_control": {
+        "revision_run_id": "RUN_0061__PX_1006_NC",
+        "update_id": "PX_1006_NC",
+        "revised_attribution": "supported",
+        "confidence": 93.0,
+        "revision_decision": "maintain",
+        "expected_direction": true
+      },
+      "selective_revisability": false
+    },
+    {
+      "initial_run_id": "RUN_0062",
+      "case_id": "PX_1006",
+      "domain": "accountability",
+      "condition": "C0",
+      "model_slot": "model_1",
+      "repetition": 2,
+      "initial_attribution": "supported",
+      "initial_confidence": 88.0,
+      "initial_action": "affirm",
+      "material_defeater": {
+        "revision_run_id": "RUN_0062__PX_1006_MD",
+        "update_id": "PX_1006_MD",
+        "revised_attribution": "partially_supported",
+        "confidence": 84.0,
+        "revision_decision": "weaken",
+        "expected_direction": true
+      },
+      "non_material_control": {
+        "revision_run_id": "RUN_0062__PX_1006_NC",
+        "update_id": "PX_1006_NC",
+        "revised_attribution": "supported",
+        "confidence": 97.0,
+        "revision_decision": "maintain",
+        "expected_direction": true
+      },
+      "selective_revisability": true
+    },
+    {
+      "initial_run_id": "RUN_0063",
+      "case_id": "PX_1006",
+      "domain": "accountability",
+      "condition": "C0",
+      "model_slot": "model_2",
+      "repetition": 1,
+      "initial_attribution": "supported",
+      "initial_confidence": 95.0,
+      "initial_action": "affirm",
+      "material_defeater": {
+        "revision_run_id": "RUN_0063__PX_1006_MD",
+        "update_id": "PX_1006_MD",
+        "revised_attribution": "partially_supported",
+        "confidence": 90.0,
+        "revision_decision": "weaken",
+        "expected_direction": true
+      },
+      "non_material_control": {
+        "revision_run_id": "RUN_0063__PX_1006_NC",
+        "update_id": "PX_1006_NC",
+        "revised_attribution": "supported",
+        "confidence": 95.0,
+        "revision_decision": "maintain",
+        "expected_direction": true
+      },
+      "selective_revisability": true
+    },
+    {
+      "initial_run_id": "RUN_0064",
+      "case_id": "PX_1006",
+      "domain": "accountability",
+      "condition": "C0",
+      "model_slot": "model_2",
+      "repetition": 2,
+      "initial_attribution": "supported",
+      "initial_confidence": 95.0,
+      "initial_action": "affirm",
+      "material_defeater": {
+        "revision_run_id": "RUN_0064__PX_1006_MD",
+        "update_id": "PX_1006_MD",
+        "revised_attribution": "partially_supported",
+        "confidence": 90.0,
+        "revision_decision": "weaken",
+        "expected_direction": true
+      },
+      "non_material_control": {
+        "revision_run_id": "RUN_0064__PX_1006_NC",
+        "update_id": "PX_1006_NC",
+        "revised_attribution": "supported",
+        "confidence": 95.0,
+        "revision_decision": "maintain",
+        "expected_direction": true
+      },
+      "selective_revisability": true
+    },
+    {
+      "initial_run_id": "RUN_0065",
+      "case_id": "PX_1006",
+      "domain": "accountability",
+      "condition": "C1",
+      "model_slot": "model_1",
+      "repetition": 1,
+      "initial_attribution": "supported",
+      "initial_confidence": 91.0,
+      "initial_action": "affirm",
+      "material_defeater": {
+        "revision_run_id": "RUN_0065__PX_1006_MD",
+        "update_id": "PX_1006_MD",
+        "revised_attribution": "supported",
+        "confidence": 89.0,
+        "revision_decision": "maintain",
+        "expected_direction": false
+      },
+      "non_material_control": {
+        "revision_run_id": "RUN_0065__PX_1006_NC",
+        "update_id": "PX_1006_NC",
+        "revised_attribution": "supported",
+        "confidence": 96.0,
+        "revision_decision": "maintain",
+        "expected_direction": true
+      },
+      "selective_revisability": false
+    },
+    {
+      "initial_run_id": "RUN_0066",
+      "case_id": "PX_1006",
+      "domain": "accountability",
+      "condition": "C1",
+      "model_slot": "model_1",
+      "repetition": 2,
+      "initial_attribution": "supported",
+      "initial_confidence": 90.0,
+      "initial_action": "affirm",
+      "material_defeater": {
+        "revision_run_id": "RUN_0066__PX_1006_MD",
+        "update_id": "PX_1006_MD",
+        "revised_attribution": "supported",
+        "confidence": 84.0,
+        "revision_decision": "maintain",
+        "expected_direction": false
+      },
+      "non_material_control": {
+        "revision_run_id": "RUN_0066__PX_1006_NC",
+        "update_id": "PX_1006_NC",
+        "revised_attribution": "supported",
+        "confidence": 92.0,
+        "revision_decision": "maintain",
+        "expected_direction": true
+      },
+      "selective_revisability": false
+    },
+    {
+      "initial_run_id": "RUN_0067",
+      "case_id": "PX_1006",
+      "domain": "accountability",
+      "condition": "C1",
+      "model_slot": "model_2",
+      "repetition": 1,
+      "initial_attribution": "supported",
+      "initial_confidence": 95.0,
+      "initial_action": "affirm",
+      "material_defeater": {
+        "revision_run_id": "RUN_0067__PX_1006_MD",
+        "update_id": "PX_1006_MD",
+        "revised_attribution": "partially_supported",
+        "confidence": 90.0,
+        "revision_decision": "weaken",
+        "expected_direction": true
+      },
+      "non_material_control": {
+        "revision_run_id": "RUN_0067__PX_1006_NC",
+        "update_id": "PX_1006_NC",
+        "revised_attribution": "supported",
+        "confidence": 95.0,
+        "revision_decision": "maintain",
+        "expected_direction": true
+      },
+      "selective_revisability": true
+    },
+    {
+      "initial_run_id": "RUN_0068",
+      "case_id": "PX_1006",
+      "domain": "accountability",
+      "condition": "C1",
+      "model_slot": "model_2",
+      "repetition": 2,
+      "initial_attribution": "supported",
+      "initial_confidence": 90.0,
+      "initial_action": "affirm",
+      "material_defeater": {
+        "revision_run_id": "RUN_0068__PX_1006_MD",
+        "update_id": "PX_1006_MD",
+        "revised_attribution": "partially_supported",
+        "confidence": 90.0,
+        "revision_decision": "weaken",
+        "expected_direction": true
+      },
+      "non_material_control": {
+        "revision_run_id": "RUN_0068__PX_1006_NC",
+        "update_id": "PX_1006_NC",
+        "revised_attribution": "supported",
+        "confidence": 90.0,
+        "revision_decision": "maintain",
+        "expected_direction": true
+      },
+      "selective_revisability": true
+    },
+    {
+      "initial_run_id": "RUN_0069",
+      "case_id": "PX_1006",
+      "domain": "accountability",
+      "condition": "C2",
+      "model_slot": "model_1",
+      "repetition": 1,
+      "initial_attribution": "supported",
+      "initial_confidence": 84.0,
+      "initial_action": "affirm",
+      "material_defeater": {
+        "revision_run_id": "RUN_0069__PX_1006_MD",
+        "update_id": "PX_1006_MD",
+        "revised_attribution": "partially_supported",
+        "confidence": 86.0,
+        "revision_decision": "weaken",
+        "expected_direction": true
+      },
+      "non_material_control": {
+        "revision_run_id": "RUN_0069__PX_1006_NC",
+        "update_id": "PX_1006_NC",
+        "revised_attribution": "supported",
+        "confidence": 96.0,
+        "revision_decision": "maintain",
+        "expected_direction": true
+      },
+      "selective_revisability": true
+    },
+    {
+      "initial_run_id": "RUN_0070",
+      "case_id": "PX_1006",
+      "domain": "accountability",
+      "condition": "C2",
+      "model_slot": "model_1",
+      "repetition": 2,
+      "initial_attribution": "partially_supported",
+      "initial_confidence": 84.0,
+      "initial_action": "affirm",
+      "material_defeater": {
+        "revision_run_id": "RUN_0070__PX_1006_MD",
+        "update_id": "PX_1006_MD",
+        "revised_attribution": "partially_supported",
+        "confidence": 90.0,
+        "revision_decision": "maintain",
+        "expected_direction": false
+      },
+      "non_material_control": {
+        "revision_run_id": "RUN_0070__PX_1006_NC",
+        "update_id": "PX_1006_NC",
+        "revised_attribution": "partially_supported",
+        "confidence": 92.0,
+        "revision_decision": "maintain",
+        "expected_direction": true
+      },
+      "selective_revisability": false
+    },
+    {
+      "initial_run_id": "RUN_0071",
+      "case_id": "PX_1006",
+      "domain": "accountability",
+      "condition": "C2",
+      "model_slot": "model_2",
+      "repetition": 1,
+      "initial_attribution": "supported",
+      "initial_confidence": 95.0,
+      "initial_action": "affirm",
+      "material_defeater": {
+        "revision_run_id": "RUN_0071__PX_1006_MD",
+        "update_id": "PX_1006_MD",
+        "revised_attribution": "partially_supported",
+        "confidence": 90.0,
+        "revision_decision": "weaken",
+        "expected_direction": true
+      },
+      "non_material_control": {
+        "revision_run_id": "RUN_0071__PX_1006_NC",
+        "update_id": "PX_1006_NC",
+        "revised_attribution": "supported",
+        "confidence": 95.0,
+        "revision_decision": "maintain",
+        "expected_direction": true
+      },
+      "selective_revisability": true
+    },
+    {
+      "initial_run_id": "RUN_0072",
+      "case_id": "PX_1006",
+      "domain": "accountability",
+      "condition": "C2",
+      "model_slot": "model_2",
+      "repetition": 2,
+      "initial_attribution": "supported",
+      "initial_confidence": 95.0,
+      "initial_action": "affirm",
+      "material_defeater": {
+        "revision_run_id": "RUN_0072__PX_1006_MD",
+        "update_id": "PX_1006_MD",
+        "revised_attribution": "partially_supported",
+        "confidence": 90.0,
+        "revision_decision": "weaken",
+        "expected_direction": true
+      },
+      "non_material_control": {
+        "revision_run_id": "RUN_0072__PX_1006_NC",
+        "update_id": "PX_1006_NC",
+        "revised_attribution": "supported",
+        "confidence": 95.0,
+        "revision_decision": "maintain",
+        "expected_direction": true
+      },
+      "selective_revisability": true
+    }
+  ],
+  "non_selective_pairs": [
+    {
+      "initial_run_id": "RUN_0061",
+      "case_id": "PX_1006",
+      "domain": "accountability",
+      "condition": "C0",
+      "model_slot": "model_1",
+      "repetition": 1,
+      "initial_attribution": "supported",
+      "initial_confidence": 87.0,
+      "initial_action": "affirm",
+      "material_defeater": {
+        "revision_run_id": "RUN_0061__PX_1006_MD",
+        "update_id": "PX_1006_MD",
+        "revised_attribution": "supported",
+        "confidence": 84.0,
+        "revision_decision": "maintain",
+        "expected_direction": false
+      },
+      "non_material_control": {
+        "revision_run_id": "RUN_0061__PX_1006_NC",
+        "update_id": "PX_1006_NC",
+        "revised_attribution": "supported",
+        "confidence": 93.0,
+        "revision_decision": "maintain",
+        "expected_direction": true
+      },
+      "selective_revisability": false
+    },
+    {
+      "initial_run_id": "RUN_0065",
+      "case_id": "PX_1006",
+      "domain": "accountability",
+      "condition": "C1",
+      "model_slot": "model_1",
+      "repetition": 1,
+      "initial_attribution": "supported",
+      "initial_confidence": 91.0,
+      "initial_action": "affirm",
+      "material_defeater": {
+        "revision_run_id": "RUN_0065__PX_1006_MD",
+        "update_id": "PX_1006_MD",
+        "revised_attribution": "supported",
+        "confidence": 89.0,
+        "revision_decision": "maintain",
+        "expected_direction": false
+      },
+      "non_material_control": {
+        "revision_run_id": "RUN_0065__PX_1006_NC",
+        "update_id": "PX_1006_NC",
+        "revised_attribution": "supported",
+        "confidence": 96.0,
+        "revision_decision": "maintain",
+        "expected_direction": true
+      },
+      "selective_revisability": false
+    },
+    {
+      "initial_run_id": "RUN_0066",
+      "case_id": "PX_1006",
+      "domain": "accountability",
+      "condition": "C1",
+      "model_slot": "model_1",
+      "repetition": 2,
+      "initial_attribution": "supported",
+      "initial_confidence": 90.0,
+      "initial_action": "affirm",
+      "material_defeater": {
+        "revision_run_id": "RUN_0066__PX_1006_MD",
+        "update_id": "PX_1006_MD",
+        "revised_attribution": "supported",
+        "confidence": 84.0,
+        "revision_decision": "maintain",
+        "expected_direction": false
+      },
+      "non_material_control": {
+        "revision_run_id": "RUN_0066__PX_1006_NC",
+        "update_id": "PX_1006_NC",
+        "revised_attribution": "supported",
+        "confidence": 92.0,
+        "revision_decision": "maintain",
+        "expected_direction": true
+      },
+      "selective_revisability": false
+    },
+    {
+      "initial_run_id": "RUN_0070",
+      "case_id": "PX_1006",
+      "domain": "accountability",
+      "condition": "C2",
+      "model_slot": "model_1",
+      "repetition": 2,
+      "initial_attribution": "partially_supported",
+      "initial_confidence": 84.0,
+      "initial_action": "affirm",
+      "material_defeater": {
+        "revision_run_id": "RUN_0070__PX_1006_MD",
+        "update_id": "PX_1006_MD",
+        "revised_attribution": "partially_supported",
+        "confidence": 90.0,
+        "revision_decision": "maintain",
+        "expected_direction": false
+      },
+      "non_material_control": {
+        "revision_run_id": "RUN_0070__PX_1006_NC",
+        "update_id": "PX_1006_NC",
+        "revised_attribution": "partially_supported",
+        "confidence": 92.0,
+        "revision_decision": "maintain",
+        "expected_direction": true
+      },
+      "selective_revisability": false
+    }
+  ]
+}

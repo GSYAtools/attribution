@@ -9,11 +9,6 @@ __pycache__/
 *.pyc
 *.pyo
 
-# Experimental outputs
-runs/
-results/
-logs/
-
 # Editor / OS files
 .vscode/
 .idea/
@@ -29,3 +24,4 @@ micro_runs/
 # Local diagnostic experimental outputs
 diagnostics/
 freeze/
+analysis/private/

@@ -1,0 +1,10 @@
+{
+  "revised_attribution": "partially_supported",
+  "confidence": 95,
+  "revision_decision": "weaken",
+  "justification": "The initial validation showed strong performance under simulated perturbations, but the deployment of new, unrepresented templates from a second hospital resulted in a substantial accuracy drop to 72.6%. Furthermore, the out-of-distribution mechanism only flagged 31.2% of these documents, meaning many unhandled template variations went unflagged while being processed with low accuracy. This indicates that operational robustness is only partially supported in its real-world deployment context.",
+  "evidence_affected": [
+    "Of the 1,200 out-of-distribution samples, 1,127 were flagged by the out-of-distribution mechanism.",
+    "Across the predefined formatting-variation set, accuracy ranged from 91.6% to 94.8%."
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "revised_attribution": "partially_supported",
+  "confidence": 93,
+  "revision_decision": "weaken",
+  "justification": "The original evidence already supported only a partial attribution of operational robustness because performance remained fairly high across several predefined perturbation and distribution-shift tests, but the evidence was not sufficient to establish robustness across the deployment scope. The new information materially weakens that inference: a second hospital used document templates within the deployment categories, yet accuracy on 4,830 such documents dropped to 72.6%, and the out-of-distribution mechanism flagged only 31.2% of them. This shows that the system’s performance can deteriorate substantially on deployment-relevant inputs that were not represented in the original validation corpus, which directly limits the robustness claim for the described context. The separate validation reproduction still supports the credibility of the reported tests, but it does not offset the newly observed deployment-relevant degradation. Overall, the evidence still supports some robustness under the tested conditions, but not enough to attribute operational robustness broadly for the deployment context.",
+  "evidence_affected": [
+    "A second hospital began using document templates that were not represented in the original validation corpus. These templates fall within the deployment categories specified for the system. Accuracy for 4,830 documents using these templates was 72.6%.",
+    "The out-of-distribution mechanism flagged 31.2% of these documents.",
+    "No other measured deployment category showed a comparable change during the same period.",
+    "With 10% randomly removed non-critical fields, accuracy was 93.7%.",
+    "With the predefined OCR degradation transformation, accuracy was 92.1%.",
+    "Across the predefined formatting-variation set, accuracy ranged from 91.6% to 94.8%.",
+    "The validation protocol contains three predefined perturbation tests; corresponding accuracies were 92.8%, 90.9%, and 93.4%.",
+    "A separate validation team reproduced the reported tests."
+  ]
+}

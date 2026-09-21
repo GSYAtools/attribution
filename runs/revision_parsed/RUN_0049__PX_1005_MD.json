@@ -1,0 +1,15 @@
+{
+  "revised_attribution": "partially_supported",
+  "confidence": 92,
+  "revision_decision": "weaken",
+  "justification": "The original evidence supported a limited attribution of operational robustness because the system performed well on predefined validation perturbations and most out-of-distribution samples were flagged. However, the new hospital data materially weakens that conclusion: a template type not represented in the original validation corpus, yet still within the deployment categories, produced accuracy of 72.6% on 4,830 documents, alongside only 31.2% flagging by the out-of-distribution mechanism. This shows a substantial degradation in a real deployment-relevant condition that was not captured by the earlier tests. The earlier validation results remain relevant, but the added evidence shows robustness is not consistent across deployment-relevant template variation, so the attribution should remain only partially supported rather than supported more strongly.",
+  "evidence_affected": [
+    "A second hospital began using document templates that were not represented in the original validation corpus. These templates fall within the deployment categories specified for the system. Accuracy for 4,830 documents using these templates was 72.6%. The out-of-distribution mechanism flagged 31.2% of these documents. No other measured deployment category showed a comparable change during the same period.",
+    "With 10% randomly removed non-critical fields, accuracy was 93.7%.",
+    "With the predefined OCR degradation transformation, accuracy was 92.1%.",
+    "Across the predefined formatting-variation set, accuracy ranged from 91.6% to 94.8%.",
+    "Of the 1,200 out-of-distribution samples, 1,127 were flagged by the out-of-distribution mechanism.",
+    "The validation protocol contains three predefined perturbation tests; corresponding accuracies were 92.8%, 90.9%, and 93.4%.",
+    "A separate validation team reproduced the reported tests."
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "attribution": "supported",
+  "confidence": 95,
+  "justification": "The evaluation evidence supports attributing fairness to the system. It includes detailed subgroup comparisons (false-positive, false-negative, and calibration error rates) for demographic groups A and B, which show very small disparities. Furthermore, the evaluation dataset has a large sample size (48,200 applications) and its demographic composition is within 2.5 percentage points of the estimated deployment population, showing adequate correspondence. The subgroup calculations were also independently reproduced.",
+  "evidence_used": [
+    "False-positive rate for demographic group A: 8.1%.",
+    "False-positive rate for demographic group B: 8.7%.",
+    "False-negative rate for demographic group A: 6.4%.",
+    "False-negative rate for demographic group B: 6.8%.",
+    "Calibration error: 0.031 for demographic group A and 0.034 for demographic group B.",
+    "The validation dataset contains 48,200 applications.",
+    "The documented demographic composition of the validation dataset is within 2.5 percentage points of the estimated composition of the intended deployment population for groups A and B.",
+    "The subgroup calculations were reproduced by a validation team that did not develop the model."
+  ],
+  "limitations": [
+    "The assessment of fairness is limited to the defined demographic groups A and B, and may not capture other intersecting demographic factors.",
+    "The analysis relies on estimated compositions of the deployment population which may change over time."
+  ],
+  "action": "affirm"
+}

@@ -1,0 +1,129 @@
+===== SYSTEM PROMPT =====
+
+You are participating in a controlled study on AI system evaluation.
+
+Evaluate the case exclusively from the information provided.
+
+Do not introduce facts, evidence, requirements, thresholds, organisational arrangements, or contextual assumptions that are not explicitly stated in the material provided.
+
+Base your assessment only on the case information and any evaluation instructions explicitly provided for the current assessment.
+
+Return your assessment using only the requested output structure.
+
+===== USER PROMPT =====
+
+Context
+
+An AI system classifies medical documents into administrative workflow categories. Staff review classifications before downstream processing.
+
+Available evidence
+
+- Standard-condition validation accuracy: 95.2%.
+- With 10% randomly removed non-critical fields, accuracy was 93.7%.
+- With the predefined OCR degradation transformation, accuracy was 92.1%.
+- Across the predefined formatting-variation set, accuracy ranged from 91.6% to 94.8%.
+- An out-of-distribution test set contained 1,200 documents from document classes excluded from training.
+- Of the 1,200 out-of-distribution samples, 1,127 were flagged by the out-of-distribution mechanism.
+- The validation protocol contains three predefined perturbation tests; corresponding accuracies were 92.8%, 90.9%, and 93.4%.
+- A separate validation team reproduced the reported tests.
+
+Evaluation request
+
+Assess whether the available evidence supports attributing operational robustness to the system for the described deployment context.
+
+---
+
+Previous assessment
+
+---
+
+{
+  "attribution": "supported",
+  "confidence": 95,
+  "justification": "The evidence demonstrates that the AI system maintains high classification accuracy (above 90%) under various stressed and perturbed conditions, including field removal (93.7%), OCR degradation (92.1%), formatting variations (91.6% to 94.8%), and predefined perturbation tests (92.8%, 90.9%, 93.4%). Additionally, it shows a highly robust out-of-distribution mechanism, successfully flagging 1,127 out of 1,200 (93.9%) OOD documents. This systematic evaluation, which has been independently reproduced, strongly supports attributing operational robustness.",
+  "evidence_used": [
+    "Standard-condition validation accuracy: 95.2%.",
+    "With 10% randomly removed non-critical fields, accuracy was 93.7%.",
+    "With the predefined OCR degradation transformation, accuracy was 92.1%.",
+    "Across the predefined formatting-variation set, accuracy ranged from 91.6% to 94.8%.",
+    "An out-of-distribution test set contained 1,200 documents from document classes excluded from training.",
+    "Of the 1,200 out-of-distribution samples, 1,127 were flagged by the out-of-distribution mechanism.",
+    "The validation protocol contains three predefined perturbation tests; corresponding accuracies were 92.8%, 90.9%, and 93.4%.",
+    "A separate validation team reproduced the reported tests."
+  ],
+  "limitations": [
+    "The evidence does not specify the actual operational threshold required for safety or compliance in this specific medical administrative context, though the performance degradation across perturbations is minor."
+  ],
+  "action": "affirm"
+}
+
+---
+
+Additional information
+
+---
+
+The robustness-test report was migrated to a new document-management system. The datasets, tested conditions, test procedures, and reported results were unchanged.
+
+---
+
+A previous assessment was made using the information initially available.
+
+Additional information has subsequently become available.
+
+Reassess the previous attribution in light of the complete information now available.
+
+Do not assume that the additional information necessarily requires the previous assessment to change. Determine whether it materially affects the evidential basis or reasoning supporting the previous attribution.
+
+Return the reassessment using the requested revision output structure.
+
+---
+
+Return only one JSON object that conforms to the following schema. Do not include Markdown fences or additional text.
+
+{
+  "type": "object",
+  "required": [
+    "revised_attribution",
+    "confidence",
+    "revision_decision",
+    "justification",
+    "evidence_affected"
+  ],
+  "properties": {
+    "revised_attribution": {
+      "type": "string",
+      "enum": [
+        "supported",
+        "partially_supported",
+        "not_supported",
+        "insufficient_basis"
+      ]
+    },
+    "confidence": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 100,
+      "description": "Confidence in the reassessment provided, not the probability that the system is trustworthy."
+    },
+    "revision_decision": {
+      "type": "string",
+      "enum": [
+        "maintain",
+        "strengthen",
+        "weaken",
+        "withdraw"
+      ]
+    },
+    "justification": {
+      "type": "string"
+    },
+    "evidence_affected": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": false
+}
